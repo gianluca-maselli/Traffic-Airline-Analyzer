@@ -67,6 +67,7 @@ function barPlot(error, airports, routes2,airlines){
                 "airportID":airportName,
                 "airlinesID":airlines_air
             }
+            
             diary.push(air_lines)
         }
         
