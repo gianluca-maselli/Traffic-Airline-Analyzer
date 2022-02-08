@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Traffic Arline Analyzer</title>
+		<style type="text/css">
+			body { 
+				height:672px; 
+				width: 1440px; 
+				margin: 0;
+				position:absolute; 
+				background: #636363;
+			}
+			#row {
+				width: 100%;
+				padding: 0;
+				margin: 0;
+				height:3%;
+			}
+			#menu {
+				border: 3px solid black;
+				border-radius: 8px;
+				height:100%;
+				width:99%;
+				padding: 3px;
+				margin: 2px;
+				float: left;
+			}
+			
+			#row1 {
+				width:1427px;
+				height:400px;
+				padding: 0;
+				margin: 0;
+				
+			}
+			#row2 {
+				width:1427px;
+				height:350px;
+				padding: 0;
+				margin: 0;
+				height:40%;
+			}
+			
+			#svg_map {
+				border: 3px solid black;
+				border-radius: 8px;
+				height:400px; 
+				width:785px;
+				margin: 1px;
+				margin-left: 4px;
+				float: left;
+				font-family:Sans,Arial;
+				background-color:white;
+			}
+			#barplot{
+				border: 3px solid black;
+				border-radius: 8px;
+				border-collapse: collapse;
+				width:615px;
+				margin: 2px;
+				height:400px;
+				margin-left:4px;
+				float: left;
+			}
+			#quad3 {
+				border: 3px solid black;
+				border-radius: 8px;
+				height:100%;
+				width:53%;
+				margin: 2px;
+				margin-left: 4px;
+				float: left;
+			}
+			#quad4{
+				border: 3px solid black;
+				border-radius: 8px;
+				border-collapse: collapse;
+				width:42%;
+				
+				margin: 2px;
+				height:100%;
+				margin-left: 4px;
+				float: left;
+			}
+			
+			
+			
+			#map{
+					position: absolute;
+					opacity: 1;
+				}
+				
+			.selected {fill: red;}
+			
+			#air_info {
+					position: absolute;
+					z-index:9;
+					margin: 7px;
+					margin-top: 35px;
+					opacity: 0.9;
+					
+			}
+			
+
+			
+			
+		</style>
+	</head>
+	<body id="body">	
+		<div id="row">
+			<div id="menu">
+				1 of 4
+			</div>
+		</div>
+		
+		<div id="row1">
+			<div id="svg_map">
+				<div id="map"></div>
+				<div id="air_info"></div>
+			</div>
+			
+			<div id="barplot"></div>
+		</div>
+		
+		<div id="row2">
+			<div id="quad3">
+				3 of 4
+			</div>
+			<div id="quad4">
+				4 of 4
+			</div>
+		</div>
+		
+			
+<!---		<div class="container" id="upper_div" >
+				<div id="map"></div>
+				<div id="air_info"></div>
+		</div> -->
+	<!--	 -->
+	
+
+	</body>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript">
+		$('.flights').on('change', function() {
+		    $('.flights').not(this).prop('checked', false);  
+		});
+	
+    </script>
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src="http://d3js.org/topojson.v1.min.js"></script>
+	<script src="https://unpkg.com/d3-geo-voronoi@1"></script>
+	<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+	<script type="text/javascript" src="worldMap.js"></script> 
+	<script type="text/javascript" src="barPlot.js"></script> 
+	
+	
+</html>
