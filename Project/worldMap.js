@@ -15,7 +15,7 @@ var zoom = d3.zoom()
             .scaleExtent([1, 20])
             .on("zoom", zoomed)
             .on("end", function(){console.log("finish zoom")});
-    
+  
 var svg = d3.select("#map").append("svg")
                 .attr("id", "svg_div")
                 .attr("height",height + margin.top + margin.bottom)
@@ -24,7 +24,8 @@ var svg = d3.select("#map").append("svg")
                 .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
                 
-                //.attr("transform","translate(-1000,20)scale(13)");            
+                //.attr("transform","translate(-1000,20)scale(13)");       
+
 
 var svg_air_inf = d3.select("#air_info").append("svg")
                     .attr("id", "svg_infoAir_div")
@@ -51,31 +52,32 @@ var checkedValue = null;
     */
     //var ibu = document.getElementById("but");
     //console.log(ibu)
-   
-function check(){
-    document.getElementById('but')
-    var checkboxes = document.getElementsByName('flights')
-    //console.log(checkboxes)
-    for (var checkbox of checkboxes){
-        if (checkbox.checked) {
-            val = checkbox.id
-            console.log(val)
-            switch_modality(val)
-        }
-    }
-}
 
+/*
 d3.queue()
     .defer(d3.json, "world.topojson")
     .defer(d3.csv, "./dataset/airports2.csv")
     .defer(d3.csv, "./dataset/routes2.csv")
-    .await(ready);
+    .defer(d3.csv, "./dataset/airlines.csv")
+    .defer(d3.csv, "./dataset/worldCountry.csv")
+    .await(ready); */
+/*
+d3.queue()
+    .defer(d3.json, "world.topojson")
+    .await(ready1);
+*/
+d3.json("world.topojson",function(data) {
+    ready1(data)
+});
+
+
 
 var projection = d3.geoMercator()
     .scale(100)
     .rotate([0, 0])
     .center([0, 0])
-    .translate([width/2, height/2]); 
+    .translate([width/2, height/2])
+    .precision(.1);
 
         
     
@@ -135,10 +137,24 @@ var Tooltip = d3.select("#map")
                             .style("stroke", "#756bb1")
                             .style("opacity", 0.8)
                     }
-        
-
-function ready(error, data, airports, routes2){
-        //console.log(data)
+function ready1(data){
+    var countries = topojson.feature(data,data.objects.countries).features
+    // MAP BUILDING ---------------
+        svg.selectAll(".country_init")
+                .data(countries)
+                .enter()
+                .append("g")
+                .attr("id","init_map")
+                .append("path")
+                .attr("class", "country")
+                .attr("d",path) //coordinates of country borders
+                .style("stroke", "#fff")
+                .style("stroke-width", "0.2")
+                .attr("fill", "#b8b8b8")
+}
+/*
+function ready(error, data, airports, routes2, airlines,worldCountry){
+    //console.log(data)
     var countries = topojson.feature(data,data.objects.countries).features
     //console.log(countries)
 
@@ -148,6 +164,7 @@ function ready(error, data, airports, routes2){
     random_air = airports[Math.floor(Math.random() * airports.length)];
     rand_name = air_len(random_air.Airport_Name)
     rand_tot = tot_dep_arr(random_air.Airport_ID, links)
+    
     
     
     /* IATA NON UNIVOCO, USARE ID AEREPORTO 
@@ -163,7 +180,7 @@ function ready(error, data, airports, routes2){
                 k++
             }
         
-    }
+        }
     }
     var tot_dep = j
     var tot_arr = k
@@ -186,7 +203,7 @@ function ready(error, data, airports, routes2){
     var tot_dep = j
     var tot_arr = k
     console.log("dep: " + tot_dep, "arr: "+tot_arr)
-    */
+    
     
     // MAP BUILDING ---------------
     svg.selectAll(".country")
@@ -229,7 +246,7 @@ function ready(error, data, airports, routes2){
                 .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
                 .attr("dy", ".35em")
                 .text(function(d) { return d.properties.name; });
-            */
+            
         
             //AIRPORTS POINTS --------------------------
             svg.selectAll(".world-airports")
@@ -255,9 +272,16 @@ function ready(error, data, airports, routes2){
                 .on("click", function(d){
                     
                     //continuare da qui
-                    f_click(d,links,airports)
-                      //console.log(tot)
-                      
+                    tot_d_a = f_click(d,links,airports)
+                   // console.log(tot_d_a)
+                    if(tot_d_a[0]>0){
+                        //barplot design
+                        barPlot(routes2, airlines,d.Airport_ID)
+                        heatMap(data,links,d.Airport_ID, airports,worldCountry)
+                    }
+                    else{
+                        missing()
+                    }
                   })
             
             //FIRST AIRPORT RANDOMLY INITIALIZED
@@ -356,11 +380,11 @@ function ready(error, data, airports, routes2){
         //        .on("mousemove", f_mousemove)
         //        .on("mouseleave", f_mouseleave)
     }
-
-    function zoomed() {
-        svg.attr("transform", "translate(" + d3.event.transform.x + "," + d3.event.transform.y + ") scale(" + d3.event.transform.k + ")");
+    */
+function zoomed() {
+    svg.attr("transform", "translate(" + d3.event.transform.x + "," + d3.event.transform.y + ") scale(" + d3.event.transform.k + ")");
         
-    }
+}
     //lat_source_air,
     //long_source_air,
     //lat_dest_air,
@@ -426,20 +450,23 @@ function ready(error, data, airports, routes2){
  //       }
  //   }
 
-    function f_click(d, links, airports){
-        if(last_clicked != d || last_clicked == d ){
-            last_clicked = ""
-            svg.selectAll("#flights_d").remove()
-            svg_air_inf.selectAll("*").remove()
+function f_click(d, links, airports){
+    if(last_clicked != d || last_clicked == d ){
+        last_clicked = ""
+        svg.selectAll("#flights_d").remove()
+        svg_air_inf.selectAll("*").remove()
+        svg_bar.selectAll("*").remove()
+        svg_heat.selectAll("*").remove()
             
-        }
-        airport_info(d,airports)
-        departures(d.Airport_ID, links)
-        //arrivals(d.IATA, links)
-       // all_flights(d.IATA, links)
-       // var tot = tot_dep_arr(d.Airport_ID,links)
-        last_clicked = d
     }
+    airport_info(d,airports)
+    departures(d.Airport_ID, links)
+    //arrivals(d.IATA, links)
+    // all_flights(d.IATA, links)
+    var tot = tot_dep_arr(d.Airport_ID,links)
+    last_clicked = d
+    return tot;
+}
 
 function departures(air_id,links){
     arr = []
@@ -471,7 +498,6 @@ function departures(air_id,links){
             
         
 }
-
 function airport_info(d,airports){
     var info = air_info(d, airports)
     var dep_arr = tot_dep_arr(d.Airport_ID,links)

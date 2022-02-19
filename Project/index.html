@@ -37,7 +37,7 @@
 			}
 			#row2 {
 				width:1427px;
-				height:350px;
+				height:330px;
 				padding: 0;
 				margin: 0;
 				height:40%;
@@ -52,7 +52,7 @@
 				margin-left: 4px;
 				float: left;
 				font-family:Sans,Arial;
-				background-color:white;
+				background-color:#eff3ff;
 			}
 			#barplot{
 				border: 3px solid black;
@@ -64,14 +64,24 @@
 				margin-left:4px;
 				float: left;
 			}
-			#quad3 {
+			#svg_heat_div{
 				border: 3px solid black;
 				border-radius: 8px;
-				height:100%;
-				width:53%;
+				height: 330px;
+				width:785px;
 				margin: 2px;
 				margin-left: 4px;
 				float: left;
+				background-color: #eff3ff;
+				font-family:Sans,Arial;
+				
+
+			}
+			#heat_buttons{
+				margin: 2px;
+				font-family:Sans,Arial;
+				margin-left: 4px;
+				
 			}
 			#quad4{
 				border: 3px solid black;
@@ -91,8 +101,16 @@
 					position: absolute;
 					opacity: 1;
 				}
+			
+			#svg_heatmap{
+				position: absolute;
+				opacity: 1;
+				font-family:Sans,Arial;
+			}
 				
 			.selected {fill: red;}
+			.selected_air {font-size: 2em;}
+			.selected_heat {fill: #f7f7f7;}
 			
 			#air_info {
 					position: absolute;
@@ -101,6 +119,45 @@
 					margin-top: 35px;
 					opacity: 0.9;
 					
+			}
+			#svg_heat_legend{
+				position: absolute;
+				z-index:9;
+				margin: 2px;
+				margin-top: 170px;
+				opacity: 0.9;
+				font-family:Sans,Arial;
+				
+				
+			}
+			table,tr,td,th{
+				
+				border-collapse: collapse;
+    			font-size: 1em;
+				vertical-align: middle;
+    			font-family: sans-serif;
+    			min-width: 170px;
+    			box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+				text-align: center;
+				
+			}
+
+
+			tr {
+				background-color: #3182bd;
+				color: #ffffff;
+				text-align: left;
+				border-bottom: 1px solid #dddddd;
+				border-radius: 8px;
+			}
+			th, td {
+    			padding: 12px 15px;
+			}
+			tbody tr {
+				border-bottom: 1px solid #090909;
+			}
+			tr:last-of-type {
+				border-bottom: 1px solid #000000;
 			}
 			
 
@@ -111,7 +168,8 @@
 	<body id="body">	
 		<div id="row">
 			<div id="menu">
-				1 of 4
+				<button class="button" id="button_airport" value="airport" onclick="getValue(this)">Airport</button>
+				<button class="button" id="button_count" value="country_search" onclick="getValue(this)">Country</button>
 			</div>
 		</div>
 		
@@ -125,9 +183,17 @@
 		</div>
 		
 		<div id="row2">
-			<div id="quad3">
-				3 of 4
+			<div id="heat_buttons">
+				<input class="mCheckbox" name="check" type ="checkbox"  value ="countries" onclick="selectIt(this)" onchange="s=this.checked" checked>Countries
+				<input class="mCheckbox" name ="check" type ="checkbox" value="continents" onclick="selectIt(this)" onchange="s=this.checked">Continents
 			</div>
+			<div id="svg_heat_div">
+				
+				<div id="svg_heatmap">
+				</div>
+				<div id = "svg_heat_legend"></div>
+			</div>
+
 			<div id="quad4">
 				4 of 4
 			</div>
@@ -140,8 +206,18 @@
 		</div> -->
 	<!--	 -->
 	
+	
 
 	</body>
+	<script>
+		function  selectIt(id){
+			var myCheckbox = document.getElementsByName("check");
+			Array.prototype.forEach.call(myCheckbox,function(el){
+			  el.checked = false;
+			});
+			id.checked = true;
+		  }
+	</script>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript">
@@ -154,8 +230,16 @@
 	<script src="http://d3js.org/topojson.v1.min.js"></script>
 	<script src="https://unpkg.com/d3-geo-voronoi@1"></script>
 	<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="worldMap.js"></script> 
-	<script type="text/javascript" src="barPlot.js"></script> 
+	<script type="text/javascript" src="barPlot.js"></script>
+	<script type="text/javascript" src="notAv.js"></script> 
+	<script type="text/javascript" src="table.js"></script> 
+	<script type="text/javascript" src="heatmap.js"></script>
+	<script type="text/javascript" src="prova.js"></script>  
+
+
 	
 	
 </html>

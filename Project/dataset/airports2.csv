@@ -862,10 +862,10 @@
 880,Maun Airport,Maun,Botswana,MUB,FBMN,-19.97260093688965,23.431100845336914,3093,2,U,Africa/Gaborone,airport,OurAirports
 881,Sir Seretse Khama International Airport,Gaberone,Botswana,GBE,FBSK,-24.555201,25.9182,3299,2,U,Africa/Gaborone,airport,OurAirports
 882,Selebi Phikwe Airport,Selebi-phikwe,Botswana,PKW,FBSP,-22.0583,27.8288,2925,2,U,Africa/Gaborone,airport,OurAirports
-883,Maya-Maya Airport,Brazzaville,Congo (Brazzaville),BZV,FCBB,-4.251699924468994,15.253000259399414,1048,1,N,Africa/Brazzaville,airport,OurAirports
-884,Owando Airport,Owando,Congo (Kinshasa),FTX,FCOO,-0.5313500165939331,15.95009994506836,1214,1,N,Africa/Brazzaville,airport,OurAirports
-885,Ouesso Airport,Ouesso,Congo (Kinshasa),OUE,FCOU,1.6159900426899998,16.0379009247,1158,1,N,Africa/Brazzaville,airport,OurAirports
-886,Pointe Noire Airport,Pointe-noire,Congo (Brazzaville),PNR,FCPP,-4.816030025482178,11.88659954071045,55,1,N,Africa/Brazzaville,airport,OurAirports
+883,Maya-Maya Airport,Brazzaville,Congo,BZV,FCBB,-4.251699924468994,15.253000259399414,1048,1,N,Africa/Brazzaville,airport,OurAirports
+884,Owando Airport,Owando,Congo,FTX,FCOO,-0.5313500165939331,15.95009994506836,1214,1,N,Africa/Brazzaville,airport,OurAirports
+885,Ouesso Airport,Ouesso,Congo,OUE,FCOU,1.6159900426899998,16.0379009247,1158,1,N,Africa/Brazzaville,airport,OurAirports
+886,Pointe Noire Airport,Pointe-noire,Congo,PNR,FCPP,-4.816030025482178,11.88659954071045,55,1,N,Africa/Brazzaville,airport,OurAirports
 887,Matsapha Airport,Manzini,Swaziland,MTS,FDMS,-26.52899932861328,31.3075008392334,2075,2,U,Africa/Mbabane,airport,OurAirports
 888,Bangui M'Poko International Airport,Bangui,Central African Republic,BGF,FEFF,4.39847993850708,18.518800735473633,1208,1,N,Africa/Bangui,airport,OurAirports
 889,Berbérati Airport,Berberati,Central African Republic,BBT,FEFT,4.2215800285339355,15.786399841308594,1929,1,N,Africa/Bangui,airport,OurAirports
@@ -996,30 +996,30 @@
 1017,Mzuzu Airport,Mzuzu,Malawi,ZZU,FWUU,-11.444700241088867,34.01179885864258,4115,2,U,Africa/Blantyre,airport,OurAirports
 1018,Moshoeshoe I International Airport,Maseru,Lesotho,MSU,FXMM,-29.462299346923828,27.552499771118164,5348,2,U,Africa/Maseru,airport,OurAirports
 1019,Mejametalana Airbase,Maseru,Lesotho,\N,FXMU,-29.304100036621094,27.50349998474121,5105,2,U,Africa/Maseru,airport,OurAirports
-1020,Ndjili International Airport,Kinshasa,Congo (Kinshasa),FIH,FZAA,-4.38575,15.4446,1027,1,N,Africa/Kinshasa,airport,OurAirports
-1021,Ndolo Airport,Kinshasa,Congo (Kinshasa),NLO,FZAB,-4.32666015625,15.327500343323,915,1,N,Africa/Kinshasa,airport,OurAirports
-1022,Muanda Airport,Muanda,Congo (Kinshasa),MNB,FZAG,-5.9308600425720215,12.351799964904785,89,1,N,Africa/Kinshasa,airport,OurAirports
-1023,Kitona Base Airport,Kitona Base,Congo (Kinshasa),\N,FZAI,-5.918059825897217,12.447699546813965,394,1,N,Africa/Kinshasa,airport,OurAirports
-1024,Bandundu Airport,Bandoundu,Congo (Kinshasa),FDU,FZBO,-3.3113200664520264,17.38170051574707,1063,1,N,Africa/Kinshasa,airport,OurAirports
-1025,Kikwit Airport,Kikwit,Congo (Kinshasa),KKW,FZCA,-5.035769939422607,18.785600662231445,1572,1,N,Africa/Kinshasa,airport,OurAirports
-1026,Mbandaka Airport,Mbandaka,Congo (Kinshasa),MDK,FZEA,0.0226000007242,18.2887001038,1040,1,N,Africa/Kinshasa,airport,OurAirports
-1027,Gbadolite Airport,Gbadolite,Congo (Kinshasa),BDT,FZFD,4.253210067749023,20.975299835205078,1509,1,N,Africa/Kinshasa,airport,OurAirports
-1028,Gemena Airport,Gemena,Congo (Kinshasa),GMA,FZFK,3.2353699207299997,19.771299362199997,1378,1,N,Africa/Kinshasa,airport,OurAirports
-1029,Kotakoli Airport,Kotakoli,Congo (Kinshasa),KLI,FZFP,4.157639980316162,21.65089988708496,1801,1,N,Africa/Kinshasa,airport,OurAirports
-1030,Lisala Airport,Lisala,Congo (Kinshasa),LIQ,FZGA,2.17066,21.496901,1509,1,N,Africa/Kinshasa,airport,OurAirports
-1031,Bangoka International Airport,Kisangani,Congo (Kinshasa),FKI,FZIC,0.481638997793,25.3379993439,1417,2,U,Africa/Lubumbashi,airport,OurAirports
-1032,Matari Airport,Isiro,Congo (Kinshasa),IRP,FZJH,2.8276100158691406,27.588300704956055,2438,2,U,Africa/Lubumbashi,airport,OurAirports
-1033,Bunia Airport,Bunia,Congo (Kinshasa),BUX,FZKA,1.5657199621200562,30.220800399780273,4045,2,U,Africa/Lubumbashi,airport,OurAirports
-1034,Buta Zega Airport,Buta Zega,Congo (Kinshasa),BZU,FZKJ,2.818350076675415,24.793699264526367,1378,2,U,Africa/Lubumbashi,airport,OurAirports
-1035,Bukavu Kavumu Airport,Bukavu/kavumu,Congo (Kinshasa),BKY,FZMA,-2.3089799880981445,28.808799743652344,5643,2,U,Africa/Lubumbashi,airport,OurAirports
-1036,Goma International Airport,Goma,Congo (Kinshasa),GOM,FZNA,-1.6708099842071533,29.238500595092773,5089,2,U,Africa/Kigali,airport,OurAirports
-1037,Kindu Airport,Kindu,Congo (Kinshasa),KND,FZOA,-2.91917991638,25.915399551399997,1630,2,U,Africa/Lubumbashi,airport,OurAirports
-1038,Lubumbashi International Airport,Lubumashi,Congo (Kinshasa),FBM,FZQA,-11.5913000107,27.5308990479,4295,2,U,Africa/Lubumbashi,airport,OurAirports
-1039,Kolwezi Airport,Kolwezi,Congo (Kinshasa),KWZ,FZQM,-10.765899658203125,25.505699157714844,5007,2,U,Africa/Lubumbashi,airport,OurAirports
-1040,Kalemie Airport,Kalemie,Congo (Kinshasa),FMI,FZRF,-5.8755598068237305,29.25,2569,2,U,Africa/Lubumbashi,airport,OurAirports
-1041,Kamina Base Airport,Kamina Base,Congo (Kinshasa),KMN,FZSA,-8.642020225524902,25.252899169921875,3543,2,U,Africa/Lubumbashi,airport,OurAirports
-1042,Kananga Airport,Kananga,Congo (Kinshasa),KGA,FZUA,-5.90005016327,22.4692001343,2139,2,U,Africa/Lubumbashi,airport,OurAirports
-1043,Mbuji Mayi Airport,Mbuji-mayi,Congo (Kinshasa),MJM,FZWA,-6.121240139010001,23.569000244099996,2221,2,U,Africa/Lubumbashi,airport,OurAirports
+1020,Ndjili International Airport,Kinshasa,Congo,FIH,FZAA,-4.38575,15.4446,1027,1,N,Africa/Kinshasa,airport,OurAirports
+1021,Ndolo Airport,Kinshasa,Congo,NLO,FZAB,-4.32666015625,15.327500343323,915,1,N,Africa/Kinshasa,airport,OurAirports
+1022,Muanda Airport,Muanda,Congo,MNB,FZAG,-5.9308600425720215,12.351799964904785,89,1,N,Africa/Kinshasa,airport,OurAirports
+1023,Kitona Base Airport,Kitona Base,Congo,\N,FZAI,-5.918059825897217,12.447699546813965,394,1,N,Africa/Kinshasa,airport,OurAirports
+1024,Bandundu Airport,Bandoundu,Congo,FDU,FZBO,-3.3113200664520264,17.38170051574707,1063,1,N,Africa/Kinshasa,airport,OurAirports
+1025,Kikwit Airport,Kikwit,Congo,KKW,FZCA,-5.035769939422607,18.785600662231445,1572,1,N,Africa/Kinshasa,airport,OurAirports
+1026,Mbandaka Airport,Mbandaka,Congo,MDK,FZEA,0.0226000007242,18.2887001038,1040,1,N,Africa/Kinshasa,airport,OurAirports
+1027,Gbadolite Airport,Gbadolite,Congo,BDT,FZFD,4.253210067749023,20.975299835205078,1509,1,N,Africa/Kinshasa,airport,OurAirports
+1028,Gemena Airport,Gemena,Congo,GMA,FZFK,3.2353699207299997,19.771299362199997,1378,1,N,Africa/Kinshasa,airport,OurAirports
+1029,Kotakoli Airport,Kotakoli,Congo,KLI,FZFP,4.157639980316162,21.65089988708496,1801,1,N,Africa/Kinshasa,airport,OurAirports
+1030,Lisala Airport,Lisala,Congo,LIQ,FZGA,2.17066,21.496901,1509,1,N,Africa/Kinshasa,airport,OurAirports
+1031,Bangoka International Airport,Kisangani,Congo,FKI,FZIC,0.481638997793,25.3379993439,1417,2,U,Africa/Lubumbashi,airport,OurAirports
+1032,Matari Airport,Isiro,Congo,IRP,FZJH,2.8276100158691406,27.588300704956055,2438,2,U,Africa/Lubumbashi,airport,OurAirports
+1033,Bunia Airport,Bunia,Congo,BUX,FZKA,1.5657199621200562,30.220800399780273,4045,2,U,Africa/Lubumbashi,airport,OurAirports
+1034,Buta Zega Airport,Buta Zega,Congo,BZU,FZKJ,2.818350076675415,24.793699264526367,1378,2,U,Africa/Lubumbashi,airport,OurAirports
+1035,Bukavu Kavumu Airport,Bukavu/kavumu,Congo,BKY,FZMA,-2.3089799880981445,28.808799743652344,5643,2,U,Africa/Lubumbashi,airport,OurAirports
+1036,Goma International Airport,Goma,Congo,GOM,FZNA,-1.6708099842071533,29.238500595092773,5089,2,U,Africa/Kigali,airport,OurAirports
+1037,Kindu Airport,Kindu,Congo,KND,FZOA,-2.91917991638,25.915399551399997,1630,2,U,Africa/Lubumbashi,airport,OurAirports
+1038,Lubumbashi International Airport,Lubumashi,Congo,FBM,FZQA,-11.5913000107,27.5308990479,4295,2,U,Africa/Lubumbashi,airport,OurAirports
+1039,Kolwezi Airport,Kolwezi,Congo,KWZ,FZQM,-10.765899658203125,25.505699157714844,5007,2,U,Africa/Lubumbashi,airport,OurAirports
+1040,Kalemie Airport,Kalemie,Congo,FMI,FZRF,-5.8755598068237305,29.25,2569,2,U,Africa/Lubumbashi,airport,OurAirports
+1041,Kamina Base Airport,Kamina Base,Congo,KMN,FZSA,-8.642020225524902,25.252899169921875,3543,2,U,Africa/Lubumbashi,airport,OurAirports
+1042,Kananga Airport,Kananga,Congo,KGA,FZUA,-5.90005016327,22.4692001343,2139,2,U,Africa/Lubumbashi,airport,OurAirports
+1043,Mbuji Mayi Airport,Mbuji-mayi,Congo,MJM,FZWA,-6.121240139010001,23.569000244099996,2221,2,U,Africa/Lubumbashi,airport,OurAirports
 1044,Modibo Keita International Airport,Bamako,Mali,BKO,GABS,12.5335,-7.94994,1247,0,N,Africa/Bamako,airport,OurAirports
 1045,Gao Airport,Gao,Mali,GAQ,GAGO,16.24839973449707,-0.005456000100821257,870,0,N,Africa/Bamako,airport,OurAirports
 1046,Kayes Dag Dag Airport,Kayes,Mali,KYS,GAKY,14.481200218200684,-11.404399871826172,164,0,N,Africa/Bamako,airport,OurAirports
@@ -2737,8 +2737,8 @@
 2879,L'Espérance Airport,St. Martin,Guadeloupe,SFG,TFFG,18.099899291992,-63.047199249268,7,-4,U,\N,airport,OurAirports
 2881,Pointe-à-Pitre Le Raizet,Pointe-a-pitre,Guadeloupe,PTP,TFFR,16.265301,-61.531799,36,-4,U,America/Guadeloupe,airport,OurAirports
 2882,Point Salines International Airport,Point Salines,Grenada,GND,TGPY,12.004199981689453,-61.78620147705078,41,-4,U,America/Grenada,airport,OurAirports
-2883,Cyril E. King Airport,St. Thomas,Virgin Islands,STT,TIST,18.337299346923828,-64.97339630126953,23,-4,U,America/St_Thomas,airport,OurAirports
-2884,Henry E Rohlsen Airport,St. Croix Island,Virgin Islands,STX,TISX,17.701900482177734,-64.79859924316406,74,-4,U,America/St_Thomas,airport,OurAirports
+2883,Cyril E. King Airport,St. Thomas,United States Virgin Islands,STT,TIST,18.337299346923828,-64.97339630126953,23,-4,U,America/St_Thomas,airport,OurAirports
+2884,Henry E Rohlsen Airport,St. Croix Island,United States Virgin Islands,STX,TISX,17.701900482177734,-64.79859924316406,74,-4,U,America/St_Thomas,airport,OurAirports
 2885,Rafael Hernandez Airport,Aguadilla,Puerto Rico,BQN,TJBQ,18.49489974975586,-67.12940216064453,237,-4,U,America/Puerto_Rico,airport,OurAirports
 2886,Diego Jimenez Torres Airport,Fajardo,Puerto Rico,FAJ,TJFA,18.308900833129883,-65.66190338134766,64,-4,U,America/Puerto_Rico,airport,OurAirports
 2887,Fernando Luis Ribas Dominicci Airport,San Juan,Puerto Rico,SIG,TJIG,18.45680046081543,-66.09809875488281,10,-4,U,America/Puerto_Rico,airport,OurAirports
@@ -2956,7 +2956,7 @@
 3118,Savannakhet Airport,Savannakhet,Laos,ZVK,VLSK,16.55660057067871,104.76000213623047,509,7,U,Asia/Vientiane,airport,OurAirports
 3119,Sam Neua Airport,Sam Neua,Laos,NEU,VLSN,20.418399810791016,104.06700134277344,3281,7,U,Asia/Vientiane,airport,OurAirports
 3120,Wattay International Airport,Vientiane,Laos,VTE,VLVT,17.988300323500003,102.56300354,564,7,U,Asia/Vientiane,airport,OurAirports
-3121,Macau International Airport,Macau,Macau,MFM,VMMC,22.149599,113.592003,20,8,U,Asia/Macau,airport,OurAirports
+3121,Macau International Airport,Macau,Macao,MFM,VMMC,22.149599,113.592003,20,8,U,Asia/Macau,airport,OurAirports
 3122,Gautam Buddha Airport,Bhairawa,Nepal,BWA,VNBW,27.505685,83.416293,358,5.75,N,Asia/Katmandu,airport,OurAirports
 3124,Janakpur Airport,Janakpur,Nepal,JKR,VNJP,26.708799362199997,85.9224014282,256,5.75,N,Asia/Katmandu,airport,OurAirports
 3125,Tribhuvan International Airport,Kathmandu,Nepal,KTM,VNKT,27.6966,85.3591,4390,5.75,N,Asia/Katmandu,airport,OurAirports
@@ -3116,9 +3116,9 @@
 3306,Malacca Airport,Malacca,Malaysia,MKZ,WMKM,2.2633600235,102.251998901,35,8,N,Asia/Kuala_Lumpur,airport,OurAirports
 3307,Sultan Mahmud Airport,Kuala Terengganu,Malaysia,TGG,WMKN,5.3826398849487305,103.10299682617188,21,8,N,Asia/Kuala_Lumpur,airport,OurAirports
 3308,Penang International Airport,Penang,Malaysia,PEN,WMKP,5.297140121459961,100.2770004272461,11,8,N,Asia/Kuala_Lumpur,airport,OurAirports
-3309,Suai Airport,Suai,East Timor,UAI,WPDB,-9.30331039428711,125.28700256347656,96,9,U,Asia/Dili,airport,OurAirports
-3310,Presidente Nicolau Lobato International Airport,Dili,East Timor,DIL,WPDL,-8.54640007019,125.526000977,154,9,U,Asia/Dili,airport,OurAirports
-3311,Cakung Airport,Baucau,East Timor,BCH,WPEC,-8.489029884339999,126.401000977,1771,9,U,Asia/Dili,airport,OurAirports
+3309,Suai Airport,Suai,Timor-Leste,UAI,WPDB,-9.30331039428711,125.28700256347656,96,9,U,Asia/Dili,airport,OurAirports
+3310,Presidente Nicolau Lobato International Airport,Dili,Timor-Leste,DIL,WPDL,-8.54640007019,125.526000977,154,9,U,Asia/Dili,airport,OurAirports
+3311,Cakung Airport,Baucau,Timor-Leste,BCH,WPEC,-8.489029884339999,126.401000977,1771,9,U,Asia/Dili,airport,OurAirports
 3312,Sembawang Air Base,Sembawang,Singapore,\N,WSAG,1.4252599477767944,103.81300354003906,86,8,N,Asia/Singapore,airport,OurAirports
 3313,Paya Lebar Air Base,Paya Lebar,Singapore,QPG,WSAP,1.3604199886322021,103.91000366210938,65,8,N,Asia/Singapore,airport,OurAirports
 3314,Tengah Air Base,Tengah,Singapore,TGA,WSAT,1.38725996017,103.708999634,50,8,N,Asia/Singapore,airport,OurAirports
@@ -4313,7 +4313,7 @@
 5608,Orapa Airport,Orapa,Botswana,ORP,FBOR,-21.266701,25.3167,3100,2,U,Africa/Gaborone,airport,OurAirports
 5609,Shakawe Airport,Shakawe,Botswana,SWX,FBSW,-18.373899459838867,21.832599639892578,3379,2,U,Africa/Gaborone,airport,OurAirports
 5610,Limpopo Valley Airport,Tuli Lodge,Botswana,TLD,FBTL,-22.189199447599997,29.126899719199997,1772,2,U,Africa/Gaborone,airport,OurAirports
-5611,Ngot Nzoungou Airport,Loubomo,Congo (Brazzaville),DIS,FCPL,-4.20635,12.6599,1079,1,N,Africa/Brazzaville,airport,OurAirports
+5611,Ngot Nzoungou Airport,Loubomo,Congo,DIS,FCPL,-4.20635,12.6599,1079,1,N,Africa/Brazzaville,airport,OurAirports
 5612,Chipata Airport,Chipata,Zambia,CIP,FLCP,-13.558300018310547,32.58720016479492,3360,2,U,Africa/Lusaka,airport,OurAirports
 5613,Los Alamitos Army Air Field,Solwesi,Zambia,\N,KSLI,33.79000092,-118.052002,32,-8,U,America/Los_Angeles,airport,OurAirports
 5614,Iconi Airport,Moroni,Comoros,YVA,FMCN,-11.710800170899999,43.2439002991,33,3,U,Indian/Comoro,airport,OurAirports
@@ -4347,15 +4347,15 @@
 5643,Oranjemund Airport,Oranjemund,Namibia,OMD,FYOG,-28.5847,16.446699,14,1,S,Africa/Windhoek,airport,OurAirports
 5644,Swakopmund Airport,Swakopmund,Namibia,SWP,FYSM,-22.66189956665,14.568099975586,207,1,S,Africa/Windhoek,airport,OurAirports
 5645,Eros Airport,Windhoek,Namibia,ERS,FYWE,-22.612199783325195,17.080400466918945,5575,1,S,Africa/Windhoek,airport,OurAirports
-5646,Boma Airport,Boma,Congo (Kinshasa),BOA,FZAJ,-5.854000091552734,13.064000129699707,26,1,N,Africa/Kinshasa,airport,OurAirports
-5647,Tshimpi Airport,Matadi,Congo (Kinshasa),MAT,FZAM,-5.799610137939453,13.440400123596191,1115,1,N,Africa/Kinshasa,airport,OurAirports
-5648,Inongo Airport,Inongo,Congo (Kinshasa),INO,FZBA,-1.947219967842102,18.28580093383789,1040,1,N,Africa/Kinshasa,airport,OurAirports
-5649,Nioki Airport,Nioki,Congo (Kinshasa),NIO,FZBI,-2.7174999713897705,17.68470001220703,1043,1,N,Africa/Kinshasa,airport,OurAirports
-5650,Basango Mboliasa Airport,Kiri,Congo (Kinshasa),KRZ,FZBT,-1.434999942779541,19.02400016784668,1013,1,N,Africa/Kinshasa,airport,OurAirports
-5651,Basankusu Airport,Basankusu,Congo (Kinshasa),BSU,FZEN,1.2247200012207031,19.78890037536621,1217,1,N,Africa/Kinshasa,airport,OurAirports
-5652,Tshikapa Airport,Tshikapa,Congo (Kinshasa),TSH,FZUK,-6.43833,20.794701,1595,2,N,Africa/Lubumbashi,airport,OurAirports
-5653,Lodja Airport,Lodja,Congo (Kinshasa),LJA,FZVA,-3.4170000553131104,23.450000762939453,1647,2,N,Africa/Lubumbashi,airport,OurAirports
-5654,Ilebo Airport,Ilebo,Congo (Kinshasa),PFR,FZVS,-4.329919,20.590124,1450,2,N,Africa/Lubumbashi,airport,OurAirports
+5646,Boma Airport,Boma,Congo,BOA,FZAJ,-5.854000091552734,13.064000129699707,26,1,N,Africa/Kinshasa,airport,OurAirports
+5647,Tshimpi Airport,Matadi,Congo,MAT,FZAM,-5.799610137939453,13.440400123596191,1115,1,N,Africa/Kinshasa,airport,OurAirports
+5648,Inongo Airport,Inongo,Congo,INO,FZBA,-1.947219967842102,18.28580093383789,1040,1,N,Africa/Kinshasa,airport,OurAirports
+5649,Nioki Airport,Nioki,Congo,NIO,FZBI,-2.7174999713897705,17.68470001220703,1043,1,N,Africa/Kinshasa,airport,OurAirports
+5650,Basango Mboliasa Airport,Kiri,Congo,KRZ,FZBT,-1.434999942779541,19.02400016784668,1013,1,N,Africa/Kinshasa,airport,OurAirports
+5651,Basankusu Airport,Basankusu,Congo,BSU,FZEN,1.2247200012207031,19.78890037536621,1217,1,N,Africa/Kinshasa,airport,OurAirports
+5652,Tshikapa Airport,Tshikapa,Congo,TSH,FZUK,-6.43833,20.794701,1595,2,N,Africa/Lubumbashi,airport,OurAirports
+5653,Lodja Airport,Lodja,Congo,LJA,FZVA,-3.4170000553131104,23.450000762939453,1647,2,N,Africa/Lubumbashi,airport,OurAirports
+5654,Ilebo Airport,Ilebo,Congo,PFR,FZVS,-4.329919,20.590124,1450,2,N,Africa/Lubumbashi,airport,OurAirports
 5657,Outer Skerries Airport,Outer Skerries,United Kingdom,OUK,EGOU,60.4252,-0.75,76,0,E,Europe/London,airport,OurAirports
 5659,La Gomera Airport,La Gomera,Spain,GMZ,GCGM,28.029600143432617,-17.214599609375,716,0,E,Atlantic/Canary,airport,OurAirports
 5662,Sherbro International Airport,Bonthe,Sierra Leone,BTE,GFBN,7.5324201583862305,-12.518899917602539,14,0,N,Africa/Freetown,airport,OurAirports
@@ -5495,7 +5495,7 @@
 7301,Constanza - Expedición 14 de Junio National Airport,Constanza,Dominican Republic,COZ,MDCZ,18.907499313354,-70.721900939941,3950,-4,U,America/Santo_Domingo,airport,OurAirports
 7302,Negril Airport,Negril,Jamaica,NEG,MKNG,18.34280014038086,-78.33209991455078,9,-5,U,America/Jamaica,airport,OurAirports
 7307,José Aponte de la Torre Airport,Ceiba,Puerto Rico,NRR,TJRV,18.245300293,-65.6434020996,38,-4,A,America/Puerto_Rico,airport,OurAirports
-7309,Charlotte Amalie Harbor Seaplane Base,Charlotte Amalie,Virgin Islands,SPB,VI22,18.338600158691406,-64.9406967163086,0,-4,A,America/St_Thomas,airport,OurAirports
+7309,Charlotte Amalie Harbor Seaplane Base,Charlotte Amalie,United States Virgin Islands,SPB,VI22,18.338600158691406,-64.9406967163086,0,-4,A,America/St_Thomas,airport,OurAirports
 7311,D. Casimiro Szlapelis Airport,Alto Rio Senguer,Argentina,ARR,SAVR,-45.013599,-70.812202,2286,-3,N,America/Catamarca,airport,OurAirports
 7312,Jose De San Martin Airport,Jose de San Martin,Argentina,JSM,SAWS,-44.048599243199995,-70.4589004517,2407,-3,N,America/Catamarca,airport,OurAirports
 7313,Uyuni Airport,Uyuni,Bolivia,UYU,SLUY,-20.446300506599997,-66.8483963013,11136,-4,U,America/La_Paz,airport,OurAirports
@@ -6470,7 +6470,7 @@
 9104,Rancho San Simeon Airport,Cambria,United States,\N,66CA,35.60770034790039,-121.11000061035156,320,-8,A,America/Los_Angeles,airport,OurAirports
 9107,Yichun Mingyueshan Airport,Yichun,China,YIC,ZSYC,27.8025,114.3062,430,8,U,Asia/Shanghai,airport,OurAirports
 9120,Dinwiddie County Airport,Petersburg,United States,PTB,KPTB,37.183799743652,-77.507400512695,193,-5,A,America/New_York,airport,OurAirports
-9123,Kasongo Airport,Kasongo,Congo (Kinshasa),\N,FZOK,-4.5329999923706055,26.617000579833984,1785,2,U,Africa/Lubumbashi,airport,OurAirports
+9123,Kasongo Airport,Kasongo,Congo,\N,FZOK,-4.5329999923706055,26.617000579833984,1785,2,U,Africa/Lubumbashi,airport,OurAirports
 9124,McMurdo Station Pegasus Field,McMurdo Station,Antarctica,\N,NZPG,-77.9634017944336,166.52499389648438,18,12,Z,Antarctica/South_Pole,airport,OurAirports
 9125,Klatovy Airport,Klatovy,Czech Republic,\N,LKKT,49.41830062866211,13.321900367736816,1299,1,E,Europe/Prague,airport,OurAirports
 9126,Sheboygan County Memorial Airport,Sheboygan,United States,SBM,KSBM,43.76959991,-87.85140228,755,-6,A,America/Chicago,airport,OurAirports
@@ -6891,9 +6891,9 @@
 11180,Resende Airport,Resende,Brazil,REZ,SDRS,-22.4785003662,-44.4803009033,1320,-3,S,\N,airport,OurAirports
 11181,Saquarema Airport,Saquarema,Brazil,\N,SDSK,-22.92972183227539,-42.50694274902344,26,-3,S,\N,airport,OurAirports
 11182,Drumheller Municipal Airport,Drumheller,Canada,\N,CEG4,51.49639892578125,-112.7490005493164,2597,-7,A,\N,airport,OurAirports
-11193,Mwene-Ditu Airport,Mwene-Ditu,Congo (Kinshasa),\N,FZWE,-6.982999801635742,23.08300018310547,3198,1,U,\N,airport,OurAirports
-11194,Tunta Airport,Kabinda,Congo (Kinshasa),KBN,FZWT,-6.132999897,24.4829998016,2766,1,U,\N,airport,OurAirports
-11195,Ikela Airport,Ikela,Congo (Kinshasa),IKL,FZGV,-1.048109,23.372501,1283,1,U,\N,airport,OurAirports
+11193,Mwene-Ditu Airport,Mwene-Ditu,Congo,\N,FZWE,-6.982999801635742,23.08300018310547,3198,1,U,\N,airport,OurAirports
+11194,Tunta Airport,Kabinda,Congo,KBN,FZWT,-6.132999897,24.4829998016,2766,1,U,\N,airport,OurAirports
+11195,Ikela Airport,Ikela,Congo,IKL,FZGV,-1.048109,23.372501,1283,1,U,\N,airport,OurAirports
 11198,Aripuanã Airport,Aripuana,Brazil,AIR,SWRP,-10.188278,-59.457273,623,-4,S,\N,airport,OurAirports
 11199,Juruena Airport,Juruena,Brazil,JRN,SWJU,-10.305832862854004,-58.489444732666016,525,-4,S,\N,airport,OurAirports
 11200,Juína Airport,Juina,Brazil,JIA,SWJN,-11.419444,-58.701668,1083,-4,S,\N,airport,OurAirports
@@ -6904,13 +6904,13 @@
 11205,Tangará da Serra Airport,Tangara da Serra,Brazil,TGQ,SWTS,-14.661999702500001,-57.4435005188,1460,-4,S,\N,airport,OurAirports
 11206,Canarana Airport,Canarana,Brazil,CQA,SWEK,-13.574443817138672,-52.27055740356445,1314,-4,S,\N,airport,OurAirports
 11207,Vila Bela da Santíssima Trindade Airport,Vila Bela da Santissima Trindade ,Brazil,MTG,SWVB,-14.9942,-59.9458,660,-4,S,\N,airport,OurAirports
-11208,Bumbar Airport,Bumba,Congo (Kinshasa),BMB,FZFU,2.18278,22.481701,0,1,U,\N,airport,OurAirports
+11208,Bumbar Airport,Bumba,Congo,BMB,FZFU,2.18278,22.481701,0,1,U,\N,airport,OurAirports
 11209,Sobral Airport,Sobral,Brazil,\N,SNOB,-3.67889,-40.336802,210,-3,N,\N,airport,OurAirports
 11210,Arapiraca Airport,Arapiraca,Brazil,APQ,SNAL,-9.775360107421875,-36.62919998168945,886,-3,N,\N,airport,OurAirports
 11211,Cangapara Airport,Floriano,Brazil,FLB,SNQG,-6.8463897705078125,-43.077301025390625,689,-3,N,\N,airport,OurAirports
 11212,Picos Airport,Picos,Brazil,PCS,SNPC,-7.0620598793029785,-41.52370071411133,1050,-3,N,\N,airport,OurAirports
-11229,Beni Airport,Beni,Congo (Kinshasa),BNC,FZNP,0.575,29.4739,3517,1,U,\N,airport,OurAirports
-11230,Boende Airport,Boende,Congo (Kinshasa),BNB,FZGN,-0.21699999272823334,20.850000381469727,1168,1,U,\N,airport,OurAirports
+11229,Beni Airport,Beni,Congo,BNC,FZNP,0.575,29.4739,3517,1,U,\N,airport,OurAirports
+11230,Boende Airport,Boende,Congo,BNB,FZGN,-0.21699999272823334,20.850000381469727,1168,1,U,\N,airport,OurAirports
 11243,Montauk Airport,Montauk,United States,MTP,KMTP,41.0765,-71.920797,6,-4,A,\N,airport,OurAirports
 11255,Porter County Municipal Airport,Valparaiso IN,United States,VPZ,KVPZ,41.45399857,-87.00710297,770,-5,A,\N,airport,OurAirports
 11257,Dharavandhoo Airport,DHARAVANDHOO,Maldives,DRV,VRMD,5.1561,73.1302,6,5,N,\N,airport,OurAirports
@@ -6923,9 +6923,9 @@
 11274,Swan Hill Airport,Swan Hill,Australia,SWH,YSWH,-35.37580108642578,143.5330047607422,234,10,O,\N,airport,OurAirports
 11277,Turtle Island Seaplane Base,Turtle Island,Fiji,TTL,NFUL,-16.966,177.368,0,12,O,\N,airport,OurAirports
 11288,Dewadaru - Kemujan Island,Karimunjawa,Indonesia,KWB,WARU,-5.80091,110.47838,35,7,U,\N,airport,OurAirports
-11290,Kongolo Airport,Kongolo,Congo (Kinshasa),KOO,FZRQ,-5.39444,26.99,1850,1,U,\N,airport,OurAirports
+11290,Kongolo Airport,Kongolo,Congo,KOO,FZRQ,-5.39444,26.99,1850,1,U,\N,airport,OurAirports
 11291,Attopeu Airport,Attopeu,Laos,AOU,VLAP,14.814715357,106.821699142,344,7,N,\N,airport,OurAirports
-11292,Kahemba Airport,Kahemba,Congo (Kinshasa),\N,FZCF,-7.333000183105469,19.017000198364258,3425,1,U,\N,airport,OurAirports
+11292,Kahemba Airport,Kahemba,Congo,\N,FZCF,-7.333000183105469,19.017000198364258,3425,1,U,\N,airport,OurAirports
 11293,Francisco de Miranda Airport,Caracas,Venezuela,\N,SVFM,10.485033035299999,-66.8435134888,2739,-4,S,\N,airport,OurAirports
 11295,São Miguel do Oeste Airport,Sao Miguel do Oeste,Brazil,SQX,SSOE,-26.781600952148438,-53.503501892089844,2180,-3,S,\N,airport,OurAirports
 11299,Mason County Airport,Ludington,United States,LDM,KLDM,43.96250153,-86.40789795,646,-5,A,\N,airport,OurAirports
@@ -7420,7 +7420,7 @@
 13248,Torgau-Beilrode Airport,Gransee,Germany,\N,EDOG,51.570907,13.051641,0,1,E,\N,airport,OurAirports
 13249,Annobón Airport,San Antonio de Pale,Equatorial Guinea,NBN,FGAB,-1.410277,5.621944,82,1,N,\N,airport,OurAirports
 13257,Renk Airport,Huangshan,China,\N,HSRN,11.8324692723,32.810497283900006,1278,8,N,\N,airport,OurAirports
-13260,Oyo Ollombo Airport,Oyo,Congo (Brazzaville),OLL,FCOD,-1.226666,15.91,1073,1,N,\N,airport,OurAirports
+13260,Oyo Ollombo Airport,Oyo,Congo,OLL,FCOD,-1.226666,15.91,1073,1,N,\N,airport,OurAirports
 13263,Port Hardy Seaplane Base,Port Hardy,Canada,\N,CAW5,50.71670150756836,-127.48300170898438,0,-8,A,\N,airport,OurAirports
 13265,Tri-City Airport,Parsons,United States,PPF,KPPF,37.32989883,-95.5062027,900,-6,A,\N,airport,OurAirports
 13266,Boun Neau Airport,Phongsaly,Laos,PCQ,VLFL,21.6475,101.9,3050,7,N,\N,airport,OurAirports
@@ -7508,7 +7508,7 @@
 13437,Stratford Municipal Airport,Stratford,Canada,\N,CYSA,43.415599823,-80.93440246579999,1215,-5,A,\N,airport,OurAirports
 13438,Edmundston Airport,Edmundston,Canada,\N,CYES,47.4906005859375,-68.48190307617188,490,-4,A,\N,airport,OurAirports
 13439,Red Dog Airport,Red Dog,United States,RDB,PADG,68.03209686279999,-162.899002075,969,-9,A,\N,airport,OurAirports
-13447,Impfondo Airport,Impfondo,Congo (Brazzaville),ION,FCOI,1.6169999837875366,18.066999435424805,1099,1,N,\N,airport,OurAirports
+13447,Impfondo Airport,Impfondo,Congo,ION,FCOI,1.6169999837875366,18.066999435424805,1099,1,N,\N,airport,OurAirports
 13448,El Bayadh Airport,El Bayadh,Algeria,EBH,DAOY,33.721666666699996,1.0925,4493,1,N,\N,airport,OurAirports
 13451,Alzintan Airport,Zintan,Libya,ZIS,HLZN,31.774878,12.25006,2080,2,N,\N,airport,OurAirports
 13452,Monkey Bay Airport,Monkey Bay,Malawi,MYZ,FWMY,-14.083600044299999,34.9197006226,1580,2,N,\N,airport,OurAirports
