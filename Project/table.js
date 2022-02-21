@@ -1,4 +1,4 @@
-function table_maker(arr2){
+function table_maker(arr2,airlines, airportId,links2){
     //console.log("i'm in table")
     var columns = ["Airlines", "Flights"]
 
@@ -32,7 +32,6 @@ function table_maker(arr2){
                     .append("tr");
     var cells = rows.selectAll("td")
                     .data(function(row){
-                        console.log(row)
                         return columns.map(function(column){
                            // console.log(column)
                             
@@ -46,8 +45,13 @@ function table_maker(arr2){
                     .enter()
                     .append("td")
                     .text(function(d,i){
-                        console.log(d)
                         return d.value
+                    })
+                    .on("click",function(d){
+                        air_name= d.value
+                        iata = get_IATA(air_name,airlines)
+                        svg.selectAll("#flights_color").remove()
+                        outline_routes(iata,airportId,links2)
                     })
     
 }

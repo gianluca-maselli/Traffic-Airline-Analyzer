@@ -1,11 +1,9 @@
 
 var h = document.getElementById('svg_map').clientHeight
 var w = document.getElementById('svg_map').clientWidth
-//console.log(h,w)
-//menu 
+
 var h_r1 = document.getElementById('body').clientHeight
 var h_r2 = document.getElementById('body').clientWidth
-//console.log(h_r1,h_r2)
 
 var margin = { top:0, left:0, right:0, bottom:0},
         height = h,
@@ -38,34 +36,7 @@ var svg_air_inf = d3.select("#air_info").append("svg")
 var last_clicked = "" 
   
 var checkedValue = null; 
-    
-    /*var input = document.getElementsByClassName('flights');
-    for(i=0; input[i]; i++){
-        console.log(input[i].checked)
-        if(input[i].checked == true){
-             checkedValue = input[i].value;
-             console.log(checkedValue)
-             
-             break;
-        }
-    }
-    */
-    //var ibu = document.getElementById("but");
-    //console.log(ibu)
 
-/*
-d3.queue()
-    .defer(d3.json, "world.topojson")
-    .defer(d3.csv, "./dataset/airports2.csv")
-    .defer(d3.csv, "./dataset/routes2.csv")
-    .defer(d3.csv, "./dataset/airlines.csv")
-    .defer(d3.csv, "./dataset/worldCountry.csv")
-    .await(ready); */
-/*
-d3.queue()
-    .defer(d3.json, "world.topojson")
-    .await(ready1);
-*/
 d3.json("world.topojson",function(data) {
     ready1(data)
 });
@@ -440,20 +411,12 @@ function zoomed() {
         return Math.sqrt(dx2 + dy2);
     }
  
-    //maybe checkbox .....
- //   function switch_modality(val){
- //       if(val == "departures"){
-  //          links = drawFlights(routes2)
- //           console.log(links)}
- //       else{
- //           console.log("non ancora fatto")
- //       }
- //   }
 
 function f_click(d, links, airports){
     if(last_clicked != d || last_clicked == d ){
         last_clicked = ""
         svg.selectAll("#flights_d").remove()
+        svg.selectAll("#flights_color").remove()
         svg_air_inf.selectAll("*").remove()
         svg_bar.selectAll("*").remove()
         svg_heat.selectAll("*").remove()

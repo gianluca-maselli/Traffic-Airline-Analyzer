@@ -9,11 +9,13 @@ var svg_bar = d3.select("#barplot")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
-            .attr("transform","translate(" + margin.left + "," + margin.top + ")");
+            .attr("transform","translate(" + margin.left + "," + margin.top + ")")
 
-function barPlot(routes2, airlines, airportId){
+
+ function barPlot(routes2, airlines, airportId){
     links2 = drawFlights2(routes2)
     //console.log(links2[0])
+
   
     diary = []
     l = []
@@ -78,6 +80,11 @@ function barPlot(routes2, airlines, airportId){
             arr2.push(infos)
         }
     }
+
+    arr2.sort(function(b, a) {
+        return a["Flights"] - b["Flights"];
+      });
+
     
     //console.log(arr2)
 
@@ -92,7 +99,8 @@ function barPlot(routes2, airlines, airportId){
             }
         });
     });
-    //console.log(min, max)
+
+
 
     if(arr2.length>3){
         //BARPLOT DESIGN ----------------
@@ -100,10 +108,10 @@ function barPlot(routes2, airlines, airportId){
         var x = d3.scaleBand()
                     .range([ 0, width])
                     .domain(arr2.map(function(d) { 
-                    //console.log(d.Airlines)
+                       // console.log(d)
                         return d.Airlines;
                     }))
-                    .padding(0.7);
+                    .padding(0.5);
     
     
         svg_bar.append("g")
@@ -114,7 +122,24 @@ function barPlot(routes2, airlines, airportId){
             .attr("transform", "translate(-10,0)rotate(-45)")
             .style("text-anchor", "end")
             .on("mouseover", function (d) {
-                d3.select(this).attr("font-size","2em")
+                d3.select(this).transition()
+                    .ease(d3.easeLinear)
+                    .duration('0')
+                    .style('font-size', 11)
+                    .attr('fill', '#1c9099');
+            })
+            .on('mouseout', function(d) {
+                d3.select(this).transition()
+                  .ease(d3.easeLinear)
+                  .duration('0')
+                  .style('font-size', "0.6em")
+                  .attr('fill', '#000');
+              })
+            .on('click', function(d){
+                //console.log(d)
+                iata = get_IATA(d,airlines)
+                svg.selectAll("#flights_color").remove()
+                outline_routes(iata,airportId,links2)
             })
 
         // Add Y axis
@@ -140,12 +165,32 @@ function barPlot(routes2, airlines, airportId){
                     return height - y(d.Flights);
                 })
                 .attr("fill", "#1c9099")
+                .on("mouseover", function(d){
+                    Tooltip_heat.style("opacity", 1)
+                    d3.select(this).classed("selected_heat", true);
+                    
+                })
+                .on("mousemove", function(d){
+                    console.log(d)
+                    Tooltip_heat.html(" <p> Airline: " + d.Airlines + "</p> <p> Flights: " + d.Flights + "</p>")
+                                .style("left", (d3.event.pageX+20) + "px")		
+                                .style("top", (d3.event.pageY-30) + "px");
+                })
+                .on("mouseout", function(d){
+                    Tooltip_heat.style("opacity", 0)
+                    d3.select(this).classed("selected_heat", false);
+                })
+
+    
+        
+
+                    
     }
     else{
         var table = []
         var table_entries = {}
-        console.log(arr2)
-        table_maker(arr2)
+        //console.log(arr2)
+        table_maker(arr2,airlines, airportId,links2)
     }
 
 
@@ -184,3 +229,30 @@ function drawFlights2(flights_database){
     
     return link2;
 }
+function airlines_len(air_name){
+    var rand_name = ""
+    if(air_name.length > 11){
+        for(i=0; i<11; i++){
+            rand_name += air_name[i]
+        }
+        rand_name = rand_name+"..."
+        
+     }
+     else{
+         rand_name = air_name
+     }
+    
+    return rand_name
+}
+
+function get_IATA(airline,airlines){
+    for(i=0;i<airlines.length;i++){
+        air_name = airlines[i].Name
+        if(airline==air_name){
+            return airlines[i].IATA
+        }
+    }
+}
+
+
+
