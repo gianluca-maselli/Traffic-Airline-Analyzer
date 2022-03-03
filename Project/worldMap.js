@@ -16,7 +16,7 @@ var zoom = d3.zoom()
   
 var svg = d3.select("#map").append("svg")
                 .attr("id", "svg_div")
-                .attr("height",height + margin.top + margin.bottom)
+                .attr("height",height+ margin.left + margin.right)
                 .attr("width", width + margin.left + margin.right)
                 .call(zoom)
                 .append("g")
@@ -43,10 +43,9 @@ d3.json("world.topojson",function(data) {
 
 
 
-var projection = d3.geoMercator()
+var projection = //d3.geoEquirectangular()
+    d3.geoMercator()
     .scale(100)
-    .rotate([0, 0])
-    .center([0, 0])
     .translate([width/2, height/2])
     .precision(.1);
 
@@ -109,6 +108,7 @@ var Tooltip = d3.select("#map")
                             .style("opacity", 0.8)
                     }
 function ready1(data){
+    
     var countries = topojson.feature(data,data.objects.countries).features
     // MAP BUILDING ---------------
         svg.selectAll(".country_init")

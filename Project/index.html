@@ -91,16 +91,21 @@
 				
 				
 			}
-			#quad4{
+			#pca{
 				border: 3px solid black;
 				border-radius: 8px;
 				border-collapse: collapse;
-				width:42%;
-				
+				width:615px;
 				margin: 2px;
-				height:100%;
+				height:330px;
 				margin-left: 4px;
 				float: left;
+				
+			}
+			#pca_buttons{
+				margin: 2px;
+				font-family:Sans,Arial;
+				margin-left: 4px;
 			}
 			
 			
@@ -169,6 +174,11 @@
 			tr:last-of-type {
 				border-bottom: 1px solid #000000;
 			}
+			.dot:hover {
+				stroke: black;
+				stroke-width: 1px;
+				
+			}  
 			
 
 			
@@ -198,15 +208,11 @@
 				<input class="mCheckbox" id="check2" name ="check" type ="checkbox" value="continents" onclick="selectIt(this)" onchange="s=this.checked">Continents
 			</div>
 			<div id="svg_heat_div">
-				
 				<div id="svg_heatmap">
 				</div>
 				<div id = "svg_heat_legend"></div>
 			</div>
-
-			<div id="quad4">
-				4 of 4
-			</div>
+			<div id="pca"></div>
 		</div>
 		
 			
@@ -222,6 +228,13 @@
 	<script>
 		function  selectIt(id){
 			var myCheckbox = document.getElementsByName("check");
+			Array.prototype.forEach.call(myCheckbox,function(el){
+			  el.checked = false;
+			});
+			id.checked = true;
+		  }
+		function  selectIt2(id){
+			var myCheckbox = document.getElementsByName("check_pca");
 			Array.prototype.forEach.call(myCheckbox,function(el){
 			  el.checked = false;
 			});
@@ -248,8 +261,13 @@
 	<script type="text/javascript" src="notAv.js"></script> 
 	<script type="text/javascript" src="table.js"></script> 
 	<script type="text/javascript" src="heatmap.js"></script>
-	<script type="text/javascript" src="prova.js"></script>
-	<script type="text/javascript" src="airLineRoute.js"></script>    
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="airLineRoute.js"></script>
+	<script type="text/javascript" src="arrayPCA.js"></script> 
+	<script type="text/javascript" src="scatterPlotPCA.js"></script> 
+	<script type="text/javascript" src="worldStates.js"></script>
+      
+       
 
 
 	

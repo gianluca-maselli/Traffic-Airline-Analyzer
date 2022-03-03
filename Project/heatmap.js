@@ -856,6 +856,3 @@ function get_color_continent(dict_continent,country_name,worldCountry){
 function zoomed_heat() {
     svg_heat.attr("transform", "translate(" + d3.event.transform.x + "," + d3.event.transform.y + ") scale(" + d3.event.transform.k + ")");
 }
-function hello(links){
-    console.log(links)
-}

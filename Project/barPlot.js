@@ -171,7 +171,7 @@ var svg_bar = d3.select("#barplot")
                     
                 })
                 .on("mousemove", function(d){
-                    console.log(d)
+                    //console.log(d)
                     Tooltip_heat.html(" <p> Airline: " + d.Airlines + "</p> <p> Flights: " + d.Flights + "</p>")
                                 .style("left", (d3.event.pageX+20) + "px")		
                                 .style("top", (d3.event.pageY-30) + "px");
