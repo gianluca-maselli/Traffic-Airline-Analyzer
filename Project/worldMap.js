@@ -74,8 +74,8 @@ var Tooltip = d3.select("#map")
                     }
     var mousemove = function(d) {
                         Tooltip.html("<p> " + d.Airport_Name + " </p> <p> IATA: " + d.IATA + "</p> <p>" + d.City + ", " + d.Country + "</p>")
-                                .style("left", (d3.event.pageX+20) + "px")		
-                                .style("top", (d3.event.pageY+10) + "px");	
+                                .style("left", (d3.event.pageX+2) + "px")		
+                                .style("top", (d3.event.pageY-20) + "px");	
                         
                     }
     var mouseleave = function(d) {
@@ -106,7 +106,32 @@ var Tooltip = d3.select("#map")
                         d3.select(this)
                             .style("stroke", "#756bb1")
                             .style("opacity", 0.8)
-                    }
+    }
+
+ //for country_flights information
+ var country_mouseover = function(d) {
+    Tooltip
+        .style("opacity", 1)
+    d3.select(this)
+        .style("stroke", "blue")
+        .style("opacity", 1)
+}
+var country_mousemove = function(d) {
+    console.log(d)
+    Tooltip.html("<p> Source country: " + d[0][0] + "</p> <p> Destination country: " + d[0][1])
+            .style("left", (d3.event.pageX+10) + "px")		
+            .style("top", (d3.event.pageY+10) + "px");	
+    
+}
+var country_mouseleave = function(d) {
+    Tooltip
+        .style("opacity", 0)
+    d3.select(this)
+        .style("stroke", "#756bb1")
+        .style("opacity", 0.8)
+}
+
+//empy map initialization
 function ready1(data){
     
     var countries = topojson.feature(data,data.objects.countries).features
@@ -123,235 +148,6 @@ function ready1(data){
                 .style("stroke-width", "0.2")
                 .attr("fill", "#b8b8b8")
 }
-/*
-function ready(error, data, airports, routes2, airlines,worldCountry){
-    //console.log(data)
-    var countries = topojson.feature(data,data.objects.countries).features
-    //console.log(countries)
-
-    //AIRLINE ROUTES CONNECTION --------------------
-    links = drawFlights(routes2)
-    //console.log(links[0])
-    random_air = airports[Math.floor(Math.random() * airports.length)];
-    rand_name = air_len(random_air.Airport_Name)
-    rand_tot = tot_dep_arr(random_air.Airport_ID, links)
-    
-    
-    
-    /* IATA NON UNIVOCO, USARE ID AEREPORTO 
-    var j=0;
-    var k = 0;
-    for(l=0;l<airports.length;l++){
-        air_id = airports[l].Airport_ID
-        for(i=0;i<links.length;i++){
-           if(air_id == links[i][0][1]){
-                j++
-            }
-            if(air_id == links[i][0][3]){
-                k++
-            }
-        
-        }
-    }
-    var tot_dep = j
-    var tot_arr = k
-    console.log("dep: " + tot_dep, "arr: "+tot_arr)
-
-    var j=0;
-    var k = 0;
-    for(l=0;l<airports.length;l++){
-        air_iata = airports[l].IATA
-        for(i=0;i<links.length;i++){
-           if(air_iata == links[i][0][2]){
-                j++
-            }
-            if(air_iata == links[i][0][4]){
-                k++
-            }
-        
-    }
-    }
-    var tot_dep = j
-    var tot_arr = k
-    console.log("dep: " + tot_dep, "arr: "+tot_arr)
-    
-    
-    // MAP BUILDING ---------------
-    svg.selectAll(".country")
-        .data(countries)
-        .enter().append("path")
-        .attr("class", "country")
-        .attr("d",path) //coordinates of country borders
-        .style("stroke", "#fff")
-        .style("stroke-width", "0.2")
-        .attr("fill", "#b8b8b8")
-            //.attr("fill", function(d){
-              // return d.properties.color --> COLOR EACH COUNTRY DIFFENTLY
-              
-           // })
-        
-        .on("mouseover", function(d){
-            d3.select(this).classed("selected", true);
-                //qui qualcosa si può inserire per quando si cliccal una nazione
-                // si potrebbe zoommare sulla nazione e vedere gli aereoporti ed i suoi collegamenti
-                // le classi si gestiscono poi nel css per dare effetti
-
-            })
-            .on("mouseout", function(d){
-                d3.select(this).classed("selected", false);
-    
-            })
-            //aggiungere ora gli aereoporti
-           // .on("onclick", function(d){
-            //    svg.call(zoom);
-           // })
-            
-            //console.log(airports)
-
-            //COUNTRY NAMES --------
-            /*
-            svg.selectAll("country_names")
-                .data(countries)
-                .enter()
-                .append("text")
-                .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
-                .attr("dy", ".35em")
-                .text(function(d) { return d.properties.name; });
-            
-        
-            //AIRPORTS POINTS --------------------------
-            svg.selectAll(".world-airports")
-                .data(airports)
-                .enter()
-                .append("circle")
-                    .attr("r", 0.2)
-                    .attr("cx", function(d){
-                    //define latitude to map in the screen
-                    //the projection is needed to pass from the real world to the flat one on the screen
-                        var coords = projection([d.Longitude, d.Latitude])
-                    //console.log(coords)
-                        return coords[0] //longitude;
-                        })
-                    .attr("cy", function(d){
-                        var coords = projection([d.Longitude, d.Latitude])
-            
-                        return coords[1] //latitude;
-                    })
-                .on("mouseover", mouseover)
-                .on("mousemove", mousemove)
-                .on("mouseleave", mouseleave)
-                .on("click", function(d){
-                    
-                    //continuare da qui
-                    tot_d_a = f_click(d,links,airports)
-                   // console.log(tot_d_a)
-                    if(tot_d_a[0]>0){
-                        //barplot design
-                        barPlot(routes2, airlines,d.Airport_ID)
-                        heatMap(data,links,d.Airport_ID, airports,worldCountry)
-                    }
-                    else{
-                        missing()
-                    }
-                  })
-            
-            //FIRST AIRPORT RANDOMLY INITIALIZED
-            svg_air_inf
-                .append("rect")
-                .attr("id", "info_box")
-                .attr("x", 5)
-                .attr("y", 2)
-                .attr("width",165)
-                .attr("height", 250)
-                .attr("rx", 8)
-                .attr('fill','#3182bd')
-                .attr("opacity",0.7)
-                .attr('stroke-width',2)
-                .attr('stroke','black')
-                .style("border-width", "5px")
-                .style("border-radius", "5px")
-                .style("padding", "5px")
-            svg_air_inf.append("text")
-                .style("fill", "#f0f0f0")
-                .attr("x",9)
-                .attr("y", 30)
-                .style("font-size", "15px")
-                .text("Airport Name:")
-            svg_air_inf.append("text")
-                .style("fill", "#f0f0f0")
-                .attr("x",9)
-                .attr("y", 50)
-                .style("font-size", "15px")
-                .text(rand_name)
-            
-            svg_air_inf.append("text")
-                .style("fill", "#f0f0f0")
-                .attr("x",9)
-                .attr("y", 80)
-                .style("font-size", "15px")
-                .text("IATA: " + random_air.IATA)
-                    
-            svg_air_inf.append("text")
-                .style("fill", "#f0f0f0")
-                .attr("x", 9)
-                .attr("y", 110)
-                .style("font-size", "15px")
-                .text("City: ")
-                    
-            svg_air_inf.append("text")
-                .style("fill", "#f0f0f0")
-                .attr("x", 9)
-                .attr("y", 130)
-                .style("font-size", "15px")
-                .text(random_air.City)
-                    
-            svg_air_inf.append("text")
-                .style("fill", "#f0f0f0")
-                .attr("x", 9)
-                .attr("y", 160)
-                .style("font-size", "15px")
-                .text("Country: ")
-                    
-            svg_air_inf.append("text")
-                .style("fill", "#f0f0f0")
-                .attr("x", 9)
-                .attr("y", 180)
-                .style("font-size", "15px")
-                .text(random_air.Country)
-            svg_air_inf.append("text")
-                .style("fill", "#f0f0f0")
-                .attr("x", 9)
-                .attr("y", 210)
-                .style("font-size", "15px")
-                .text("Total departures: " + rand_tot[0])
-                    
-            svg_air_inf.append("text")
-                .style("fill", "#f0f0f0")
-                .attr("x", 9)
-                .attr("y", 230)
-                .style("font-size", "15px")
-                .text("Total arrivals: " + rand_tot[1])
-
-                
-                
-                
-                
-                        
-            
-            //FLIGH PATHS creation ---------------------------       
-        //    svg.selectAll(".flights")
-        //        .data(links)
-        //        .enter()
-        //        .append("path")
-        //            .attr("d", function(d){ return path(d[1])})
-        //            .style("fill", "none")
-        //            .style("stroke", "#756bb1")
-        //            .style("stroke-width", 0.1)
-        //        .on("mouseover", f_mouseover)
-        //        .on("mousemove", f_mousemove)
-        //        .on("mouseleave", f_mouseleave)
-    }
-    */
 function zoomed() {
     svg.attr("transform", "translate(" + d3.event.transform.x + "," + d3.event.transform.y + ") scale(" + d3.event.transform.k + ")");
         
@@ -420,6 +216,7 @@ function f_click(d, links, airports){
         svg_air_inf.selectAll("*").remove()
         svg_bar.selectAll("*").remove()
         svg_heat.selectAll("*").remove()
+        svg_scatter.selectAll("*").remove()
             
     }
     airport_info(d,airports)
@@ -448,7 +245,7 @@ function departures(air_id,links){
             .append("path")
             .attr("id","flights_d")
             .attr("d", function(x) { 
-            
+                //console.log(x[1])
                 return path(x[1])
             })
                 .style("fill", "none")
@@ -631,4 +428,179 @@ function air_len(air_name){
     return rand_name
 }
 
+//COUNTRY FUNCTIONS ------------------------------------------------
+function c_click(d,links, airports,centroids_dict){
+    if(last_clicked != d || last_clicked == d ){
+        last_clicked = ""
+        svg.selectAll("#flights_c").remove()
+    }
+    
+    c_departures(d.country,links, airports,centroids_dict)
+    //arrivals(d.IATA, links)
+    // all_flights(d.IATA, links)
+    //var tot = tot_dep_arr(d.Airport_ID,links)
+    last_clicked = d
+    //return tot;
+}
 
+
+
+
+
+function c_departures(country,links, airports,centroids_dict){
+    
+    links_country = country_departures(country,links, airports,centroids_dict)
+    //console.log(links_country)
+    arr_comodo = []
+    for(i=0;i<83;i++){
+        arr_comodo[i]=links_country[i]
+    }
+    //console.log(arr_comodo)
+       
+    svg.selectAll("air_flights_c")
+            .data(links_country)
+            .enter()
+            .append("g")
+            .append("path")
+            .attr("id","flights_c")
+            .attr("d", function(s) { 
+                //console.log(s[1])
+                return path(s[1])
+            })
+            .style("fill", "none")
+            .style("stroke", "#756bb1")
+            .style("stroke-width", 0.1)
+            .on("mouseover", country_mouseover)
+            .on("mousemove", country_mousemove)
+            .on("mouseleave", country_mouseleave)
+}
+
+function country_departures(country,links, airports,centroids_dict){
+    country_airports = get_country_airports(country,airports)
+    var source_country = {
+        'name':country,
+        'airports':country_airports
+    }
+    var infos = []
+    var source_air_country_Dest = {}
+    for(l=0;l<source_country.airports.length;l++){
+        source_air_id = source_country.airports[l]
+        var dest_airs = []
+        for(i=0;i<links.length;i++){
+            source_id = links[i][0][1]
+            if(source_air_id == source_id){
+                dest_airs.push(links[i][0][3])
+            }
+            
+        }
+        source_air_country_Dest = {
+            'id_source_c_air': source_air_id,
+            'dest_air_ids': dest_airs
+        }
+        infos.push(source_air_country_Dest)
+    }
+    //console.log(infos)
+    all_dest = []
+    notFound = []
+    notFound1 = []
+    for(j=0;j<infos.length;j++){
+        arr = infos[j].dest_air_ids
+        for(v=0;v<arr.length;v++){
+            if(isNaN(arr[v])){continue;}
+            country_dest = get_countryByIdAir(arr[v],airports)
+            if(country_dest == null){notFound.push(arr[v])}
+            console.log(arr[v],country_dest)
+            all_dest.push(country_dest)
+            //}
+            
+        }
+    }
+    //console.log(all_dest)
+    console.log(notFound)
+    console.log(notFound1)
+    var destination_countries = []
+    $.each(all_dest, function(i, el){
+        if($.inArray(el, destination_countries) === -1) destination_countries.push(el);
+    });
+    console.log(destination_countries)
+    
+    
+    source_country_centroids = get_Country_centroids(country,centroids_dict)
+    
+    //console.log(source_country_centroids)
+    path_country = []
+    link = []
+    for(n=0;n<destination_countries.length;n++){
+        dest_c = destination_countries[n]
+        if(dest_c == 'Burma'){ 
+            dest_c = 'Myanmar'}
+        if(dest_c == 'Virgin Islands'){ 
+            dest_c = 'United States Virgin Islands'}
+        if(dest_c == 'South Sudan'){ 
+                dest_c = 'Sudan'}
+        if(dest_c == 'Cocos (Keeling) Islands'){
+            dest_c = 'Cocos Islands'
+        }     
+        centroid_dest = get_Country_centroids(dest_c,centroids_dict)
+        source_dest = [country,dest_c]
+        topush = {type: "LineString", coordinates: [source_country_centroids, centroid_dest]}
+        path_country.push(topush)
+        link[n] = [source_dest, topush]
+    }
+    console.log(link)
+    return link
+    
+    
+
+}
+
+function get_countries_airports(countries,airports){
+     
+    country_airports = {}
+    list_country_airps = []
+    
+    for(i=0;i<countries.length;i++){
+        c_name = countries[i].properties.name
+        airps = get_country_airports(c_name,airports)
+        country_airports = {
+            'country':c_name,
+            'airports':airps
+        }
+        list_country_airps.push(country_airports)
+        
+    }
+    
+    //console.log(list_country_airps)
+}
+function get_country_airports(country_name, airports){
+    airps = []
+    for(s=0;s<airports.length;s++){
+        air_country = airports[s].Country
+        if(country_name == air_country){
+            airps.push(airports[s].Airport_ID)
+        }
+    }
+    return airps
+}
+function get_countryByIdAir(id_air,airports){
+    var dest_country
+    for(i=0;i<airports.length;i++){
+        id_A = airports[i].Airport_ID
+        if(id_air == id_A){
+           dest_country = airports[i].Country
+        }
+    }
+    return dest_country
+}
+function get_Country_centroids(country,centroids_dict){
+    var centroid
+    for(i=0;i<centroids_dict.length;i++){
+        if(country == centroids_dict[i].country){
+            centroid_x = centroids_dict[i].longitude
+            centroid_y = centroids_dict[i].latitude
+            //console.log(country,centroid_x,centroid_y)
+            centroid = [centroid_x,centroid_y]
+        }
+    }
+    return centroid
+}

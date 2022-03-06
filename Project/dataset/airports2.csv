@@ -2480,6 +2480,7 @@
 2607,Governador Jorge Teixeira de Oliveira Airport,Porto Velho,Brazil,PVH,SBPV,-8.70928955078125,-63.90230178833008,290,-4,S,America/Boa_Vista,airport,OurAirports
 2609,Plácido de Castro Airport,Rio Branco,Brazil,RBR,SBRB,-9.868888854980469,-67.89805603027344,633,-5,S,America/Rio_Branco,airport,OurAirports
 2610,Guararapes - Gilberto Freyre International Airport,Recife,Brazil,REC,SBRF,-8.126489639282227,-34.92359924316406,33,-3,S,America/Fortaleza,airport,OurAirports
+2611,Rio Grande,Rio Grande,Brazil,RIG,SBRG,-32.082617,-52.166542,27,-3,S,America/Sao_Paulo,unknown,Legacy
 2612,Santos Dumont Airport,Rio De Janeiro,Brazil,SDU,SBRJ,-22.910499572799996,-43.1631011963,11,-3,S,America/Sao_Paulo,airport,OurAirports
 2613,Leite Lopes Airport,Ribeirao Preto,Brazil,RAO,SBRP,-21.136388778686523,-47.776668548583984,1806,-3,S,America/Sao_Paulo,airport,OurAirports
 2614,Santa Cruz Air Force Base,Rio De Janeiro,Brazil,SNZ,SBSC,-22.9324,-43.719101,10,-3,S,America/Sao_Paulo,airport,OurAirports
@@ -4001,6 +4002,7 @@
 4242,Tanna Airport,Tanna,Vanuatu,TAH,NVVW,-19.45509910583496,169.2239990234375,19,11,U,Pacific/Efate,airport,OurAirports
 4244,Paulatuk (Nora Aliqatchialuk Ruben) Airport,Paulatuk,Canada,YPC,CYPC,69.3608381154,-124.075469971,15,-7,A,America/Edmonton,airport,OurAirports
 4247,El Trompillo Airport,Santa Cruz,Bolivia,SRZ,SLET,-17.8115997314,-63.1715011597,1371,-4,U,America/La_Paz,airport,OurAirports
+4248,Kulusuk,Kulusuk,Greenland,KUS,\N,65.566667,-37.1166667,112,-3,E,America/Godthab,unknown,User
 4249,Juancho E. Yrausquin Airport,Saba,Netherlands Antilles,SAB,TNCS,17.645000457763672,-63.220001220703125,60,-4,U,America/Curacao,airport,OurAirports
 4250,Eagle County Regional Airport,Vail,United States,EGE,KEGE,39.64260101,-106.9179993,6548,-7,A,America/Denver,airport,OurAirports
 4252,Stokmarknes Skagen Airport,Stokmarknes,Norway,SKN,ENSK,68.578826904297,15.033416748047,11,1,E,Europe/Oslo,airport,OurAirports
@@ -4012,6 +4014,7 @@
 4261,Flagstaff Pulliam Airport,Flagstaff,United States,FLG,KFLG,35.13850021,-111.6709976,7014,-7,N,America/Phoenix,airport,OurAirports
 4262,Lake Tahoe Airport,South Lake Tahoe,United States,TVL,KTVL,38.89390182495117,-119.99500274658203,6264,-8,A,America/Los_Angeles,airport,OurAirports
 4263,Joslin Field Magic Valley Regional Airport,Twin Falls,United States,TWF,KTWF,42.4818,-114.487999,4154,-7,A,America/Denver,airport,OurAirports
+4264,Monaco,Monaco,Monaco,MCM,\N,43.73333333,7.41666666,0,1,E,Europe/Monaco,unknown,User
 4265,Martha's Vineyard Airport,Vineyard Haven MA,United States,MVY,KMVY,41.3931007385,-70.6143035889,67,-5,A,America/New_York,airport,OurAirports
 4268,Concord Municipal Airport,Concord NH,United States,CON,KCON,43.20270157,-71.50229645,342,-5,A,America/New_York,airport,OurAirports
 4270,Groton New London Airport,Groton CT,United States,GON,KGON,41.330101013183594,-72.04509735107422,9,-5,A,America/New_York,airport,OurAirports
@@ -4111,9 +4114,11 @@
 4382,Johnston Atoll Airport,Johnston Island,Johnston Atoll,JON,PJON,16.7285995483,-169.533996582,7,-10,U,Pacific/Johnston,airport,OurAirports
 4383,Smith Field,Fort Wayne IN,United States,SMD,KSMD,41.14339828,-85.15280151,835,-5,A,America/New_York,airport,OurAirports
 4384,California Redwood Coast-Humboldt County Airport,Arcata CA,United States,ACV,KACV,40.978101,-124.109,221,-8,A,America/Los_Angeles,airport,OurAirports
+4385,Camp Mabry Austin City,Austin TX,United States,ATT,KATT,30.31666,-97.7666,0,-6,A,America/Chicago,unknown,User
 4386,Albert J Ellis Airport,Jacksonville NC,United States,OAJ,KOAJ,34.8292007446,-77.61209869380001,94,-5,A,America/New_York,airport,OurAirports
 4387,Tuscaloosa Regional Airport,Tuscaloosa AL,United States,TCL,KTCL,33.220600128174,-87.611396789551,170,-6,A,America/Chicago,airport,OurAirports
 4388,Dubuque Regional Airport,Dubuque IA,United States,DBQ,KDBQ,42.40200043,-90.70950317,1077,-6,A,America/Chicago,airport,OurAirports
+4389,Forde Bringeland,Forde,Norway,FDE,\N,61.392,5.763,1034,1,E,Europe/Oslo,unknown,User
 4390,Shun Tak Heliport,Hong Kong,Hong Kong,HHP,VHST,22.2893714905,114.152153015,107,8,N,Asia/Hong_Kong,airport,OurAirports
 5404,Uru Harbour Airport,Atoifi,Solomon Islands,ATD,AGAT,-8.87333,161.011002,0,11,U,Pacific/Guadalcanal,airport,OurAirports
 5405,Gwaunaru'u Airport,Auki,Solomon Islands,AKS,AGGA,-8.70257,160.682007,5,11,U,Pacific/Guadalcanal,airport,OurAirports
@@ -4164,6 +4169,8 @@
 5450,Grímsey Airport,Grímsey,Iceland,GRY,BIGR,66.5458,-18.0173,66,0,N,Atlantic/Reykjavik,airport,OurAirports
 5452,Thorshofn Airport,Thorshofn,Iceland,THO,BITN,66.21849822998047,-15.335599899291992,65,0,N,Atlantic/Reykjavik,airport,OurAirports
 5453,Vopnafjörður Airport,Vopnafjörður,Iceland,VPN,BIVO,65.72059631347656,-14.850600242614746,16,0,N,Atlantic/Reykjavik,airport,OurAirports
+5454,Caye Caulker Airport,Caye Caulker,Belize,CUK,\N,17.7347,-88.0325,1,-6,U,America/Belize,airport,User
+5455,Punta Gorda Airport,Punta Gorda,Belize,PND,\N,16.1024,-88.8083,7,-6,U,America/Belize,airport,User
 5456,Whistler/Green Lake Water Aerodrome,Whistler,Canada,YWS,CAE5,50.1436004639,-122.948997498,2100,-8,A,America/Vancouver,airport,OurAirports
 5457,Anahim Lake Airport,Anahim Lake,Canada,YAA,CAJ4,52.45249938964844,-125.3030014038086,3635,-8,A,America/Vancouver,airport,OurAirports
 5458,Williams Harbour Airport,Williams Harbour,Canada,YWM,CCA6,52.566898345947266,-55.784698486328125,70,-3.5,A,America/St_Johns,airport,OurAirports
@@ -4183,6 +4190,9 @@
 5472,Chisasibi Airport,Chisasibi,Canada,YKU,CSU2,53.805599212646484,-78.91690063476562,43,-5,A,America/Toronto,airport,OurAirports
 5473,Tête-à-la-Baleine Airport,Tête-à-la-Baleine,Canada,ZTB,CTB6,50.674400329589844,-59.38359832763672,107,-4,A,America/Blanc-Sablon,airport,OurAirports
 5474,La Tabatière Airport,La Tabatière,Canada,ZLT,CTU5,50.8307991027832,-58.97560119628906,102,-4,A,America/Blanc-Sablon,airport,OurAirports
+5475,Nantong Airport,Nantong,China,NTG,\N,32.0708,120.976,0,8,U,Asia/Shanghai,airport,User
+5476,Apartadó Airport,Apartadó,Colombia,\N,\N,7.033,-77.2,0,-5,U,America/Bogota,airport,User
+5477,Tarapacá Airport,Tarapacá,Colombia,TCD,\N,-2.867,-69.733,0,-5,U,America/Bogota,airport,User
 5478,Cat Lake Airport,Cat Lake,Canada,YAC,CYAC,51.72719955444336,-91.82440185546875,1344,-6,A,America/Winnipeg,airport,OurAirports
 5479,Fort Frances Municipal Airport,Fort Frances,Canada,YAG,CYAG,48.65420150756836,-93.439697265625,1125,-6,A,America/Winnipeg,airport,OurAirports
 5480,Kasabonika Airport,Kasabonika,Canada,XKS,CYAQ,53.52470016479492,-88.6427993774414,672,-5,A,America/Toronto,airport,OurAirports
@@ -4304,6 +4314,7 @@
 5597,Ängelholm-Helsingborg Airport,Ängelholm,Sweden,AGH,ESTA,56.29610061645508,12.847100257873535,68,1,E,Europe/Stockholm,airport,OurAirports
 5598,Storuman Airport,Mohed,Sweden,SQO,ESUD,64.96089935302734,17.69659996032715,915,1,E,Europe/Stockholm,airport,OurAirports
 5599,Hemavan Airport,Hemavan,Sweden,HMV,ESUT,65.80609893798828,15.082799911499023,1503,1,E,Europe/Stockholm,airport,OurAirports
+5601,Shire Inda Selassie Airport,Shire Indasilase,Ethiopia,SHC,\N,14.0781,38.2725,6207,3,U,Africa/Addis_Ababa,airport,User
 5602,Ventspils International Airport,Ventspils,Latvia,VNT,EVVA,57.35779953,21.5442008972,19,2,E,Europe/Riga,airport,OurAirports
 5603,Rand Airport,Johannesburg,South Africa,QRA,FAGM,-26.2425003052,28.1511993408,5483,2,U,Africa/Johannesburg,airport,OurAirports
 5604,Kruger Mpumalanga International Airport,Mpumalanga,South Africa,MQP,FAKN,-25.3831996918,31.1056003571,2829,2,U,Africa/Johannesburg,airport,OurAirports
@@ -4405,6 +4416,7 @@
 5709,Arua Airport,Arua,Uganda,RUA,HUAR,3.049999952316284,30.91699981689453,3951,3,U,Africa/Kampala,airport,OurAirports
 5710,Gulu Airport,Gulu,Uganda,ULU,HUGU,2.8055601119995117,32.27180099487305,3510,3,U,Africa/Kampala,airport,OurAirports
 5711,Diu Airport,Diu,India,DIU,VA1P,20.71310043334961,70.92109680175781,31,5.5,N,Asia/Calcutta,airport,OurAirports
+5712,Gheshm Airport,Gheshm,Iran,\N,\N,26.9487,56.2688,100,3.5,E,Asia/Tehran,airport,User
 5714,Aberdeen Regional Airport,Aberdeen,United States,ABR,KABR,45.449100494384766,-98.42179870605469,1302,-6,A,America/Chicago,airport,OurAirports
 5715,Southwest Georgia Regional Airport,Albany,United States,ABY,KABY,31.535499572753906,-84.19450378417969,197,-5,A,America/New_York,airport,OurAirports
 5716,Athens Ben Epps Airport,Athens,United States,AHN,KAHN,33.94860076904297,-83.32630157470703,808,-5,A,America/New_York,airport,OurAirports
@@ -4492,6 +4504,8 @@
 5801,Süleyman Demirel International Airport,Isparta,Turkey,ISE,LTFC,37.8554000854,30.368400573699997,2835,3,E,Europe/Istanbul,airport,OurAirports
 5802,Balıkesir Körfez Airport,Balikesir Korfez,Turkey,EDO,LTFD,39.554599762,27.0137996674,50,3,E,Europe/Istanbul,airport,OurAirports
 5803,Samsun Çarşamba Airport,Samsun,Turkey,SZF,LTFH,41.254501,36.567101,18,3,E,Europe/Istanbul,airport,OurAirports
+5804,Misratah Airport,Misratah,Libya,MRA,\N,32.325,15.061,60,2,N,Africa/Tripoli,airport,User
+5805,Ubari Airport,Ubari,Libya,QUB,\N,26.5675,12.8231,1387,2,N,Africa/Tripoli,airport,User
 5806,Žilina Airport,Žilina,Slovakia,ILZ,LZZI,49.231498718299996,18.6135005951,1020,1,E,Europe/Bratislava,airport,OurAirports
 5807,JAGS McCartney International Airport,Cockburn Town,Turks and Caicos Islands,GDT,MBGT,21.444499969482422,-71.14230346679688,13,-4,U,America/Grand_Turk,airport,OurAirports
 5808,Middle Caicos Airport,Middle Caicos,Turks and Caicos Islands,MDS,MBMC,21.82602,-71.8025,9,-4,U,America/Grand_Turk,airport,OurAirports
@@ -4523,6 +4537,7 @@
 5851,Port-de-Paix Airport,Port-de-Paix,Haiti,PAX,MTPX,19.9335994720459,-72.84860229492188,9,-5,U,America/Port-au-Prince,airport,OurAirports
 5852,Cayo Coco Airport,Cayo Coco,Cuba,\N,MUOC,22.513200759900002,-78.51100158690001,6,-5,U,America/Havana,airport,OurAirports
 5853,Alberto Delgado Airport,Trinidad,Cuba,TND,MUTD,21.788299560546875,-79.99720001220703,125,-5,U,America/Havana,airport,OurAirports
+5855,Long Banga Airport,Long Banga,Malaysia,LBP,\N,3.18495,115.454,750,8,N,Asia/Kuala_Lumpur,airport,User
 5856,Congo Town Airport,Andros,Bahamas,COX,MYAK,24.158701,-77.589798,15,-5,U,America/Nassau,airport,OurAirports
 5857,Arthur's Town Airport,Arthur's Town,Bahamas,ATC,MYCA,24.6294,-75.673797,18,-5,U,America/Nassau,airport,OurAirports
 5858,New Bight Airport,Cat Island,Bahamas,TBI,MYCB,24.3153,-75.452301,5,-5,U,America/Nassau,airport,OurAirports
@@ -4620,6 +4635,10 @@
 5952,Sulaymaniyah International Airport,Sulaymaniyah,Iraq,ISU,ORSU,35.5617485046,45.316738128699996,2494,3,U,Asia/Baghdad,airport,OurAirports
 5953,Kamishly Airport,Kamishly,Syria,KAC,OSKL,37.020599365234375,41.19139862060547,1480,2,E,Asia/Damascus,airport,OurAirports
 5954,Sayun International Airport,Sayun Intl,Yemen,GXF,OYSY,15.9660997391,48.78829956049999,2097,3,U,Asia/Aden,airport,OurAirports
+5955,Bahia Piña Airport,Bahia Piña,Panama,BFQ,\N,7.583,-78.2,14,-5,U,America/Panama,airport,User
+5956,EL Real Airport,El Real,Panama,ELE,\N,8.133,-77.7,57,-5,U,America/Panama,airport,User
+5957,Contadora Airport,Contadora Island,Panama,OTD,\N,8.62876,-79.0347,14,-5,U,America/Panama,airport,User
+5958,Sambu Airport,Boca de Sábalo,Panama,SAX,\N,8.017,-78.2,32,-5,U,America/Panama,airport,User
 5959,Adak Airport,Adak Island,United States,ADK,PADK,51.87799835205078,-176.64599609375,18,-10,A,America/Adak,airport,OurAirports
 5960,Gustavus Airport,Gustavus,United States,GST,PAGS,58.4253006,-135.7070007,35,-9,A,America/Anchorage,airport,OurAirports
 5961,Skagway Airport,Skagway,United States,SGY,PAGY,59.46009826660156,-135.3159942626953,44,-9,A,America/Anchorage,airport,OurAirports
@@ -4631,7 +4650,20 @@
 5967,Aniak Airport,Aniak,United States,ANI,PANI,61.581600189208984,-159.54299926757812,88,-9,A,America/Anchorage,airport,OurAirports
 5968,Chevak Airport,Chevak,United States,VAK,PAVA,61.5409,-165.6005,75,-9,A,America/Anchorage,airport,OurAirports
 5969,Wrangell Airport,Wrangell,United States,WRG,PAWG,56.48429871,-132.3699951,49,-9,A,America/Anchorage,airport,OurAirports
+5970,Tadji Airport,Aitape,Papua New Guinea,ATP,\N,-3.18985,142.43,48,10,U,Pacific/Port_Moresby,airport,User
+5971,Gasmata Island Airport,Gasmata Island,Papua New Guinea,GMI,\N,-6.27111,150.331,23,10,U,Pacific/Port_Moresby,airport,User
+5972,Ihu Airport,Ihu,Papua New Guinea,IHU,\N,-7.89756,145.396,47,10,U,Pacific/Port_Moresby,airport,User
+5973,Nissan Island Airport,Nissan Island,Papua New Guinea,IIS,\N,-4.49972,154.226,52,10,U,Pacific/Port_Moresby,airport,User
+5974,Jacquinot Bay Airport,Jacquinot Bay,Papua New Guinea,JAQ,\N,-5.6525,151.507,136,10,U,Pacific/Port_Moresby,airport,User
+5975,Kandrian Airport,Kandrian,Papua New Guinea,KDR,\N,-6.183,149.533,280,10,U,Pacific/Port_Moresby,airport,User
+5976,Kokoda Airport,Kokoda,Papua New Guinea,KKD,\N,-8.88468,147.731,1240,10,U,Pacific/Port_Moresby,airport,User
+5977,Kamusi Airport,Kamusi,Papua New Guinea,KUY,\N,-7.42035,143.122,0,10,U,Pacific/Port_Moresby,airport,User
+5978,Lake Murray Airport,Lake Murray,Papua New Guinea,LMY,\N,-7.00992,141.494,52,10,U,Pacific/Port_Moresby,airport,User
+5979,Londolovit Airport,Londolovit,Papua New Guinea,LNV,\N,-3.04361,152.629,167,10,U,Pacific/Port_Moresby,airport,User
+5980,Losuia Airport,Losuia,Papua New Guinea,LSA,\N,-8.50582,151.081,27,10,U,Pacific/Port_Moresby,airport,User
+5981,Obo Airport,Obo,Papua New Guinea,OBX,\N,-7.583,141.317,29,10,U,Pacific/Port_Moresby,airport,User
 5982,Balimo Airport,Balimo,Papua New Guinea,OPU,AYBM,-8.05000019073,142.932998657,51,10,U,Pacific/Port_Moresby,airport,OurAirports
+5984,Tufi Airport,Tufi,Papua New Guinea,TFI,\N,-9.07595,149.32,85,10,U,Pacific/Port_Moresby,airport,User
 5986,Baimuru Airport,Baimuru,Papua New Guinea,VMU,AYBA,-7.49686002731,144.819900513,27,10,U,Pacific/Port_Moresby,airport,OurAirports
 5989,Kalaupapa Airport,Molokai,United States,LUP,PHLU,21.21100044,-156.973999,24,-10,A,Pacific/Honolulu,airport,OurAirports
 5990,Eniwetok Airport,Eniwetok Atoll,Marshall Islands,ENT,PKMA,11.340700149536133,162.3280029296875,13,12,U,Pacific/Majuro,airport,OurAirports
@@ -4766,9 +4798,13 @@
 6125,Elista Airport,Elista,Russia,ESL,URWI,46.3739013671875,44.33089828491211,501,3,N,Europe/Moscow,airport,OurAirports
 6126,Aleknagik / New Airport,Aleknagik,United States,WKK,5A8,59.2826004028,-158.617996216,66,-9,A,America/Anchorage,airport,OurAirports
 6128,Mercer County Airport,Bluefield,United States,BLF,KBLF,37.295799255371094,-81.20770263671875,2857,-5,A,America/New_York,airport,OurAirports
+6129,Kearney Municipal Airport,Kearney,United States,EAR,EAR,40.727,-99.0068,2131,-6,A,America/Chicago,airport,User
 6130,Mid Delta Regional Airport,Greenville,United States,GLH,KGLH,33.4828987121582,-90.98560333251953,131,-6,A,America/Chicago,airport,OurAirports
+6131,Laughlin-Bullhead Intl,Bullhead,United States,IFP,IFP,35.1574,-114.56,695,-7,A,America/Phoenix,unknown,User
+6132,Kingman Airport,Kingman,United States,IGM,IGM,35.2595,-113.938,3449,-7,A,America/Phoenix,airport,User
 6133,Tri Cities Airport,Pasco,United States,PSC,KPSC,46.26470184326172,-119.11900329589844,410,-8,A,America/Los_Angeles,airport,OurAirports
 6134,Akutan Seaplane Base,Akutan,United States,KQA,KQA,54.1337704415,-165.778895617,0,-9,A,America/Anchorage,airport,OurAirports
+6135,Grant County Airport,Silver City,United States,SVC,SVC,32.6365,-108.156,5446,-7,A,America/Denver,airport,User
 6136,Lopez Island Airport,Lopez,United States,LPS,S31,48.4838981628418,-122.93800354003906,209,-8,A,America/Los_Angeles,airport,OurAirports
 6137,Salekhard Airport,Salekhard,Russia,SLY,USDD,66.5907974243164,66.61100006103516,218,5,N,Asia/Yekaterinburg,airport,OurAirports
 6138,Khanty Mansiysk Airport,Khanty-Mansiysk,Russia,HMA,USHH,61.028499603271484,69.08609771728516,76,5,N,Asia/Yekaterinburg,airport,OurAirports
@@ -4863,6 +4899,7 @@
 6228,Pendopo Airport,Talang Gudang-Sumatra Island,Indonesia,PDO,WIPQ,-3.2860701084136963,103.87999725341797,184,7,N,Asia/Jakarta,airport,OurAirports
 6229,Malikus Saleh Airport,Lhok Seumawe-Sumatra Island,Indonesia,LSW,WITM,5.226679801940918,96.95030212402344,90,7,N,Asia/Jakarta,airport,OurAirports
 6230,Pulau Pangkor Airport,Pangkor Island,Malaysia,PKG,WMPA,4.244719982147217,100.5530014038086,19,8,N,Asia/Kuala_Lumpur,airport,OurAirports
+6231,Stagen Airport,Laut Island,Indonesia,KBU,WRBK,-3.29472,116.165,4,8,N,Asia/Makassar,airport,User
 6232,Long Bawan Airport,Long Bawan-Borneo Island,Indonesia,LBW,WRLB,3.9028,115.6921,3165,8,N,Asia/Makassar,airport,OurAirports
 6233,Nunukan Airport,Nunukan-Nunukan Island,Indonesia,NNX,WRLF,4.13333333333,117.666666667,30,8,N,Asia/Makassar,airport,OurAirports
 6234,Long Apung Airport,Long Apung-Borneo Island,Indonesia,LPU,WRLP,1.704486,114.970297,627,8,N,Asia/Makassar,airport,OurAirports
@@ -5056,6 +5093,7 @@
 6425,Szczecin-Dąbie Airport,Szczecin,Poland,\N,EPSD,53.3921012878418,14.63379955291748,3,1,E,Europe/Warsaw,airport,OurAirports
 6426,Worcester Regional Airport,Worcester,United States,ORH,KORH,42.26729965209961,-71.87570190429688,1009,-5,A,America/New_York,airport,OurAirports
 6427,Anqing Tianzhushan Airport,Anqing,China,AQG,ZSAQ,30.582199,117.050003,0,8,N,Asia/Shanghai,airport,OurAirports
+6428,Jing Gang Shan Airport,Ji An,China,\N,\N,26.8997,114.7375,0,8,N,Asia/Shanghai,airport,User
 6429,Shanhaiguan Airport,Qinhuangdao,China,SHP,ZBSH,39.968102,119.731003,30,8,N,Asia/Shanghai,airport,OurAirports
 6430,Yuncheng Guangong Airport,Yuncheng,China,YCU,ZBYC,35.116391,111.031388889,1242,8,N,Asia/Shanghai,airport,OurAirports
 6431,Lanzhou City Airport,Lanzhou,China,\N,ZLAN,36.033333,103.86667,5040,8,N,Asia/Shanghai,airport,OurAirports
@@ -5063,6 +5101,14 @@
 6433,Dandong Airport,Dandong,China,DDG,ZYDD,40.0247,124.286003,30,8,N,Asia/Shanghai,airport,OurAirports
 6434,Ordos Ejin Horo Airport,Dongsheng,China,DSN,ZBDS,39.49,109.861388889,4557,8,N,Asia/Shanghai,airport,OurAirports
 6435,Bao'anying Airport,Panzhihua,China,PZI,ZUZH,26.54,101.79852,1620,8,N,Asia/Shanghai,airport,OurAirports
+6436,Grytviken,Grytviken,South Georgia and the Islands,\N,\N,-54.16534,-36.30288,0,-2,N,Atlantic/South_Georgia,unknown,User
+6437,South Shetland,South Shetland,Antarctica,\N,\N,-68,-58,0,-4,N,\N,unknown,User
+6438,South Shetland,South Shetland,Antarctica,\N,\N,-63.37,-62.83,0,12,N,Antarctica/South_Pole,unknown,User
+6439,New Rochelle Amtrak Station,New Rochelle,United States,\N,\N,40.913923,-73.782008,66,-5,A,America/New_York,station,User
+6441,New Haven Rail Station,New Haven,United States,ZVE,\N,41.298669,-72.925992,7,-5,A,America/New_York,station,User
+6442,Chicago Union Station,Chicago,United States,\N,\N,41.8791966,-87.6388507,581,-6,A,America/Chicago,station,User
+6443,Dibrugarh Airport,Dibrugarh,India,\N,\N,27.4839,95.0169,362,5.5,N,Asia/Calcutta,airport,User
+6444,Doha Free Zone Airport,Doha,Qatar,XOZ,\N,24.8333,50.9166,0,3,N,Asia/Qatar,airport,User
 6445,Bremerton National Airport,Bremerton,United States,PWT,KPWT,47.490200042725,-122.76499938965,444,-8,A,America/Los_Angeles,airport,OurAirports
 6446,Spencer Municipal Airport,Spencer,United States,SPW,KSPW,43.165500640869,-95.202796936035,1339,-6,A,America/Chicago,airport,OurAirports
 6447,Jefferson City Memorial Airport,Jefferson City,United States,JEF,KJEF,38.5912017822,-92.15609741210001,549,-6,A,America/Chicago,airport,OurAirports
@@ -5070,12 +5116,23 @@
 6454,Unst Airport,Unst,United Kingdom,UNT,EGPW,60.74720001220703,-0.8538500070571899,0,0,E,Europe/London,airport,OurAirports
 6455,Berkley Structures Heliport,Pagerungan,Indonesia,\N,WA19,47.682043,-122.148456,50,-8,N,America/Los_Angeles,airport,OurAirports
 6456,Provincetown Municipal Airport,Provincetown,United States,PVC,KPVC,42.0718994141,-70.2213973999,9,-5,A,America/New_York,airport,OurAirports
+6457,Kenmore Air Harbor Seaplane Base,Seattle,United States,LKE,KW55,47.629,-122.339,14,-8,A,America/Los_Angeles,airport,User
 6458,Anduki Airport,Seria,Brunei,\N,WBAK,4.637000083920001,114.382003784,7,8,N,Asia/Brunei,airport,OurAirports
 6460,Gustaf III Airport,Gustavia,France,SBH,TFFJ,17.904399871826172,-62.84360122680664,49,-4,E,\N,airport,OurAirports
+6463,Belize City Municipal Airport,Belize,Belize,TZA,\N,17.5344,-88.298,15,-6,N,America/Belize,airport,User
 6464,Kostroma Sokerkino Airport,Kostroma,Russia,KMW,UUBA,57.7969017029,41.019401550299996,446,3,N,Europe/Moscow,airport,OurAirports
 6465,Sukhumi Dranda Airport,Sukhumi,Georgia,SUI,UGSS,42.8582000732,41.128101348899996,53,4,N,Asia/Tbilisi,airport,OurAirports
 6466,Donskoye Airport,Tambow,Russia,TBW,UUOT,52.806098937988,41.482799530029,413,3,N,Europe/Moscow,airport,OurAirports
 6467,Oban Airport,North Connel,United Kingdom,OBN,EGEO,56.4635009765625,-5.399670124053955,20,0,E,Europe/London,airport,OurAirports
+6468,Vilamendhoo,Vilamendhoo,Maldives,\N,\N,73.0191098670891,3.60965475494316,0,1,U,Arctic/Longyearbyen,unknown,User
+6469,Vilamendhoo,Vilamendhoo,Maldives,\N,\N,3.60965475494316,73.0191098670891,0,5,U,Indian/Maldives,unknown,User
+6470,Vilamendhoo,Vilamendhoo,Maldives,\N,\N,3.484,73.802,0,5,U,Indian/Maldives,unknown,User
+6471,Vilamendhoo,Vilamendhoo,Maldives,\N,\N,73.801,3.801,0,5,U,\N,unknown,User
+6472,Aaa,Aaa,Maldives,\N,\N,73.9,3.222,0,5,U,\N,unknown,User
+6473,Vilamendhoo,Vilamendhoo,Maldives,\N,\N,0,0,0,5,U,\N,unknown,User
+6474,Vilamendhoo,Vilamendhoo,Maldives,\N,\N,3.8,73.8,0,5,U,Indian/Maldives,unknown,User
+6475,Sharya,Sharya,Russia,\N,\N,58.2321,45.3314,453,3,N,Europe/Moscow,unknown,User
+6476,Mt. Fuji Shizuoka Airport,Shizuoka,Japan,FSZ,RJNS,34.796111,138.189444,433,9,N,Asia/Tokyo,airport,User
 6477,Erechim Airport,Erechim,Brazil,ERM,SSER,-27.66189956665039,-52.2682991027832,2498,-3,S,America/Sao_Paulo,airport,OurAirports
 6478,La Côte Airport,Prangins,Switzerland,\N,LSGP,46.40639877319336,6.258059978485107,1352,1,E,Europe/Zurich,airport,OurAirports
 6479,Courchevel Airport,Courcheval,France,CVF,LFLJ,45.39670181274414,6.6347198486328125,6588,1,E,Europe/Paris,airport,OurAirports
@@ -5106,6 +5163,7 @@
 6718,St Mary's Airport,St Mary's,United States,KSM,PASM,62.0605011,-163.302002,312,-9,A,America/Anchorage,airport,OurAirports
 6719,Kivalina Airport,Kivalina,United States,KVL,PAVL,67.73619842529297,-164.56300354003906,13,-9,A,America/Anchorage,airport,OurAirports
 6720,Mekoryuk Airport,Mekoryuk,United States,MYU,PAMY,60.37139892578125,-166.27099609375,48,-9,A,America/Anchorage,airport,OurAirports
+6721,Point Hope Airport,Point Hope,United States,PHO,PPHO,68.3488,-166.799,12,-9,A,America/Anchorage,airport,User
 6722,Ruby Airport,Ruby,United States,RBY,PARY,64.72720337,-155.4700012,658,-9,A,America/Anchorage,airport,OurAirports
 6723,Shishmaref Airport,Shishmaref,United States,SHH,PASH,66.249604,-166.089112,12,-9,A,America/Anchorage,airport,OurAirports
 6724,Savoonga Airport,Savoonga,United States,SVA,PASA,63.6864013671875,-170.4929962158203,53,-9,A,America/Anchorage,airport,OurAirports
@@ -5134,6 +5192,7 @@
 6747,Gorgan Airport,Gorgan,Iran,GBT,OING,36.909400939899996,54.4012985229,-24,3.5,E,Asia/Tehran,airport,OurAirports
 6748,Ilam Airport,Ilam,Iran,IIL,OICI,33.58660125732422,46.40480041503906,4404,3.5,E,Asia/Tehran,airport,OurAirports
 6749,Parsabade Moghan Airport,Parsabad,Iran,PFQ,OITP,39.60359954834,47.881500244141,251,3.5,E,Asia/Tehran,airport,OurAirports
+6750,Nueva Loja Airport,Lago Agrio,Ecuador,LGQ,SELA,0.093056,-76.8675,980,-5,U,America/Guayaquil,airport,User
 6751,Tocache Airport,Tocache,Peru,\N,SPCH,-8.1829996109,-76.516998291,1500,-5,U,America/Lima,airport,OurAirports
 6752,Tacheng Airport,Tacheng,China,TCG,ZWTC,46.67250061035156,83.3407974243164,0,8,U,Asia/Shanghai,airport,OurAirports
 6753,Mardin Airport,Mardin,Turkey,MQM,LTCR,37.223300933800004,40.6316986084,1729,3,E,Europe/Istanbul,airport,OurAirports
@@ -5153,6 +5212,7 @@
 6767,Togiak Airport,Togiak Village,United States,TOG,PATG,59.052799224853516,-160.39700317382812,21,-9,A,America/Anchorage,airport,OurAirports
 6768,Geneina Airport,Geneina,Sudan,EGN,HSGN,13.48169994354248,22.467199325561523,2650,3,U,Africa/Khartoum,airport,OurAirports
 6769,Long Akah Airport,Long Akah,Malaysia,LKH,WBGL,3.299999952316284,114.78299713134766,289,8,N,Asia/Kuala_Lumpur,airport,OurAirports
+6770,Tanjung Manis Airport,Tanjung Manis,Malaysia,TGC,WBTM,2.17784,111.202,15,8,N,Asia/Kuala_Lumpur,airport,User
 6771,Walaha Airport,Walaha,Vanuatu,WLH,NVSW,-15.411999702500001,167.690994263,151,11,U,Pacific/Efate,airport,OurAirports
 6772,Chaoyang Airport,Chaoyang,China,CHG,ZYCY,41.538101,120.434998,568,8,U,Asia/Shanghai,airport,OurAirports
 6773,Buffalo Spring,Samburu South,Kenya,UAS,HKSB,0.530583,37.534195,3295,3,U,Africa/Nairobi,airport,OurAirports
@@ -5245,6 +5305,7 @@
 6916,Pangborn Memorial Airport,Wenatchee,United States,EAT,KEAT,47.3988990784,-120.207000732,1249,-8,A,America/Los_Angeles,airport,OurAirports
 6917,Antonio Nery Juarbe Pol Airport,Arecibo,Puerto Rico,ARE,TJAB,18.4500007629,-66.6753005981,23,-4,N,America/Puerto_Rico,airport,OurAirports
 6918,Ringi Cove Airport,Ringi Cove,Solomon Islands,RIN,AGRC,-8.12639045715332,157.14300537109375,0,11,U,Pacific/Guadalcanal,airport,OurAirports
+6919,Bellona,Bellona,Solomon Islands,BNY,\N,-11.302,159.8,3,11,U,Pacific/Guadalcanal,unknown,User
 6922,Kirensk Airport,Kirensk,Russia,KCK,UIKK,57.773,108.064,840,8,N,Asia/Irkutsk,airport,OurAirports
 6924,Ust-Kut Airport,Ust-Kut,Russia,UKX,UITT,56.8567008972168,105.7300033569336,2188,8,N,Asia/Irkutsk,airport,OurAirports
 6926,Rimatara Airport,Rimatara,French Polynesia,RMT,NTAM,-22.63725,-152.8059,60,-10,U,\N,airport,OurAirports
@@ -5324,6 +5385,8 @@
 7025,Catalina Airport,Catalina Island,United States,AVX,KAVX,33.4049,-118.416,1602,-8,A,America/Los_Angeles,airport,OurAirports
 7026,Mojave Airport,Mojave,United States,MHV,KMHV,35.05939865,-118.1520004,2801,-8,A,America/Los_Angeles,airport,OurAirports
 7027,Interlaken Air Base,Interlaken,Switzerland,ZIN,LSMI,46.6766014,7.8790798,0,1,E,Europe/Zurich,airport,OurAirports
+7028,Kenmore Air Harbor Inc Seaplane Base,Kenmore,United States,KEH,\N,47.7548,-122.259,14,-8,A,America/Los_Angeles,airport,User
+7029,Municipal,Corozal,Belize,CZH,\N,18.3822,-88.4119,40,-6,N,America/Belize,unknown,User
 7030,Inisheer Aerodrome,Inisheer,Ireland,INQ,EIIR,53.064701080322266,-9.510899543762207,40,0,E,Europe/Dublin,airport,OurAirports
 7033,Strezhevoy Airport,Strezhevoy,Russia,SWT,UNSS,60.709400177,77.66000366210001,164,7,N,Asia/Krasnoyarsk,airport,OurAirports
 7035,Hutchinson Municipal Airport,Hutchinson,United States,HUT,KHUT,38.0654983521,-97.86060333250002,1543,-6,A,America/Chicago,airport,OurAirports
@@ -5378,17 +5441,26 @@
 7096,Kwigillingok Airport,Kwigillingok,United States,KWK,PAGG,59.876499,-163.169005,18,-9,A,America/Anchorage,airport,OurAirports
 7097,Marshall Don Hunter Sr Airport,Marshall,United States,MLL,PADM,61.8642997742,-162.026000977,103,-9,A,America/Anchorage,airport,OurAirports
 7098,Russian Mission Airport,Russian Mission,United States,RSH,PARS,61.7788848877,-161.319458008,51,-9,A,America/Anchorage,airport,OurAirports
+7099,Tuntutuliak Airport,Tuntutuliak,United States,WTL,\N,60.335278,-162.666944,16,-9,A,America/Anchorage,airport,User
+7100,Ekwok Airport,Ekwok,United States,KEK,\N,59.356944,-157.471111,135,-9,A,America/Anchorage,airport,User
 7101,Koliganek Airport,Koliganek,United States,KGK,PAJZ,59.726600647,-157.259002686,269,-9,A,America/Anchorage,airport,OurAirports
+7102,Levelock Airport,Levelock,United States,KLL,\N,59.128056,-156.858611,39,-9,A,America/Anchorage,airport,User
 7103,Manokotak Airport,Manokotak,United States,KMO,PAMB,58.990200042699996,-159.050003052,100,-9,A,America/Anchorage,airport,OurAirports
 7105,Chalkyitsik Airport,Chalkyitsik,United States,CIK,PACI,66.6449966431,-143.740005493,544,-9,A,America/Anchorage,airport,OurAirports
 7106,Eagle Airport,Eagle,United States,EAA,PAEG,64.77639771,-141.151001,908,-9,A,America/Anchorage,airport,OurAirports
 7107,Hughes Airport,Hughes,United States,HUS,PAHU,66.04109955,-154.2630005,299,-9,A,America/Anchorage,airport,OurAirports
 7108,Huslia Airport,Huslia,United States,HSL,PAHL,65.69789886,-156.3509979,220,-9,A,America/Anchorage,airport,OurAirports
+7109,Livingood Airport,Livingood,United States,LIV,\N,65.531111,-148.541111,696,-9,A,America/Anchorage,airport,User
+7110,Minto Airport,Minto,United States,MNT,\N,65.143611,-149.37,460,-9,A,America/Anchorage,airport,User
 7111,Nulato Airport,Nulato,United States,NUL,PANU,64.729301,-158.074005,399,-9,A,America/Anchorage,airport,OurAirports
+7112,Rampart Airport,Rampart,United States,RMP,\N,65.507778,-150.140833,302,-9,A,America/Anchorage,airport,User
+7113,Tanana Airport,Tanana,United States,TAL,\N,65.179556,-152.075833,207,-9,A,America/Anchorage,airport,User
 7114,Venetie Airport,Venetie,United States,VEE,PAVE,67.0086975098,-146.365997314,574,-9,A,America/Anchorage,airport,OurAirports
 7115,Beaver Airport,Beaver,United States,WBQ,PAWB,66.362197876,-147.406997681,359,-9,A,America/Anchorage,airport,OurAirports
 7116,Central Airport,Central,United States,CEM,PACE,65.57379913,-144.7830048,937,-9,A,America/Anchorage,airport,OurAirports
 7117,Shungnak Airport,Shungnak,United States,SHG,PAGH,66.88809967041,-157.16200256348,197,-9,A,America/Anchorage,airport,OurAirports
+7118,Birch Creek Airport,Brich Creek,United States,KBC,\N,66.256708,-145.815319,450,-9,A,America/Anchorage,airport,User
+7119,Coldfoot Airport,Coldfoot,United States,CXF,\N,67.251389,-150.176111,1014,-9,A,America/Anchorage,airport,User
 7120,Inyokern Airport,Inyokern,United States,IYK,KIYK,35.65879822,-117.8300018,2457,-8,A,America/Los_Angeles,airport,OurAirports
 7121,Visalia Municipal Airport,Visalia,United States,VIS,KVIS,36.3186988831,-119.392997742,295,-8,A,America/Los_Angeles,airport,OurAirports
 7122,Merced Regional Macready Field,Merced,United States,MCE,KMCE,37.28469849,-120.5139999,155,-8,A,America/Los_Angeles,airport,OurAirports
@@ -5402,18 +5474,46 @@
 7134,Nabern/Teck Airport,Kirchheim-Teck,Germany,\N,EDTN,48.61277771,9.477222442629998,1214,1,E,Europe/Berlin,airport,OurAirports
 7135,Angoon Seaplane Base,Angoon,United States,AGN,PAGN,57.503601,-134.585007,0,-9,A,America/Anchorage,airport,OurAirports
 7136,Elfin Cove Seaplane Base,Elfin Cove,United States,ELV,PAEL,58.195201873799995,-136.347000122,0,-9,A,America/Anchorage,airport,OurAirports
+7137,Tenakee Seaplane Base,Tenakee Springs,United States,TKE,\N,57.779722,-135.218333,0,-9,A,America/Anchorage,airport,User
+7138,Pelican Seaplane Base,Pelican,United States,PEC,\N,57.955278,-136.236389,0,-9,A,America/Anchorage,airport,User
+7139,Chatham Seaplane Base,Sitka,United States,CYM,\N,57.515,-134.946111,0,-9,A,America/Anchorage,airport,User
 7140,Funter Bay Seaplane Base,Funter Bay,United States,FNR,PANR,58.2543983459,-134.897994995,0,-9,A,America/Anchorage,airport,OurAirports
+7141,Excursion Inlet Seaplane Base,Excursion Inlet,United States,EXI,\N,58.420556,-135.449167,0,-9,A,America/Anchorage,airport,User
 7142,Hoonah Airport,Hoonah,United States,HNH,PAOH,58.0961,-135.410111,19,-9,A,America/Anchorage,airport,OurAirports
 7143,Kake Airport,Kake,United States,\N,PAFE,56.9613990784,-133.910003662,172,-9,A,America/Anchorage,airport,OurAirports
+7144,Craig Seaplane Base,Craig,United States,CGA,\N,55.478889,-133.147778,0,-9,A,America/Anchorage,airport,User
+7145,Hollis Seaplane Base,Hollis,United States,HYL,\N,55.481667,-132.646111,0,-9,A,America/Anchorage,airport,User
 7146,Metlakatla Seaplane Base,Metakatla,United States,MTM,PAMM,55.131001,-131.578003,0,-9,A,America/Anchorage,airport,OurAirports
+7147,Thorne Bay Seaplane Base,Thorne Bay,United States,KTB,\N,55.688056,-132.536667,0,-9,A,America/Anchorage,airport,User
 7148,Hydaburg Seaplane Base,Hydaburg,United States,HYG,PAHY,55.206298828125,-132.8280029296875,0,-9,A,America/Anchorage,airport,OurAirports
+7149,Hyder Seaplane Base,Hyder,United States,WHD,\N,55.903333,-130.006667,0,-8,A,America/Vancouver,airport,User
+7150,Point Baker Seaplane Base,Point Baker,United States,KPB,\N,56.351944,-133.6225,0,-9,A,America/Anchorage,airport,User
+7151,Port Protection Seaplane Base,Port Protection,United States,PPV,\N,56.328889,-133.61,0,-9,A,America/Anchorage,airport,User
+7152,North Whale Seaplane Base,North Whale Pass,United States,WWP,\N,56.116389,-133.121667,0,-9,A,America/Anchorage,airport,User
+7153,Chignik Lake Airport,Chignik Lake,United States,KCQ,\N,56.255,-158.775278,50,-9,A,America/Anchorage,airport,User
 7154,Egegik Airport,Egegik,United States,EGX,PAII,58.1855010986,-157.375,92,-9,A,America/Anchorage,airport,OurAirports
+7155,Chignik Lagoon Airport,Chignik Lagoon,United States,KCL,\N,56.311111,-158.534167,25,-9,A,America/Anchorage,airport,User
+7156,Chignik Bay Seaplane Base,Chignik,United States,KBW,\N,56.295556,-158.401398,0,-9,A,America/Anchorage,airport,User
 7157,Perryville Airport,Perryville,United States,KPV,PAPE,55.905998,-159.162993,29,-9,A,America/Anchorage,airport,OurAirports
 7158,Pilot Point Airport,Pilot Point,United States,PIP,PAPN,57.5803985596,-157.572006226,57,-9,A,America/Anchorage,airport,OurAirports
 7159,South Naknek Nr 2 Airport,South Naknek,United States,WSN,PFWS,58.7033996582,-157.007995605,162,-9,A,America/Anchorage,airport,OurAirports
 7160,Akhiok Airport,Akhiok,United States,AKK,PAKH,56.9387016296,-154.182998657,44,-9,A,America/Anchorage,airport,OurAirports
 7161,Karluk Airport,Karluk,United States,KYK,PAKY,57.5671005249,-154.449996948,137,-9,A,America/Anchorage,airport,OurAirports
 7162,Larsen Bay Airport,Larsen Bay,United States,KLN,PALB,57.5350990295,-153.977996826,87,-9,A,America/Anchorage,airport,OurAirports
+7163,Old Harbor Airport,Old Harbor,United States,OLH,\N,57.218056,-153.269722,55,-9,A,America/Anchorage,airport,User
+7164,Ouzinkie Airport,Ouzinkie,United States,KOZ,\N,57.922876,-152.500511,55,-9,A,America/Anchorage,airport,User
+7165,Port Lions Airport,Port Lions,United States,ORI,\N,57.885278,-152.846111,52,-9,A,America/Anchorage,airport,User
+7166,Alitak Seaplane Base,Lazy Bay,United States,ALZ,\N,56.899444,-154.247778,0,-9,A,America/Anchorage,airport,User
+7167,Amook Bay Seaplane Base,Amook Bay,United States,AOS,\N,57.471389,-153.815278,0,-9,A,America/Anchorage,airport,User
+7168,Kitoi Bay Seaplane Base,Kitoi Bay,United States,KKB,\N,58.190833,-152.370556,0,-9,A,America/Anchorage,airport,User
+7169,Moser Bay Seaplane Base,Moser Bay,United States,KMY,\N,57.025556,-154.145833,0,-9,A,America/Anchorage,airport,User
+7170,Olga Bay Seaplane Base,Olga Bay,United States,KOY,\N,57.161389,-154.229722,0,-9,A,America/Anchorage,airport,User
+7171,Port Bailey Seaplane Base,Port Bailey,United States,KPY,\N,57.93,-153.040556,0,-9,A,America/Anchorage,airport,User
+7172,Port Williams Seaplane Base,Port Williams,United States,KPR,\N,58.49,-152.582222,0,-9,A,America/Anchorage,airport,User
+7173,Seal Bay Seaplane Base,Seal Bay,United States,SYB,\N,58.166667,-152.5,0,-9,A,America/Anchorage,airport,User
+7174,San Juan - Uganik Seaplane Base,San Juan,United States,WSJ,\N,57.730278,-153.320556,0,-9,A,America/Anchorage,airport,User
+7175,West Point Village Seaplane Base,West Point,United States,KWP,\N,57.77,-153.548889,0,-9,A,America/Anchorage,airport,User
+7176,Zachar Bay Seaplane Base,Zachar Bay,United States,KZB,\N,57.55,-153.75,0,-9,A,America/Anchorage,airport,User
 7177,Ambler Airport,Ambler,United States,ABL,PAFM,67.1063,-157.856989,334,-9,A,America/Anchorage,airport,OurAirports
 7178,Buckland Airport,Buckland,United States,BKC,PABL,65.9815979004,-161.149002075,31,-9,A,America/Anchorage,airport,OurAirports
 7179,Bob Baker Memorial Airport,Kiana,United States,IAN,PAIK,66.9759979248,-160.43699646,166,-9,A,America/Anchorage,airport,OurAirports
@@ -5429,11 +5529,13 @@
 7190,Koyuk Alfred Adams Airport,Koyuk,United States,KKA,PAKK,64.9394989014,-161.154006958,154,-9,A,America/Anchorage,airport,OurAirports
 7191,St Michael Airport,St. Michael,United States,SMK,PAMK,63.49010086,-162.1100006,98,-9,A,America/Anchorage,airport,OurAirports
 7192,Shaktoolik Airport,Shaktoolik,United States,SKK,PFSH,64.37110138,-161.223999,24,-9,A,America/Anchorage,airport,OurAirports
+7193,Stebbins Airport,Stebbins,United States,WBB,\N,63.515833,-162.278056,14,-9,A,America/Anchorage,airport,User
 7194,Tin City Long Range Radar Station Airport,Tin City,United States,TNC,PATC,65.56310272,-167.9219971,271,-9,A,America/Anchorage,airport,OurAirports
 7195,Atka Airport,Atka,United States,AKB,PAAK,52.22029877,-174.2059937,57,-10,A,America/Adak,airport,OurAirports
 7196,Nikolski Air Station,Nikolski,United States,IKO,PAKO,52.94160079956055,-168.8489990234375,77,-9,A,America/Anchorage,airport,OurAirports
 7198,Yakataga Airport,Yakataga,United States,CYT,PACY,60.080974,-142.494541,12,-9,A,America/Anchorage,airport,OurAirports
 7199,Alakanuk Airport,Alakanuk,United States,AUK,PAUK,62.680042266799994,-164.659927368,10,-9,A,America/Anchorage,airport,OurAirports
+7200,Sheldon Point Airport,Nunam Iqua,United States,SXP,\N,62.520556,-164.847778,12,-9,A,America/Anchorage,airport,User
 7201,Kipnuk Airport,Kipnuk,United States,KPN,PAKI,59.932998657199995,-164.031005859,11,-9,A,America/Anchorage,airport,OurAirports
 7202,False Pass Airport,False Pass,United States,KFP,PAKF,54.8474006652832,-163.41000366210938,20,-9,A,America/Anchorage,airport,OurAirports
 7203,Nelson Lagoon Airport,Nelson Lagoon,United States,NLG,PAOU,56.007499694824,-161.16000366211,14,-9,A,America/Anchorage,airport,OurAirports
@@ -5444,9 +5546,14 @@
 7208,Koyukuk Airport,Koyukuk,United States,KYU,PFKU,64.8760986328,-157.727005005,149,-9,A,America/Anchorage,airport,OurAirports
 7209,Scammon Bay Airport,Scammon Bay,United States,SCM,PACM,61.845298767100005,-165.570999146,14,-9,A,America/Anchorage,airport,OurAirports
 7210,Nondalton Airport,Nondalton,United States,NNL,PANO,59.980201721191,-154.8390045166,314,-9,A,America/Anchorage,airport,OurAirports
+7212,Nunapitchuk Airport,Nunapitchuk,United States,NUP,\N,60.905833,-162.439167,12,-9,A,America/Anchorage,airport,User
 7213,Kongiganak Airport,Kongiganak,United States,KKH,PADY,59.960800170899994,-162.880996704,30,-9,A,America/Anchorage,airport,OurAirports
 7214,Nikolai Airport,Nikolai,United States,NIB,PAFS,63.0186,-154.358002,441,-9,A,America/Anchorage,airport,OurAirports
+7215,Takotna Airport,Takotna,United States,TCT,\N,62.971944,-156.082778,825,-9,A,America/Anchorage,airport,User
+7216,Pilot Station Airport,Pilot Station,United States,PQS,\N,61.934444,-162.899444,305,-9,A,America/Anchorage,airport,User
 7217,Akiak Airport,Akiak,United States,AKI,PFAK,60.9029006958,-161.231002808,30,-9,A,America/Anchorage,airport,OurAirports
+7218,Tuluksak Airport,Tuluksak,United States,TLT,\N,61.096944,-160.969444,30,-9,A,America/Anchorage,airport,User
+7219,Grayling Airport,Grayling,United States,KGX,\N,62.894444,-160.065,99,-9,A,America/Anchorage,airport,User
 7220,Wainwright Airport,Wainwright,United States,AIN,PAWI,70.6380004883,-159.994995117,41,-9,A,America/Anchorage,airport,OurAirports
 7221,Zapala Airport,ZAPALA,Argentina,APZ,SAHZ,-38.975498,-70.113602,3330,-3,N,America/Argentina/Salta,airport,OurAirports
 7222,Rincon De Los Sauces Airport,Rincon de los Sauces,Argentina,RDS,SAHS,-37.3905982971,-68.9041976929,1968,-3,N,America/Argentina/Salta,airport,OurAirports
@@ -5456,8 +5563,10 @@
 7233,Chenega Bay Airport,Chenega,United States,NCN,PFCB,60.0773010254,-147.992004395,72,-9,A,America/Anchorage,airport,OurAirports
 7235,Tok Junction Airport,Tok,United States,TKJ,PFTO,63.32949829,-142.9539948,1639,-9,A,America/Anchorage,airport,OurAirports
 7236,Circle City /New/ Airport,Circle,United States,IRC,PACR,65.830498,-144.076008,613,-9,A,America/Anchorage,airport,OurAirports
+7237,Coffman Cove Seaplane Base,Coffman Cove,United States,KCC,\N,56.014722,-132.833889,0,-9,A,America/Anchorage,airport,User
 7240,Sleetmute Airport,Sleetmute,United States,SLQ,PASL,61.7005004883,-157.166000366,190,-9,A,America/Anchorage,airport,OurAirports
 7242,Healy River Airport,Healy,United States,\N,PAHV,63.8661994934082,-148.968994140625,1263,-9,A,America/Anchorage,airport,OurAirports
+7243,Kake Seaplane Base,Kake,United States,KAE,\N,56.973056,-133.945556,0,-9,A,America/Anchorage,airport,User
 7244,Klawock Seaplane Base,Klawock,United States,\N,PAQC,55.5546989440918,-133.1020050048828,0,-9,A,America/Anchorage,airport,OurAirports
 7245,Minchumina Airport,Lake Minchumina,United States,LMA,PAMH,63.886002,-152.302002,678,-9,A,America/Anchorage,airport,OurAirports
 7246,Manley Hot Springs Airport,Manley Hot Springs,United States,MLY,PAML,64.99759674069999,-150.643997192,270,-9,A,America/Anchorage,airport,OurAirports
@@ -5485,6 +5594,16 @@
 7277,Wekweètì Airport,Wekweeti,Canada,YFJ,CFJ2,64.190804,-114.077002,1208,-7,A,America/Edmonton,airport,OurAirports
 7278,Camaguey-Campo Cuatro Milpas Airport,Guasave,Mexico,\N,MM52,25.652200698853,-108.53800201416,92,-7,A,America/Mazatlan,airport,OurAirports
 7280,Cabo San Lucas International Airport,Cabo San Lucas,Mexico,\N,MMSL,22.947701,-109.936996,459,-7,A,America/Mazatlan,airport,OurAirports
+7281,Bahia Tortugas Airfield,Bahia Tortugas,Mexico,\N,\N,27.705278,-114.911111,102,-7,A,America/Mazatlan,unknown,User
+7282,Palo Verde Airport,San Bruno,Mexico,PVP,\N,27.093056,-112.098889,55,-7,A,America/Mazatlan,airport,User
+7283,Ziyaraifushi,Ziyaraifushi,Maldives,\N,\N,4.531313889,73.373325,0,5,U,Indian/Maldives,unknown,User
+7284,Brussels Gare du Midi,Brussels,Belgium,ZYR,\N,50.8,4.4,180,1,E,Europe/Brussels,unknown,User
+7285,Caye Chapel Airport,Caye Chapel,Belize,CYC,\N,17.683611,-88.045,10,-6,U,America/Belize,airport,User
+7286,Big Creek Airport,Big Creek,Belize,BGK,\N,16.516667,-88.416667,16,-6,U,America/Belize,airport,User
+7287,Dangriga Airport,Dangriga,Belize,DGA,\N,16.966667,-88.216667,10,-6,U,America/Belize,airport,User
+7288,Placencia Airport,Placencia,Belize,PLJ,\N,16.536944,-88.361667,42,-6,U,America/Belize,airport,User
+7289,Sartaneja Airport,Sarteneja,Belize,SJX,\N,18.355556,-88.130833,10,-6,U,America/Belize,airport,User
+7290,Huehuetenango Airport,Huehuetenango,Guatemala,\N,\N,15.314722,-91.476111,1901,-6,U,America/Guatemala,airport,User
 7291,Corn Island,Corn Island,Nicaragua,RNI,MNCI,12.1628999710083,-83.06379699707031,1,-6,U,America/Managua,airport,OurAirports
 7292,San Pedro Airport,Bonanza,Nicaragua,BZA,MNBZ,13.949999809265137,-84.5999984741211,600,-6,U,America/Managua,airport,OurAirports
 7293,Rosita Airport,Rosita,Nicaragua,RFS,MNRT,13.889699935913086,-84.40889739990234,193,-6,U,America/Managua,airport,OurAirports
@@ -5496,6 +5615,7 @@
 7302,Negril Airport,Negril,Jamaica,NEG,MKNG,18.34280014038086,-78.33209991455078,9,-5,U,America/Jamaica,airport,OurAirports
 7307,José Aponte de la Torre Airport,Ceiba,Puerto Rico,NRR,TJRV,18.245300293,-65.6434020996,38,-4,A,America/Puerto_Rico,airport,OurAirports
 7309,Charlotte Amalie Harbor Seaplane Base,Charlotte Amalie,United States Virgin Islands,SPB,VI22,18.338600158691406,-64.9406967163086,0,-4,A,America/St_Thomas,airport,OurAirports
+7310,Christiansted Harbor Seaplane Base,Christiansted,Virgin Islands,SSB,\N,17.747222,-64.705,0,-4,A,America/St_Thomas,airport,User
 7311,D. Casimiro Szlapelis Airport,Alto Rio Senguer,Argentina,ARR,SAVR,-45.013599,-70.812202,2286,-3,N,America/Catamarca,airport,OurAirports
 7312,Jose De San Martin Airport,Jose de San Martin,Argentina,JSM,SAWS,-44.048599243199995,-70.4589004517,2407,-3,N,America/Catamarca,airport,OurAirports
 7313,Uyuni Airport,Uyuni,Bolivia,UYU,SLUY,-20.446300506599997,-66.8483963013,11136,-4,U,America/La_Paz,airport,OurAirports
@@ -5529,7 +5649,10 @@
 7353,Dr Augusto Roberto Fuster International Airport,Pedro Juan Caballero,Paraguay,PJC,SGPJ,-22.639999389648438,-55.83000183105469,1873,-4,U,America/Asuncion,airport,OurAirports
 7354,Alcides Fernández Airport,Acandi,Colombia,ACD,SKAD,8.51667,-77.3,50,-5,U,America/Bogota,airport,OurAirports
 7355,Los Colonizadores Airport,Saravena,Colombia,RVE,SKSA,6.951868,-71.857179,680,-5,U,America/Bogota,airport,OurAirports
+7356,La Chorrera Airport,La Chorrera,Colombia,LCR,\N,-0.733333,-73.016667,10,-5,U,America/Bogota,airport,User
 7357,Batagay Airport,Batagay,Russia,BQJ,UEBB,67.648002624512,134.69500732422,696,10,N,Asia/Vladivostok,airport,OurAirports
+7357,Batagay Airport,Batagay,Russia,BQJ,UEBB,67.648002624512,134.69500732422,696,10,N,Asia/Vladivostok,airport,OurAirports
+7358,La Macarena,La Macarena,Colombia,LMC,\N,2.179167,-73.7875,10,-5,U,America/Bogota,unknown,User
 7359,Villa Garzón Airport,Villa Garzon,Colombia,VGZ,SKVG,0.978767,-76.6056,1248,-5,U,America/Bogota,airport,OurAirports
 7360,El Bagre Airport,El Bagre,Colombia,EBG,SKEB,7.59647,-74.8089,180,-5,U,America/Bogota,airport,OurAirports
 7361,Juan H White Airport,Caucasia,Colombia,CAQ,SKCU,7.96847,-75.1985,174,-5,U,America/Bogota,airport,OurAirports
@@ -5584,6 +5707,10 @@
 7429,Cape Palmas Airport,Greenville,Liberia,CPA,GLCP,4.3790202140808105,-7.6969499588012695,20,0,U,Africa/Monrovia,airport,OurAirports
 7432,Ecuvillens Airport,Ecuvillens,Switzerland,\N,LSGE,46.755001068115234,7.076109886169434,2293,1,E,Europe/Zurich,airport,OurAirports
 7437,Inhaca Airport,Inhaca,Mozambique,IHC,FQIA,-25.9971446991,32.929351806599996,10,2,U,Africa/Maputo,airport,OurAirports
+7238,Crooked Creek Airport,Crooked Creek,United States,CKD,\N,61.867778,-158.135,178,-9,A,America/Anchorage,airport,User
+7239,Red Devil Airport,Red Devil,United States,RDV,\N,61.788056,-157.350278,174,-9,A,America/Anchorage,airport,User
+7240,Sleetmute Airport,Sleetmute,United States,SLQ,PASL,61.7005004883,-157.166000366,190,-9,A,America/Anchorage,airport,OurAirports
+7241,Stony River 2 Airport,Stony River,United States,SRV,\N,61.7875,-156.591111,230,-9,A,America/Anchorage,airport,User
 7442,Ouro Sogui Airport,Matam,Senegal,MAX,GOSM,15.593600273132324,-13.322799682617188,85,0,U,Africa/Dakar,airport,OurAirports
 7443,Bird Island Airport,Bird Island,Seychelles,BDI,FSSB,-3.72472,55.205299,6,4,U,\N,airport,OurAirports
 7446,Wadi Halfa Airport,Wadi Halfa,Sudan,WHF,HSSW,21.802698135375977,31.521577835083008,961,3,U,Africa/Khartoum,airport,OurAirports
@@ -5613,6 +5740,9 @@
 7474,Severo-Evensk Airport,Evensk,Russia,\N,UHMW,61.92166519165039,159.22999572753906,0,11,N,Asia/Srednekolymsk,airport,OurAirports
 7475,Olenyok Airport,Olenyok,Russia,ONK,UERO,68.514999,112.480003,847,9,N,Asia/Yakutsk,airport,OurAirports
 7476,Saskylakh Airport,Saskylakh,Russia,SYS,UERS,71.92790222168,114.08000183105,0,9,N,Asia/Yakutsk,airport,OurAirports
+7477,Lensk Airport,Lensk,Russia,\N,\N,60.719444,114.931944,700,9,N,Asia/Yakutsk,airport,User
+7478,Burevestnik Airport,Iturup Island,Russia,BVV,\N,44.92,147.621667,79,11,N,Asia/Srednekolymsk,airport,User
+7479,Okha Airport,Okha,Russia,OHH,\N,53.583333,142.933333,100,11,N,Asia/Srednekolymsk,airport,User
 7480,Leshukonskoye Airport,Arkhangelsk,Russia,LDG,ULAL,64.8960037231,45.7229995728,220,3,N,Europe/Moscow,airport,OurAirports
 7481,Nizhneangarsk Airport,Nizhneangarsk,Russia,\N,UIUN,55.80080032348633,109.59500122070312,1545,8,N,Asia/Irkutsk,airport,OurAirports
 7483,Vanavara Airport,Vanavara,Russia,\N,UNIW,60.35969924926758,102.3239974975586,892,7,N,Asia/Krasnoyarsk,airport,OurAirports
@@ -5649,6 +5779,9 @@
 7522,Kinston Regional Jetport At Stallings Field,Kinston,United States,ISO,KISO,35.331401825,-77.60880279540001,93,-5,A,America/New_York,airport,OurAirports
 7523,First Flight Airport,Kill Devil Hills,United States,FFA,KFFA,36.0181999207,-75.67130279540001,13,-5,A,America/New_York,airport,OurAirports
 7527,Lintsang Airfield,Lincang,China,LNJ,ZPLC,23.738100051900002,100.025001526,6230,8,U,Asia/Shanghai,airport,OurAirports
+7528,Wenshan Airport,Wenshan,China,WNH,\N,23.375833,104.243056,1000,8,U,Asia/Shanghai,airport,User
+7529,Ponta Pelada Airport,Manaus,Brazil,\N,\N,-3.14604,-59.9863,267,-4,S,America/Boa_Vista,airport,User
+7530,Sao Gabriel da Cachoeira Airport,Sao Gabriel da Cachoeira,Brazil,\N,\N,-0.148056,-66.9858,251,-4,S,America/Boa_Vista,airport,User
 7531,Maturacá Airport,Maturaca,Brazil,\N,SWMK,0.6282690167427063,-66.11509704589844,354,-4,S,America/Boa_Vista,airport,OurAirports
 7532,Carajás Airport,Parauapebas,Brazil,CKS,SBCJ,-6.11527776718,-50.0013885498,2064,-3,S,America/Belem,airport,OurAirports
 7533,Centro de Lançamento de Alcântara Airport,Alcantara,Brazil,\N,SNCW,-2.372999906539917,-44.396400451660156,148,-3,S,America/Fortaleza,airport,OurAirports
@@ -5668,6 +5801,7 @@
 7558,Ulaangom Airport,Ulaangom,Mongolia,ULO,ZMUG,50.066588,91.938273,0,7,U,Asia/Hovd,airport,OurAirports
 7559,Borongan Airport,Borongan,Philippines,\N,RPVW,11.674300193799999,125.478996277,7,8,N,Asia/Manila,airport,OurAirports
 7560,Lubang Airport,Lubang,Philippines,LBX,RPLU,13.855400085449219,120.1050033569336,43,8,N,Asia/Manila,airport,OurAirports
+7562,Dickwella Airport,Dickwella,Sri Lanka,DIW,\N,5.966667,80.683333,100,5.5,U,Asia/Colombo,airport,User
 7563,Kulob Airport,Kulyab,Tajikistan,TJU,UTDK,37.98809814453125,69.80500030517578,2293,5,U,Asia/Dushanbe,airport,OurAirports
 7564,Chi Mei Airport,Cimei,Taiwan,CMJ,RCCM,23.2131004333,119.417999268,63,8,U,Asia/Taipei,airport,OurAirports
 7565,Daşoguz Airport,Dasoguz,Turkmenistan,TAZ,UTAT,41.761101,59.826698,272,5,U,Asia/Ashgabat,airport,OurAirports
@@ -5851,7 +5985,9 @@
 7892,Strasbourg Neuhof Airfield,Strasbourg Neudorf,France,\N,LFGC,48.554401,7.77806,456,1,E,Europe/Paris,airport,OurAirports
 7893,Nannhausen Airport,Nannhausen,Germany,\N,EDRN,49.9702796936,7.47916698456,1224,1,E,Europe/Berlin,airport,OurAirports
 7894,Yushu Batang Airport,Yushu,China,YUS,ZYLS,32.836388888900004,97.0363888889,12816,8,U,Asia/Shanghai,airport,OurAirports
+7895,Playon Chico,Playon Chico,Panama,PYC,\N,9.303333,-78.236111,10,-5,U,America/Panama,unknown,User
 7898,Lianshui Airport,Huai An,China,HIA,ZSSH,33.7908333333,119.125,28,8,N,Asia/Shanghai,airport,OurAirports
+7901,El Porvenir,El Porvenir,Panama,PVE,\N,9.559167,-78.971111,5,-5,U,America/Panama,unknown,User
 7902,Toronto/Oshawa Executive Airport,Oshawa,Canada,YOO,CYOO,43.922798,-78.894997,460,-5,A,America/Toronto,airport,OurAirports
 7903,Marl-Loemühle Airfield,Recklinghausen,Germany,\N,EDLM,51.647202,7.16333,240,1,U,Europe/Berlin,airport,OurAirports
 7904,Färila Air Base,Farila,Sweden,\N,ESNF,61.897998809814,15.705300331116,0,1,E,Europe/Stockholm,airport,OurAirports
@@ -5993,6 +6129,17 @@
 8156,Bolshoye Gryzlovo Airfield,Stupino,Russia,\N,UUDG,54.785,37.645,797,3,N,Europe/Moscow,airport,OurAirports
 8162,Charlevoix Municipal Airport,Charelvoix,United States,\N,KCVX,45.3047981262207,-85.2748031616211,669,-5,A,America/New_York,airport,OurAirports
 8165,Mykines Heliport,Mykines,Faroe Islands,\N,EKMS,62.1021003723,-7.645919799800001,110,0,E,Atlantic/Faeroe,airport,OurAirports
+8166,V-A Waterfront,Cape Town,South Africa,\N,\N,-33.901161,18.425896,0,2,N,Africa/Johannesburg,unknown,User
+8167,Steenberg Helipad,Cape Town,South Africa,\N,\N,-34.070582,18.424067,50,2,N,Africa/Johannesburg,unknown,User
+8168,Steenberg Helipad,Cape Town,South Africa,\N,\N,-34.070582,18.424067,50,2,N,Africa/Johannesburg,unknown,User
+8169,Moultrie Municipal Airport,Moultrie,United States,MGR,\N,31.0849167,-83.80325,294,-5,A,America/New_York,airport,User
+8170,Roche Harbor Seaplane Base,Roche Harbor,United States,RCE,\N,48.608056,-123.159722,0,-8,A,America/Los_Angeles,airport,User
+8171,Blakely Island Airport,Blakely Island,United States,BYW,\N,48.56025,-122.80243,0,-8,A,America/Los_Angeles,airport,User
+8172,Rosario Seaplane Base,Rosario,United States,RSJ,\N,48.645556,-122.868056,0,-8,A,America/Los_Angeles,airport,User
+8173,Westsound Seaplane Base,Westsound,United States,WSX,\N,48.617778,-122.952778,0,-8,A,America/Los_Angeles,airport,User
+8174,Friday Harbor Seaplane Base,Friday Harbor,United States,FBS,\N,48.537222,-123.009722,0,-8,A,America/Los_Angeles,airport,User
+8175,Big Bay Water Aerodrome,Big Bay,Canada,YRR,\N,50.4,-125.133333,0,-8,A,America/Vancouver,airport,User
+8176,Furnace Creek,Death Valley National Park,United States,L06,\N,36.273,-116.515,0,-8,A,America/Los_Angeles,unknown,User
 8177,Cornwall Regional Airport,Cornwall,Canada,YCC,CYCC,45.09280014038086,-74.56330108642578,175,-5,A,America/Toronto,airport,OurAirports
 8178,Seppe Airfield,Bosschenhoofd,Netherlands,\N,EHSE,51.554699,4.5525,30,1,E,Europe/Amsterdam,airport,OurAirports
 8179,St Stephan Airport,St.Stephan,Switzerland,\N,LSTS,46.497398376464844,7.412569999694824,3304,1,E,Europe/Zurich,airport,OurAirports
@@ -6007,6 +6154,13 @@
 8195,Block Island State Airport,Block Island,United States,BID,KBID,41.1680984497,-71.577796936,108,-5,A,America/New_York,airport,OurAirports
 8199,Nightmute Airport,Nightmute,United States,NME,PAGT,60.471000671387,-164.70100402832,4,-9,A,America/Anchorage,airport,OurAirports
 8200,Toksook Bay Airport,Toksook Bay,United States,OOK,PAOO,60.54140091,-165.0870056,59,-9,A,America/Anchorage,airport,OurAirports
+8201,Tununak Airport,Tununak,United States,TNK,\N,60.575556,-165.271667,14,-9,A,America/Anchorage,airport,User
+8202,Goodnews Airport,Goodnews Bay,United States,GNU,\N,59.1175,-161.5775,15,-9,A,America/Anchorage,airport,User
+8203,Newtok Airport,Newtok,United States,WWT,\N,60.939167,-164.641111,25,-9,U,America/Anchorage,airport,User
+8204,Achutupo Airport,Achutupo,Panama,ACU,\N,9.2,-77.98,0,-5,U,America/Panama,airport,User
+8205,Tubuala Airport,Tubuala,Panama,TUW,\N,9.52,-79.03,0,-5,U,America/Panama,airport,User
+8206,Garachine Airport,Garachine,Panama,GHE,\N,8.06,-78.36,0,-5,U,America/Panama,airport,User
+8207,Mulatupo Airport,Mulatupo,Panama,MPP,\N,8.95,-77.75,0,-5,U,America/Panama,airport,User
 8208,Ittoqqortoormiit Heliport,Ittoqqortoormiit,Greenland,OBY,BGSC,70.4882288244,-21.971679925900002,238,-1,U,America/Scoresbysund,airport,OurAirports
 8209,Vinnytsia/Gavyryshivka Airport,Vinnitsa,Ukraine,VIN,UKWW,49.242531,28.613778,961,2,E,Europe/Kiev,airport,OurAirports
 8215,Decatur County Industrial Air Park,Bainbridge,United States,BGE,KBGE,30.9715004,-84.63739777,141,-5,A,America/New_York,airport,OurAirports
@@ -6173,6 +6327,16 @@
 8477,Bob Quinn Lake Airport,Bob Quinn Lake,Canada,YBO,CBW4,56.9667015076,-130.25,2000,-8,U,America/Vancouver,airport,OurAirports
 8480,Msembe Airport,Msembe,Tanzania,\N,HTMR,-7.684811,34.922282,2500,3,U,Africa/Dar_es_Salaam,airport,OurAirports
 8482,Grabtsevo Airport,Kaluga,Russia,KLF,UUBC,54.5499992371,36.3666687012,656,3,N,Europe/Moscow,airport,OurAirports
+8483,Reykjahlid,Reykjahlid,Iceland,\N,\N,65.6,-17,100,0,U,Atlantic/Reykjavik,unknown,User
+8484,Central Station,Stockholm,Sweden,XEV,\N,59.33,18.058056,10,1,E,Europe/Stockholm,station,User
+8485,Central Station,Uppsala,Sweden,QYX,\N,59.858333,17.646111,23,1,E,Europe/Stockholm,station,User
+8486,Centraal,Rotterdam,Netherlands,QRH,\N,51.924444,4.469444,7,1,E,Europe/Amsterdam,unknown,User
+8487,Holesovice,Praha,Czech Republic,XYJ,\N,50.11,14.439444,616,1,E,Europe/Prague,unknown,User
+8488,Hauptbahnhof,Bonn,Germany,\N,\N,50.731944,7.096944,204,1,E,Europe/Berlin,station,User
+8489,Central,Copenhagen,Denmark,ZGH,\N,55.672778,12.564444,16,1,E,Europe/Copenhagen,unknown,User
+8490,Hauptbahnhof,Salzburg,Austria,ZSB,\N,47.813056,13.046667,1391,1,E,Europe/Vienna,station,User
+8491,Centraal,Antwerp,Belgium,ZWE,\N,51.217222,4.421111,51,1,E,Europe/Brussels,unknown,User
+8492,Ellisras,Lephalale,South Africa,ELL,FAEA,-23.666667,27.75,2700,2,U,Africa/Johannesburg,unknown,User
 8493,Tri-County Regional Airport,Lone Rock,United States,LNR,KLNR,43.2117004395,-90.181602478,717,-6,A,America/Chicago,airport,OurAirports
 8494,Price County Airport,Phillips,United States,\N,KPBH,45.70899963378906,-90.40249633789062,1497,-6,A,America/Chicago,airport,OurAirports
 8495,Monroe Municipal Airport,Monroe,United States,\N,KEFT,42.614898681640625,-89.59040069580078,1086,-6,A,America/Chicago,airport,OurAirports
@@ -6298,6 +6462,7 @@
 8721,Antsirabe Airport,Antsirabe,Madagascar,ATJ,FMME,-19.8392214824,47.063713073699994,4997,3,U,Indian/Antananarivo,airport,OurAirports
 8722,Bekily Airport,Bekily,Madagascar,OVA,FMSL,-24.235694754699995,45.3045272827,1270,3,U,Indian/Antananarivo,airport,OurAirports
 8723,Ust-Tsylma Airport,Ust-Tsylma,Russia,UTS,UUYX,65.43729400630001,52.20033645629999,262,3,N,Europe/Moscow,airport,OurAirports
+8735,Pomalaa,Pomalaa,Indonesia,PUM,\N,-4.183333,121.61667,0,8,N,Asia/Makassar,unknown,User
 8740,Gorno-Altaysk Airport,Gorno-Altaysk,Russia,RGK,UNBG,51.9667015076,85.8332977295,965,7,N,Asia/Krasnoyarsk,airport,OurAirports
 8742,Fond du Lac County Airport,Fond du Lac,United States,FLD,KFLD,43.7711982727,-88.48840332030001,808,-6,A,America/Chicago,airport,OurAirports
 8743,Waupaca Municipal Airport,Waupaca,United States,\N,KPCZ,44.33330154,-89.01979828,840,-6,A,America/Chicago,airport,OurAirports
@@ -6366,6 +6531,9 @@
 8853,Fairoaks Airport,Fairoaks,United Kingdom,\N,EGTF,51.3480987549,-0.558888971806,80,0,U,Europe/London,airport,OurAirports
 8854,Boulder Municipal Airport,Boulder,United States,WBU,KBDU,40.0393981934,-105.225997925,5288,-7,A,America/Denver,airport,OurAirports
 8855,Neustadt-Glewe Airport,Neustadt-Glewe,Germany,\N,EDAN,53.35972213745117,11.615278244018555,115,1,E,Europe/Berlin,airport,OurAirports
+8856,Berchtesgarden BKS,Bischofswiesen,Germany,\N,\N,47.62313,12.972214,2297,1,E,Europe/Berlin,unknown,User
+8857,Hohe Duene,Warnemuende,Germany,\N,ETMW,54.181438,12.132082,10,1,E,Europe/Berlin,unknown,User
+8858,Sannvhe,Tangshan,China,TVS,ZBSN,39.717444,118.002389,25,8,N,Asia/Shanghai,unknown,User
 8859,Goetsenhoven Air Base,GOETSENHOVEN,Belgium,\N,EBTN,50.781700134277344,4.957779884338379,246,1,E,Europe/Brussels,airport,OurAirports
 8860,Tutow Airport,Wildenrath,Germany,\N,EDUW,53.92194366455078,13.218889236450195,26,1,E,Europe/Berlin,airport,OurAirports
 8861,Bremgarten Airport,Bremgarten,Germany,\N,EDTG,47.9027786255,7.6177778244,696,1,E,Europe/Berlin,airport,OurAirports
@@ -6414,6 +6582,7 @@
 8954,Mário Pereira Lopes–São Carlos Airport,Sao Carlos,Brazil,QSC,SDSC,-21.875401,-47.903703,2649,-3,S,America/Sao_Paulo,airport,OurAirports
 8958,Chan Gurney Municipal Airport,Yankton,United States,YKN,KYKN,42.916698455811,-97.385902404785,1306,-6,A,America/Chicago,airport,OurAirports
 8961,Sir Bani Yas Airport,Sir Bani Yas Island,United Arab Emirates,XSB,OMBY,24.283611,52.580278,25,4,U,Asia/Dubai,airport,OurAirports
+8962,Dalma Airport,Dalma Island,United Arab Emirates,ZDY,\N,24.5033833,52.3360528,8,4,U,Asia/Dubai,airport,User
 8963,Bromont (Roland Desourdy) Airport,Bromont,Canada,ZBM,CZBM,45.2907981873,-72.74140167239999,375,-5,A,America/Toronto,airport,OurAirports
 8965,Beccles Airport,Beccles,United Kingdom,\N,EGSM,52.435298919699996,1.6183300018300002,80,0,E,Europe/London,airport,OurAirports
 8966,Kratie Airport,Kratie,Cambodia,KTI,VDKT,12.48799991607666,106.05500030517578,0,7,N,Asia/Phnom_Penh,airport,OurAirports
@@ -6478,6 +6647,7 @@
 9129,Kangel Danda Airport,Kangel Danda,Nepal,\N,VNKL,27.4106333137,86.6465950012,0,5.75,N,Asia/Katmandu,airport,OurAirports
 9132,Bajura Airport,Bajura,Nepal,BJU,VNBR,29.50200080871582,81.66899871826172,4300,5.75,N,Asia/Katmandu,airport,OurAirports
 9134,Chara Airport,Chara,Russia,\N,UIAR,56.913333892822266,118.2699966430664,2201,9,N,Asia/Yakutsk,airport,OurAirports
+9135,Tho Xuan Airport,Thanh Hoa,Vietnam,THD,\N,19.90167,105.46778,0,7,N,Asia/Saigon,airport,User
 9136,Herning Airport,Herning,Denmark,\N,EKHG,56.18470001220703,9.044449806213379,167,1,E,Europe/Copenhagen,airport,OurAirports
 9137,Oberschleißheim Airfield,Schleissheim,Germany,\N,EDNX,48.239445,11.561389,1594,1,E,Europe/Berlin,airport,OurAirports
 9138,Pinal Airpark,Marana,United States,MZJ,KMZJ,32.5106010437,-111.32800293,1893,-7,N,America/Phoenix,airport,OurAirports
@@ -6495,6 +6665,7 @@
 9175,Tetiaroa Airport,Tetiaroa,French Polynesia,TTI,NTTE,-17.0132999420166,-149.58700561523438,7,-10,N,Pacific/Tahiti,airport,OurAirports
 9178,Floyd Bennett Memorial Airport,Queensbury,United States,GFL,KGFL,43.3412017822,-73.6102981567,328,-5,A,America/New_York,airport,OurAirports
 9179,Saratoga County Airport,Ballston Spa,United States,\N,K5B2,43.05130005,-73.86119843,434,-5,A,America/New_York,airport,OurAirports
+9181,Tampa Padang,Mamuju,Indonesia,MJU,WAWJ,-2.583333,119.033333,2,8,N,Asia/Makassar,unknown,User
 9182,Crystal River Airport,Crystal River,United States,\N,KCGC,28.867300033569336,-82.57129669189453,9,-5,A,America/New_York,airport,OurAirports
 9183,Martin State Airport,Baltimore,United States,MTN,KMTN,39.325699,-76.413803,21,-5,A,America/New_York,airport,OurAirports
 9184,Lincoln Regional Karl Harder Field,Lincoln,United States,\N,KLHM,38.90919876098633,-121.35099792480469,121,-8,A,America/Los_Angeles,airport,OurAirports
@@ -6600,6 +6771,7 @@
 9528,Fazenda Campo Verde Airport,Sihanoukville,Cambodia,\N,SNKV,1.04278004169,-50.516700744599994,49,-3,N,America/Fortaleza,airport,OurAirports
 9532,Prominent Hill Airport,Prominent Hill,Australia,PXH,YPMH,-29.716,135.5244,745,9.5,O,Australia/Adelaide,airport,OurAirports
 9533,Cowra Airport,Chatsworth,Australia,CWT,YCWR,-33.84469985961914,148.6490020751953,966,10,A,Australia/Sydney,airport,OurAirports
+9540,Deer Harbor Seaplane,Deer Harbor,United States,DHB,\N,48.618397,-123.00596,0,-8,A,America/Los_Angeles,airport,User
 9542,Coral Bay Airport,Coral Bay,Australia,\N,YCOY,-23.1299991607666,113.7770004272461,5,8,O,Australia/Perth,airport,OurAirports
 9543,Ogden Hinckley Airport,Ogden,United States,OGD,KOGD,41.195899963379,-112.0120010376,4473,-7,A,America/Denver,airport,OurAirports
 9544,Lake Country Regional Airport,Clarksville,United Arab Emirates,\N,KW63,36.5957984924,-78.56009674070002,421,-5,A,America/New_York,airport,OurAirports
@@ -6607,12 +6779,22 @@
 9546,Colorado Plains Regional Airport,Akron,United States,AKO,KAKO,40.1755981445,-103.222000122,4714,-7,A,America/Denver,airport,OurAirports
 9547,Sanderson Field,Shelton,United States,SHN,KSHN,47.233600616455,-123.14800262451,273,-8,A,America/Los_Angeles,airport,OurAirports
 9739,Napakiak Airport,Napakiak,United States,WNA,PANA,60.69029998779297,-161.97900390625,17,-9,A,America/Anchorage,airport,OurAirports
+9740,Delta Junction Airport,Delta Junction,United States,DJN,\N,64.050556,-145.717222,1150,-9,A,America/Anchorage,airport,User
+9741,Stevens Village Airport,Stevens Village,United States,SVS,\N,66.016944,-149.054444,329,-9,A,America/Anchorage,airport,User
+9742,Akiachak Airport,Akiachak,United States,KKI,\N,60.906111,-161.426944,25,-9,A,America/Anchorage,airport,User
+9743,Atmautluak Airport,Atmautluak,United States,4A2,\N,60.866667,-162.273056,17,-9,A,America/Anchorage,airport,User
 9744,Napaskiak Airport,Napaskiak,United States,PKA,PAPK,60.70289993,-161.7779999,24,-9,A,America/Anchorage,airport,OurAirports
+9745,Chignik Fisheries Airport,Chignik,United States,KCG,\N,56.317778,-158.590833,25,-9,A,America/Anchorage,airport,User
 9746,Tok Airport,Tok,United States,\N,PATJ,63.303333,-143.001111,1670,-9,A,America/Anchorage,airport,OurAirports
+9747,Klemtu Airport,Klemtu,Canada,YKT,\N,52.583333,-128.533333,0,-8,A,America/Vancouver,airport,User
 9749,Bedwell Harbour Seaplane Base,Bedwell Harbour,Canada,YBW,CAB3,48.75,-123.233001709,0,-8,A,America/Vancouver,airport,OurAirports
 9751,Washabo Airport,Washabo,Suriname,WSO,SMWS,5.215277,-57.185302,68,-3,N,America/Paramaribo,airport,OurAirports
 9753,Popham Airfield,Popham,United Kingdom,\N,EGHP,51.193901,-1.23472,550,0,E,Europe/London,airport,OurAirports
 9754,Causey Airport,Liberty,United States,\N,K2A5,35.911800384521484,-79.61759948730469,723,-5,A,America/New_York,airport,OurAirports
+9755,Zhuhai Railway Station,Zhuhai,China,\N,\N,22.218333,113.545,118,8,N,Asia/Macau,station,User
+9756,Silver Creek Airport,Stann Creek,Belize,SVK,\N,16.728417,-88.36925,216,-6,N,America/Belize,airport,User
+9757,Independence Airport,Independence,Belize,INB,\N,16.521944,-88.410583,18,-6,N,America/Belize,airport,User
+9758,Corazon de Jesus Airport,Corazon de Jesus,Panama,CZJ,\N,9.447222,-78.575,8,-5,N,America/Panama,airport,User
 9759,Abaco I Walker C Airport,Walker's Cay,Bahamas,WKR,MYAW,27.266700744628906,-78.39969635009766,10,-5,A,\N,airport,OurAirports
 9760,Black Point Airstrip,Black Point,Bahamas,\N,MYEB,24.089488448799997,-76.3979172707,10,-5,A,America/Nassau,airport,OurAirports
 9761,Bartica A Airport,Bartica,Guyana,GFO,SYBT,6.358864,-58.655207,3,-4,N,America/Guyana,airport,OurAirports
@@ -6656,14 +6838,28 @@
 9819,Beni Mellal Airport,Beni Mellal,Morocco,BEM,GMMD,32.401895,-6.315905,1694,0,E,Africa/Casablanca,airport,OurAirports
 9820,Şırnak Şerafettin Elçi Airport,Cizre,Turkey,NKT,LTCV,37.3647,42.0582,2038,3,E,Europe/Istanbul,airport,OurAirports
 9821,Suntar Airport,Suntar,Russia,SUY,UENS,62.185001373291,117.63500213623,452,9,N,Asia/Yakutsk,airport,OurAirports
+9822,Srednekolymsk Airport,Srednekolymsk,Russia,\N,\N,67.479722,153.735,48,11,N,Asia/Srednekolymsk,airport,User
+9823,Goulimime Airport,Goulimime,Morocco,GLN,\N,29.0266991,-10.0502996,984,0,E,Africa/Casablanca,airport,User
 9824,Tazadit Airport,Zouerat,Mauritania,OUZ,GQPZ,22.756399154663086,-12.483599662780762,1129,0,N,Africa/Nouakchott,airport,OurAirports
 9825,Asaba International Airport,Asaba,Nigeria,ABB,DNAS,6.204167,6.665278,305,1,N,Africa/Lagos,airport,OurAirports
 9826,Akwa Ibom International Airport,Uyo,Nigeria,QUO,DNAI,4.8725,8.093,170,1,N,Africa/Lagos,airport,OurAirports
+9827,Semera Airport,Semera,Ethiopia,SZE,\N,11.7875,40.991667,1380,3,N,Africa/Addis_Ababa,airport,User
 9828,Kasama Airport,Kasama,Zambia,KAA,FLKS,-10.216699600219727,31.13330078125,4541,2,N,Africa/Lusaka,airport,OurAirports
 9829,Mbeya Airport,Mbeya,Tanzania,\N,HTMB,-8.919444,33.463889,5600,3,N,Africa/Dar_es_Salaam,airport,OurAirports
 9830,Mpanda Airport,Mpanda,Tanzania,\N,HTMP,-6.355374,31.084116,3520,3,N,Africa/Dar_es_Salaam,airport,OurAirports
 9831,Songea Airport,Songea,Tanzania,SGX,HTSO,-10.682999610900879,35.58300018310547,3445,3,N,Africa/Dar_es_Salaam,airport,OurAirports
 9832,Morogoro Airport,Morogoro,Tanzania,\N,HTMG,-6.797220230102539,37.653099060058594,1676,3,N,Africa/Dar_es_Salaam,airport,OurAirports
+9832,Morogoro Airport,Morogoro,Tanzania,\N,HTMG,-6.797220230102539,37.653099060058594,1676,3,N,Africa/Dar_es_Salaam,airport,OurAirports
+9833,Kirawira Aerodrome,Grumeti Game Reserve,Tanzania,GTZ,\N,-2.160833,34.225556,3970,3,N,Africa/Dar_es_Salaam,airport,User
+9834,Kogatende Airstrip,Kogatende,Tanzania,\N,\N,-1.565604,34.885572,1000,3,U,Africa/Dar_es_Salaam,unknown,User
+9835,Lobo Airstrip,Lobo,Tanzania,\N,HTLO,-2.010441,35.160822,1000,3,N,Africa/Dar_es_Salaam,unknown,User
+9836,Serengeti South Airfield,Serengeti South,Tanzania,\N,HTST,-2.457931,34.82171,1000,3,N,Africa/Dar_es_Salaam,unknown,User
+9837,Chiasso Railway Station,Chiasso,Switzerland,\N,\N,45.832222,9.031111,781,1,E,Europe/Zurich,station,User
+9838,Etihad Travel Mall,Dubai,United Arab Emirates,XNB,\N,25.154721,55.226424,100,4,N,Asia/Dubai,unknown,User
+9839,Port of liverpool,Liverpool,United Kingdom,\N,\N,53.4043,-2.9949,0,0,U,Europe/London,unknown,User
+9840,Port of montreal,Montreal,Canada,\N,\N,45.547,-73.53,0,-5,U,America/Toronto,unknown,User
+9841,Zaysan Airport,Zaysan,Kazakhstan,SZI,\N,47.486944,84.887222,2170,6,E,Asia/Qyzylorda,airport,User
+9842,Tuticorin Airport,Thoothukudi,India,TCR,\N,8.724167,78.025833,129,5.5,N,Asia/Calcutta,airport,User
 9843,Jiuhuashan Airport,Chizhou,China,JUH,ZSJH,30.7403,117.6856,60,8,N,Asia/Shanghai,airport,OurAirports
 9844,Anshan Air Base,Anshan,China,AOG,ZYAS,41.105301,122.853996,0,8,N,Asia/Shanghai,airport,OurAirports
 9845,Saertu Airport,Daqing,China,DQA,ZYDQ,46.7463888889,125.140555556,496,8,N,Asia/Shanghai,airport,OurAirports
@@ -6724,6 +6920,7 @@
 10114,Chichen Itza International Airport,Chichen Itza,Mexico,CZA,MMCT,20.6413002014,-88.4461975098,102,-6,S,America/Mexico_City,airport,OurAirports
 10116,Bunbury Airport,Bunbury,Australia,BUY,YBUN,-33.378299713134766,115.677001953125,53,8,U,\N,airport,OurAirports
 10117,Cable Airport,Upland,United States,CCB,KCCB,34.1115989685,-117.68800354,1444,-8,A,\N,airport,OurAirports
+10119,Fuvahmulah Airport,Fuvahmulah,Maldives,FVM,\N,0.3100238,73.4336631,2,5,U,\N,airport,User
 10121,Mount Sterling Montgomery County Airport,Mount Sterling,United States,\N,KIOB,38.05810165,-83.979599,1019,-5,A,\N,airport,OurAirports
 10122,Elkhart Municipal Airport,Elkhart,United States,EKI,KEKM,41.7193984985,-86.00319671630001,778,-5,A,\N,airport,OurAirports
 10123,Nappanee Municipal Airport,Nappanee ,United States,\N,KC03,41.44620132446289,-85.93479919433594,860,-5,A,\N,airport,OurAirports
@@ -7436,6 +7633,7 @@
 13334,Palenque International Airport,Palenque,Mexico,PQM,MMPQ,17.533153,-92.015484,200,-5,U,\N,airport,OurAirports
 13335,Caloundra Airport,Caloundra,Australia,CUD,YCDR,-26.799999237060547,153.10000610351562,12,10,N,\N,airport,OurAirports
 13336,Clarks Point Airport,Clarks Point,United States,CLP,PFCL,58.83369827,-158.529007,80,-9,A,\N,airport,OurAirports
+13337,Waterfall Seaplane Base,Waterfall,United States,KWF,\N,55.296389,-133.243333,0,-9,A,\N,\N,\N
 13339,Ospika Airport,Williston Lake,Canada,\N,CBA9,56.275001525878906,-124.052001953125,2300,-8,A,\N,airport,OurAirports
 13341,Charlottetown Airport,Charlottetown,Canada,\N,CCH4,52.76499938964844,-56.1156005859375,209,-3.5,A,\N,airport,OurAirports
 13342,Doris Lake,Doris Lake,Canada,JOJ,CDL7,68.1252746582,-106.585281372,50,-7,A,\N,airport,OurAirports

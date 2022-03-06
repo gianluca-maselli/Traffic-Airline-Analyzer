@@ -1,15 +1,6 @@
 
 function getValue(element){
-    var btnValue = element.innerText;
-    /*
-    cb = document.getElementsByClassName('mCheckbox')[0]
-    cb.addEventListener('change', function(){
-        some_var = this.checked
-        console.log(this.value)
-    })*/
-
-    
-    
+    var btnValue = element.innerText;    
     console.log(btnValue)
     d3.queue()
         .defer(d3.json, "world.topojson")
@@ -18,9 +9,10 @@ function getValue(element){
         .defer(d3.csv, "./dataset/airlines.csv")
         .defer(d3.csv, "./dataset/worldCountry.csv")
         .defer(d3.json, "./dataset/pca_positions.json")
+        .defer(d3.csv, "./dataset/country_centroids.csv")
         .await(ready);
 
-        function ready(error, data, airports, routes2, airlines,worldCountry,pca_data){
+        function ready(error, data, airports, routes2, airlines,worldCountry,pca_data,c_centroids){
             //getArrayPCA(airports,airlines,routes2)
             var countries = topojson.feature(data,data.objects.countries).features
             //compute centroids 
@@ -28,13 +20,17 @@ function getValue(element){
             //console.log(countries[1].geometry)
             //console.log(cent)
             //centroids_country = {}
+            /*
             var centroids_country = countries.map(function (country){
                 c_name = country.properties.name
                 centroid =  path.centroid(country);
                 return {'country':c_name, 'centroid':centroid}
-            });
+            });*/
+            //console.log(c_centroids)
 
-            console.log(centroids_country)
+            
+
+            //console.log(centroids_country)
 
             //console.log(centroids)
             //console.log(countries)
@@ -174,23 +170,21 @@ function getValue(element){
                     d3.select(this).classed("selected", false);
                     
                 })
-                .on("click", function(d){
-                    console.log(d.properties.name)
-                    //DA FARE E SISTEMARE ZOOM
-                })
+                
                 svg.selectAll(".world-country_points")
-                .data(centroids_country)
+                .data(c_centroids)
                 .enter()
                 .append("g")
                 .attr("id","centroids")
                 .append("circle")
                 .attr("r", 0.5)
                 .attr("cx", function (d){ 
+                    //console.log(d)
+                    var coords = projection([d.longitude, d.latitude])
+                    /*
                     x = 0
                     if(d.country == 'United States'){
                         x = d.centroid[0] +30
-                        
-                       
                     }
                     else if(d.country == 'Canada'){
                         x = d.centroid[0] - 30
@@ -228,14 +222,13 @@ function getValue(element){
                     else{
                         x = d.centroid[0]
                     }
-                    return x; })
+                    console.log(x) */
+                    return coords[0]; })
                 .attr("cy", function (d){ 
+                    /*
                     y = 0
                     if(d.country == 'United States'){
                         y = d.centroid[1] +30
-                        console.log(y)
-                        console.log(y - 50)
-                       
                     }
                     else if(d.country == 'Canada'){
                         y = d.centroid[1] + 30
@@ -264,15 +257,23 @@ function getValue(element){
                     else if(d.country == 'Panama'){
                         y = d.centroid[1] - 0.5
                     }
-                    
                     else{
                         y = d.centroid[1]
                     }
+                    console.log(y) */
+                    var coords = projection([d.longitude, d.latitude])
+                    return coords[1]; })
                     
-                    return y; })
-                    
-                .on('mouseover', function(d){
-                    console.log(d)
+                .on('mouseover', mouseover)
+                .on('mousemove', function(d){
+                    Tooltip.html("<p> Country: " + d.country + " </p>")
+                        .style("left", (d3.event.pageX+2) + "px")		
+                        .style("top", (d3.event.pageY-20) + "px");
+                })
+                .on('mouseleave', mouseleave)
+                .on("click", function(d){
+                    console.log(d.country)
+                    c_click(d,links,airports, c_centroids)
                 })
 
                 
@@ -282,6 +283,4 @@ function getValue(element){
     
     }  
 
-    
-        
 }
