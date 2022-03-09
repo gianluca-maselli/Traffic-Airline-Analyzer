@@ -196,6 +196,178 @@ var svg_bar = d3.select("#barplot")
 
 }
 
+//COUNTRY BARPLOT -----------------------------------
+function barplot_country(routes2,airports,airlines,country){
+    links2 = drawFlights2(routes2)
+    country_airports = get_country_airports(country,airports)
+    var source_country = {
+        'name':country,
+        'airports':country_airports
+    }
+    var air_lines = {}
+    var airline_name = ""
+    
+    var airline_info = []
+    var air_id_airlines = {}
+    infos = []
+    flag = 0
+    //console.log(source_country)
+    for(i=0;i<country_airports.length;i++){
+        id_airport = country_airports[i]
+        var airlines_air = []
+        //console.log(id_airport)
+        for(j=0;j<links2.length;j++){
+           
+            if(id_airport == links2[j][0][2]){
+                flag = 1
+                airportName = id_airport
+                for(k=0;k<airlines.length;k++){
+                    if(links2[j][0][1]== airlines[k].Airline_ID){
+                        airline_name=airlines[k].Name
+                        airlines_air.push(airline_name)
+                        break
+                    }
+                }
+            }
+        }
+        if(flag==1){
+            air_id_airlines = {
+                'air_id':id_airport,
+                'flights': airlines_air
+            }
+            infos.push(air_id_airlines)
+        }
+
+    }
+    //console.log(infos)
+    diary = []
+    tot_airlines = []
+    for(i=0;i<infos.length;i++){
+        flight_in_air = infos[i].flights
+        for(k=0;k<flight_in_air.length;k++){
+            tot_airlines.push(flight_in_air[k])
+        }
+    }
+    //console.log(tot_airlines)
+    const counts = {};
+    tot_airlines.forEach(function(x){
+        counts[x] = (counts[x] || 0) + 1;
+    })
+    var keys = Object.keys(counts)
+    var diary = []
+    for(s=0;s<keys.length;s++){
+        var dic = {}
+        dic = { "Airline" : keys[s], "Flights":counts[keys[s]]}
+        diary.push(dic)
+    }
+
+    //console.log(diary)
+
+    diary.sort(function(b, a) {
+        return a["Flights"] - b["Flights"];
+      });
+
+    
+    //console.log(arr2)
+
+    min = Number.MAX_VALUE,
+    max = -Number.MAX_VALUE;
+
+    diary.forEach(function (row) {
+        Object.keys(row).forEach(function (k) {                
+            if (k !== 'Airline' && row[k] !== null) {
+                min = Math.min(min, row[k]);
+                max = Math.max(max, row[k]);
+            }
+        });
+    });
+
+    //COUNTRY BARPLOT
+    if(diary.length>3){
+        //BARPLOT DESIGN ----------------
+        // X axis
+        var x = d3.scaleBand()
+                    .range([ 0, width])
+                    .domain(diary.map(function(d) { 
+                       // console.log(d)
+                        return d.Airline;
+                    }))
+                    .padding(0.5);
+    
+    
+        svg_bar.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x))
+            .selectAll("text")
+            .style("font-size", "0.6em")
+            .attr("transform", "translate(-10,0)rotate(-45)")
+            .style("text-anchor", "end")
+            .on("mouseover", function (d) {
+                d3.select(this).transition()
+                    .ease(d3.easeLinear)
+                    .duration('0')
+                    .style('font-size', 11)
+                    .attr('fill', '#1c9099');
+            })
+            .on('mouseout', function(d) {
+                d3.select(this).transition()
+                  .ease(d3.easeLinear)
+                  .duration('0')
+                  .style('font-size', "0.6em")
+                  .attr('fill', '#000');
+              })
+            .on('click', function(d){
+                //console.log(d)
+                //iata = get_IATA(d,airlines)
+                //svg.selectAll("#flights_color").remove()
+                //outline_routes(iata,airportId,links2)
+            })
+
+        // Add Y axis
+        var y = d3.scaleLinear()
+                    .domain([0, max])
+                    .range([ height, 0]);
+        svg_bar.append("g")
+                .call(d3.axisLeft(y));
+        // Bars
+        svg_bar.selectAll("mybar")
+                .data(diary)
+                .enter()
+                .append("rect")
+                .attr("x", function(d) { 
+                    return  x(d.Airline);
+                })
+                .attr("y", function(d) { 
+                    return  y(d.Flights);
+
+                })
+                .attr("width", x.bandwidth())
+                .attr("height", function(d) { 
+                    return height - y(d.Flights);
+                })
+                .attr("fill", "#1c9099")
+                .on("mouseover", function(d){
+                    Tooltip_heat.style("opacity", 1)
+                    d3.select(this).classed("selected_heat", true);
+                    
+                })
+                .on("mousemove", function(d){
+                    //console.log(d)
+                    Tooltip_heat.html(" <p> Airline: " + d.Airline + "</p> <p> Flights: " + d.Flights + "</p>")
+                                .style("left", (d3.event.pageX+20) + "px")		
+                                .style("top", (d3.event.pageY-30) + "px");
+                })
+                .on("mouseout", function(d){
+                    Tooltip_heat.style("opacity", 0)
+                    d3.select(this).classed("selected_heat", false);
+                })
+    }
+    else{
+        table_maker_country(diary,airlines, country,links2)
+    }
+
+}
+
 
 
 function drawFlights2(flights_database){
@@ -253,6 +425,5 @@ function get_IATA(airline,airlines){
         }
     }
 }
-
 
 

@@ -1,4 +1,3 @@
-
 function getValue(element){
     var btnValue = element.innerText;    
     console.log(btnValue)
@@ -50,20 +49,20 @@ function getValue(element){
                 .attr("fill", "#b8b8b8")
                 .on("mouseover", function(d){
                     d3.select(this).classed("selected", true);
-                        //qui qualcosa si può inserire per quando si cliccal una nazione
-                        // si potrebbe zoommare sulla nazione e vedere gli aereoporti ed i suoi collegamenti
-                        // le classi si gestiscono poi nel css per dare effetti
         
                 })
                 .on("mouseout", function(d){
                     d3.select(this).classed("selected", false);
-            
                 })
                
             if(btnValue=="Airport"){
                 svg.selectAll("#point-airports").remove()
                 svg.selectAll("#Country_c").remove()
                 svg.selectAll("#centroids").remove()
+                svg.selectAll("#flights_c").remove()
+                svg_bar.selectAll("*").remove()
+                svg_heat.selectAll("*").remove()
+                svg_legend.selectAll("*").remove()
                 
                 //AIRPORTS POINTS --------------------------
                 svg.selectAll(".world-airports")
@@ -85,7 +84,6 @@ function getValue(element){
                     .on("mousemove", mousemove)
                     .on("mouseleave", mouseleave)
                     .on("click", function(d){
-                        
                         tot_d_a = f_click(d,links,airports)
                         // console.log(tot_d_a)
                         if(tot_d_a[0]>0){
@@ -181,89 +179,10 @@ function getValue(element){
                 .attr("cx", function (d){ 
                     //console.log(d)
                     var coords = projection([d.longitude, d.latitude])
-                    /*
-                    x = 0
-                    if(d.country == 'United States'){
-                        x = d.centroid[0] +30
-                    }
-                    else if(d.country == 'Canada'){
-                        x = d.centroid[0] - 30
-                    }
-                    else if(d.country == 'Norway'){
-                        x = d.centroid[0] - 12
-                    }
-                    else if(d.country == 'Vietnam'){
-                        x = d.centroid[0] + 3.5
-                    }
-                    else if(d.country == 'Laos'){
-                        x = d.centroid[0] - 2
-                    }
-                    else if(d.country == 'Malaysia'){
-                        x = d.centroid[0] - 13
-                    }
-                    else if(d.country == 'Indonesia'){
-                        x = d.centroid[0] - 6
-                    }
-                    else if(d.country == 'New Zealand'){
-                        x = d.centroid[0] + 2
-                    }
-                    else if(d.country == 'Chile'){
-                        x = d.centroid[0] - 2
-                    }
-                    else if(d.country == 'Denmark'){
-                        x = d.centroid[0] - 1.5
-                    }
-                    else if(d.country == 'United Kingdom'){
-                        x = d.centroid[0] + 1.5
-                    }
-                    else if(d.country == 'Western Sahara'){
-                        x = d.centroid[0] - 0.5
-                    }
-                    else{
-                        x = d.centroid[0]
-                    }
-                    console.log(x) */
                     return coords[0]; })
                 .attr("cy", function (d){ 
-                    /*
-                    y = 0
-                    if(d.country == 'United States'){
-                        y = d.centroid[1] +30
-                    }
-                    else if(d.country == 'Canada'){
-                        y = d.centroid[1] + 30
-                    }
-                    else if(d.country == 'Norway'){
-                        y = d.centroid[1] + 55
-                    }
-                    else if(d.country == 'Japan'){
-                        y = d.centroid[1] + 4
-                    }
-                    else if(d.country == 'Croatia'){
-                        y = d.centroid[1] - 1.5
-                    }
-                    else if(d.country == 'Vietnam'){
-                        y = d.centroid[1] + 7
-                    }
-                    else if(d.country == 'Laos'){
-                        y = d.centroid[1] - 2
-                    }
-                    else if(d.country == 'Indonesia'){
-                        y = d.centroid[1] - 2
-                    }
-                    else if(d.country == 'Cuba'){
-                        y = d.centroid[1] - 0.5
-                    }
-                    else if(d.country == 'Panama'){
-                        y = d.centroid[1] - 0.5
-                    }
-                    else{
-                        y = d.centroid[1]
-                    }
-                    console.log(y) */
                     var coords = projection([d.longitude, d.latitude])
                     return coords[1]; })
-                    
                 .on('mouseover', mouseover)
                 .on('mousemove', function(d){
                     Tooltip.html("<p> Country: " + d.country + " </p>")
@@ -272,8 +191,17 @@ function getValue(element){
                 })
                 .on('mouseleave', mouseleave)
                 .on("click", function(d){
-                    console.log(d.country)
-                    c_click(d,links,airports, c_centroids)
+                    //console.log(d)
+                    tot_dep = c_click(d,links,airports, c_centroids)
+                    //console.log(tot_dep)
+                    if(tot_dep>0){
+                        barplot_country(routes2,airports,airlines,d.country)
+                        //aggiungere cose
+                        countryHeatMap_country(data,d.country,links,airports,worldCountry)
+                    }
+                    else{
+                        missing_country()
+                    }
                 })
 
                 

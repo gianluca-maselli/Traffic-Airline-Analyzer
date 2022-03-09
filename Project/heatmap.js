@@ -57,6 +57,13 @@ var colorScale_country = {  "50+": "#bd0026",
                             "1-5": "#fed976", 
                             "0": "#ffffb2"
 }
+var colorScale_country2 = {  "100+": "#bd0026",
+                            "50-100": "#f03b20", 
+                            "25-50": "#fd8d3c", 
+                            "10-25": "#feb24c", 
+                            "1-10": "#fed976", 
+                            "0": "#ffffb2"
+}
 
 var Tooltip_heat = d3.select("#svg_heat_div")
                 .append("div")
@@ -855,4 +862,246 @@ function get_color_continent(dict_continent,country_name,worldCountry){
 
 function zoomed_heat() {
     svg_heat.attr("transform", "translate(" + d3.event.transform.x + "," + d3.event.transform.y + ") scale(" + d3.event.transform.k + ")");
+}
+
+
+//COUNTRY HEATMAP --------------------------------------------------------
+function countryHeatMap_country(data,country,links,airports,worldCountry){
+    info = get_country_info(country,links,airports)
+    infos = info[0]
+    //console.log(infos)
+    departures_countries = {}
+    dep_countries = []
+    for(a=0;a<infos.length;a++){
+        dep_airIDs = infos[a].dest_air_ids
+        //console.log(dep_airIDs)
+        if(dep_airIDs.length>0){
+            //console.log(dep_airIDs)
+            country_list = get_departures_country(dep_airIDs,airports)
+            departures_countries = {
+                'air_id':infos[a].id_source_c_air,
+                'departure_countries':country_list
+            }
+            dep_countries.push(departures_countries)
+           
+        }
+        
+        //get_departures_country(dep_array,airports)
+    }
+    //console.log(dep_countries)
+    tot_countries_arr = []
+    for(l=0;l<dep_countries.length;l++){
+        arr = dep_countries[l].departure_countries
+        for(h=0;h<arr.length;h++){
+            tot_countries_arr.push(arr[h])
+        }
+    }
+    //console.log(tot_countries_arr)
+    country_n = get_depN_country(tot_countries_arr)
+    console.log(country_n)
+
+    //COUNTRY HEATMAP BUILDING
+    var map_countries = topojson.feature(data,data.objects.countries).features
+
+    svg_heat.selectAll(".nation")
+    .data(map_countries)
+    .enter()
+    .append("path")
+    .attr("d",pathHeat)
+//    .attr("fill","#b8b8b8")
+    .attr("fill",function(d){
+    //col = get_color_continent(dict_continent,d.properties.name,worldCountry)
+    val = country_n[d.properties.name]
+    if(val == null){
+        col = colorScale_country2["0"]
+        return col
+    }
+    else{
+        col = get_colour_country2(country_n,d.properties.name,colorScale_country2)
+        return col
+    }
+    //console.log(count_name)
+    //return col
+    
+    })
+    .style("stroke", "#252525")
+    .style("stroke-width", "0.2")
+    .on("mouseover", function(d){
+        Tooltip_heat.style("opacity", 1)
+        d3.select(this).classed("selected_heat", true);
+        
+    })
+    .on("mousemove", function(d){
+        continent = get_continent(d.properties.name, worldCountry)
+        Tooltip_heat.html(" <p> Country: " + d.properties.name + "</p> <p> Continent: " + continent + "</p>")
+                    .style("left", (d3.event.pageX+10) + "px")		
+                    .style("top", (d3.event.pageY+10) + "px");
+    })
+    .on("mouseout", function(d){
+        Tooltip_heat.style("opacity", 0)
+        d3.select(this).classed("selected_heat", false);
+    })
+
+    svg_legend
+        .append("rect")
+        .attr("id", "info_box")
+        .attr("x", -96)
+        .attr("y", 20)
+        .attr("width",145)
+        .attr("height", 170)
+        .attr("rx", 8)
+        .attr('fill','#F5F5F5')
+        .attr("opacity",0.7)
+        .attr('stroke-width',2)
+        .attr('stroke','black')
+        .style("border-width", "5px")
+        .style("border-radius", "5px")
+        .style("padding", "5px")
+    svg_legend.append("text")
+        .style("fill", "#000000")
+        .attr("x",-47)
+        .attr("y", 39)
+        .style("font-size", "17px")
+        .text("Flights")
+    //50+
+    svg_legend
+        .append("rect")
+        .attr("x",-90)
+        .attr("y",55)
+        .attr("width",15)
+        .attr("height", 15)
+        .attr("rx", 2)
+        .style("fill","#bd0026")
+        .attr('stroke-width',0.5)
+        .attr('stroke','black')
+        .style("border-radius", "2px")
+        
+    svg_legend.append("text")
+        .style("fill", "#000000")
+        .attr("x",-70)
+        .attr("y", 67)
+        .style("font-size", "15px")
+        .text("> 100")
+    //35-50
+    svg_legend
+        .append("rect")
+        .attr("x",-90)
+        .attr("y",79)
+        .attr("width",15)
+        .attr("height", 15)
+        .attr("rx", 2)
+        .style("fill","#f03b20")
+        .attr('stroke-width',0.5)
+        .attr('stroke','black')
+        .style("border-radius", "2px")
+    svg_legend.append("text")
+        .style("fill", "#000000")
+        .attr("x",-70)
+        .attr("y", 91)
+        .style("font-size", "15px")
+        .text("50-100")
+    //20-35
+    svg_legend
+        .append("rect")
+        .attr("x",-90)
+        .attr("y",101)
+        .attr("width",15)
+        .attr("height", 15)
+        .attr("rx", 2)
+        .style("fill","#fd8d3c")
+        .attr('stroke-width',0.5)
+        .attr('stroke','black')
+        .style("border-radius", "2px")
+    svg_legend.append("text")
+        .style("fill", "#000000")
+        .attr("x",-70)
+        .attr("y", 113)
+        .style("font-size", "15px")
+        .text("25-50")
+    //5-20
+    svg_legend
+        .append("rect")
+        .attr("x",-90)
+        .attr("y",123)
+        .attr("width",15)
+        .attr("height", 15)
+        .attr("rx", 2)
+        .style("fill","#feb24c")
+        .attr('stroke-width',0.5)
+        .attr('stroke','black')
+        .style("border-radius", "2px")
+    svg_legend.append("text")
+        .style("fill", "#000000")
+        .attr("x",-70)
+        .attr("y", 135)
+        .style("font-size", "15px")
+        .text("10-25")
+    //1-5
+    svg_legend
+        .append("rect")
+        .attr("x",-90)
+        .attr("y",145)
+        .attr("width",15)
+        .attr("height", 15)
+        .attr("rx", 2)
+        .style("fill","#fed976")
+        .attr('stroke-width',0.5)
+        .attr('stroke','black')
+        .style("border-radius", "2px")
+    svg_legend.append("text")
+        .style("fill", "#000000")
+        .attr("x",-70)
+        .attr("y", 157)
+        .style("font-size", "15px")
+        .text("1-10")
+
+    //0
+    svg_legend
+        .append("rect")
+        .attr("x",-90)
+        .attr("y",167)
+        .attr("width",15)
+        .attr("height", 15)
+        .attr("rx", 2)
+        .style("fill","#ffffb2")
+        .attr('stroke-width',0.5)
+        .attr('stroke','black')
+        .style("border-radius", "2px")
+    svg_legend.append("text")
+        .style("fill", "#000000")
+        .attr("x",-70)
+        .attr("y", 179)
+        .style("font-size", "15px")
+        .text("0")
+    
+
+    
+
+
+}
+
+function get_colour_country2(dict,key,colours){
+    count = dict[key]
+    //console.log(count, key)
+    //console.log(count)
+    col = ""
+    if(count > 100){
+        col = colours["100+"]
+    }
+    else if(count<=100 && count > 50){
+        col = colours["50-100"]
+    }
+    else if(count<=50 && count > 25){
+        col = colours["25-50"]
+    }
+    else if(count<=25 && count > 10){
+        col = colours["10-25"]
+    }
+    else if(count<=10 && count >= 1){
+        col = colours["1-10"]
+    }
+    else if(count==0){
+        col = colours["0"]
+    }
+    return col;
 }

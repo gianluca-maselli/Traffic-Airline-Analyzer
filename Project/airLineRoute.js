@@ -6,7 +6,7 @@ var c_mouseover = function(d) {
     d3.select(this)
         .style("stroke", "white")
         .style("opacity", 1)
-}
+    }
 var c_mousemove = function(d) {
     Tooltip.html("<p> Airline: " + d[0][0] + "</p> <p> Source Airport: " + d[0][3] + "</p> <p> Destination Airport: " + d[0][5])
             .style("left", (d3.event.pageX+10) + "px")		
@@ -31,7 +31,6 @@ function outline_routes(iata,airportId,links2){
            to_color.push(links2[i])
         }
     }
-    console.log(to_color)
 
     svg.selectAll("flights_d")
             .data(to_color)
@@ -49,6 +48,5 @@ function outline_routes(iata,airportId,links2){
             .on("mouseover", c_mouseover)
             .on("mousemove", c_mousemove)
             .on("mouseleave", c_mouseleave)
-
 }
 

@@ -15,14 +15,14 @@ var zoom = d3.zoom()
             .on("end", function(){console.log("finish zoom")});
   
 var svg = d3.select("#map").append("svg")
-                .attr("id", "svg_div")
-                .attr("height",height+ margin.left + margin.right)
-                .attr("width", width + margin.left + margin.right)
-                .call(zoom)
-                .append("g")
-                .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+            .attr("id", "svg_div")
+            .attr("height",height+ margin.left + margin.right)
+            .attr("width", width + margin.left + margin.right)
+            .call(zoom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
                 
-                //.attr("transform","translate(-1000,20)scale(13)");       
+            //.attr("transform","translate(-1000,20)scale(13)");       
 
 
 var svg_air_inf = d3.select("#air_info").append("svg")
@@ -40,7 +40,6 @@ var checkedValue = null;
 d3.json("world.topojson",function(data) {
     ready1(data)
 });
-
 
 
 var projection = //d3.geoEquirectangular()
@@ -117,7 +116,6 @@ var Tooltip = d3.select("#map")
         .style("opacity", 1)
 }
 var country_mousemove = function(d) {
-    console.log(d)
     Tooltip.html("<p> Source country: " + d[0][0] + "</p> <p> Destination country: " + d[0][1])
             .style("left", (d3.event.pageX+10) + "px")		
             .style("top", (d3.event.pageY+10) + "px");	
@@ -433,14 +431,18 @@ function c_click(d,links, airports,centroids_dict){
     if(last_clicked != d || last_clicked == d ){
         last_clicked = ""
         svg.selectAll("#flights_c").remove()
+        svg_air_inf.selectAll("*").remove()
+        svg_bar.selectAll("*").remove()
+        svg_heat.selectAll("*").remove()
+        svg_heat.selectAll("*").remove()
     }
     
-    c_departures(d.country,links, airports,centroids_dict)
+    tot_departures = c_departures(d.country,links, airports,centroids_dict)
     //arrivals(d.IATA, links)
     // all_flights(d.IATA, links)
     //var tot = tot_dep_arr(d.Airport_ID,links)
     last_clicked = d
-    //return tot;
+    return tot_departures;
 }
 
 
@@ -449,13 +451,10 @@ function c_click(d,links, airports,centroids_dict){
 
 function c_departures(country,links, airports,centroids_dict){
     
-    links_country = country_departures(country,links, airports,centroids_dict)
-    //console.log(links_country)
-    arr_comodo = []
-    for(i=0;i<83;i++){
-        arr_comodo[i]=links_country[i]
-    }
-    //console.log(arr_comodo)
+    links_c = country_departures(country,links, airports,centroids_dict)
+    links_country = links_c[0]
+    tot_departures = links_c[1]
+    //console.log('qui--->',links_country)
        
     svg.selectAll("air_flights_c")
             .data(links_country)
@@ -473,32 +472,16 @@ function c_departures(country,links, airports,centroids_dict){
             .on("mouseover", country_mouseover)
             .on("mousemove", country_mousemove)
             .on("mouseleave", country_mouseleave)
+    
+    return tot_departures;
 }
 
 function country_departures(country,links, airports,centroids_dict){
-    country_airports = get_country_airports(country,airports)
-    var source_country = {
-        'name':country,
-        'airports':country_airports
-    }
-    var infos = []
-    var source_air_country_Dest = {}
-    for(l=0;l<source_country.airports.length;l++){
-        source_air_id = source_country.airports[l]
-        var dest_airs = []
-        for(i=0;i<links.length;i++){
-            source_id = links[i][0][1]
-            if(source_air_id == source_id){
-                dest_airs.push(links[i][0][3])
-            }
-            
-        }
-        source_air_country_Dest = {
-            'id_source_c_air': source_air_id,
-            'dest_air_ids': dest_airs
-        }
-        infos.push(source_air_country_Dest)
-    }
+    info = get_country_info(country,links, airports)
+    infos = info[0]
+    tot_departures = info[1]
+    tot_arrivals = info[2]
+    //console.log(tot_departures,tot_arrivals)
     //console.log(infos)
     all_dest = []
     notFound = []
@@ -509,20 +492,20 @@ function country_departures(country,links, airports,centroids_dict){
             if(isNaN(arr[v])){continue;}
             country_dest = get_countryByIdAir(arr[v],airports)
             if(country_dest == null){notFound.push(arr[v])}
-            console.log(arr[v],country_dest)
+            //console.log(arr[v],country_dest)
             all_dest.push(country_dest)
             //}
             
         }
     }
     //console.log(all_dest)
-    console.log(notFound)
-    console.log(notFound1)
+    //console.log(notFound)
+    //console.log(notFound1)
     var destination_countries = []
     $.each(all_dest, function(i, el){
         if($.inArray(el, destination_countries) === -1) destination_countries.push(el);
     });
-    console.log(destination_countries)
+    //console.log(destination_countries)
     
     
     source_country_centroids = get_Country_centroids(country,centroids_dict)
@@ -547,8 +530,9 @@ function country_departures(country,links, airports,centroids_dict){
         path_country.push(topush)
         link[n] = [source_dest, topush]
     }
-    console.log(link)
-    return link
+    country_info(country,tot_departures,tot_arrivals)
+    //console.log(link)
+    return [link,tot_departures]
     
     
 
@@ -603,4 +587,103 @@ function get_Country_centroids(country,centroids_dict){
         }
     }
     return centroid
+}
+
+function country_info(country,tot_departures,tot_arrivals){
+    svg_air_inf.append("g").attr("id", "info_country_box")
+                .append("rect")
+                .attr("id", "info_box")
+                .attr("x", 5)
+                .attr("y", 75)
+                .attr("width",167)
+                .attr("height", 150)
+                .attr("rx", 8)
+                .attr('fill','#3182bd')
+                .attr("opacity",0.7)
+                .attr('stroke-width',2)
+                .attr('stroke','black')
+                .style("border-width", "5px")
+                .style("border-radius", "5px")
+                .style("padding", "5px")
+                  
+    svg_air_inf.append("text")
+                .style("fill", "#f0f0f0")
+                .attr("x",9)
+                .attr("y", 115)
+                .style("font-size", "15px")
+                .text("Country:")
+    svg_air_inf.append("text")
+                .style("fill", "#f0f0f0")
+                .attr("x",9)
+                .attr("y", 135)
+                .style("font-size", "15px")
+                .text(country)
+            
+    svg_air_inf.append("text")
+                .style("fill", "#f0f0f0")
+                .attr("x",9)
+                .attr("y", 170)
+                .style("font-size", "15px")
+                .text("Total departures: " + tot_departures)
+                    
+    svg_air_inf.append("text")
+                .style("fill", "#f0f0f0")
+                .attr("x", 9)
+                .attr("y", 200)
+                .style("font-size", "15px")
+                .text("Total arrivals: " + tot_arrivals)
+                    
+    
+}
+
+function air_info(d,airports){
+    
+    airports.forEach(function(row){
+        if(row.Airport_ID == d.Airport_ID){
+            info_air = {
+                name: row.Airport_Name,
+                iata: row.IATA,
+                city: row.City,
+                country: row.Country
+
+            };
+        }
+    })
+    
+    return info_air
+}
+
+function get_country_info(country,links, airports){
+    country_airports = get_country_airports(country,airports)
+    var source_country = {
+        'name':country,
+        'airports':country_airports
+    }
+    var infos = []
+    var source_air_country_Dest = {}
+    var tot_departures = 0
+    var tot_arrivals = 0
+    for(l=0;l<source_country.airports.length;l++){
+        source_air_id = source_country.airports[l]
+        
+        var dest_airs = []
+        for(i=0;i<links.length;i++){
+            source_id = links[i][0][1]
+            if(source_air_id == source_id){
+                dest_airs.push(links[i][0][3])
+                tot_departures+=1
+
+            }
+            else if(source_air_id == links[i][0][3]){
+                tot_arrivals+=1
+            }
+            
+        }
+        source_air_country_Dest = {
+            'id_source_c_air': source_air_id,
+            'dest_air_ids': dest_airs
+        }
+        infos.push(source_air_country_Dest)
+    }
+    return [infos,tot_departures,tot_arrivals]
 }
