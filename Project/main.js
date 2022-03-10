@@ -9,9 +9,10 @@ function getValue(element){
         .defer(d3.csv, "./dataset/worldCountry.csv")
         .defer(d3.json, "./dataset/pca_positions.json")
         .defer(d3.csv, "./dataset/country_centroids.csv")
+        .defer(d3.json, "./dataset/pca_countries_pos.json")
         .await(ready);
 
-        function ready(error, data, airports, routes2, airlines,worldCountry,pca_data,c_centroids){
+        function ready(error, data, airports, routes2, airlines,worldCountry,pca_data,c_centroids,pca_data_c){
             //getArrayPCA(airports,airlines,routes2)
             var countries = topojson.feature(data,data.objects.countries).features
             //compute centroids 
@@ -59,10 +60,14 @@ function getValue(element){
                 svg.selectAll("#point-airports").remove()
                 svg.selectAll("#Country_c").remove()
                 svg.selectAll("#centroids").remove()
+                svg.selectAll("#flights_d").remove()
                 svg.selectAll("#flights_c").remove()
+                svg.selectAll("#flights_color").remove()
+                svg_air_inf.selectAll("*").remove()
                 svg_bar.selectAll("*").remove()
                 svg_heat.selectAll("*").remove()
                 svg_legend.selectAll("*").remove()
+                svg_scatter.selectAll("*").remove()
                 
                 //AIRPORTS POINTS --------------------------
                 svg.selectAll(".world-airports")
@@ -198,6 +203,34 @@ function getValue(element){
                         barplot_country(routes2,airports,airlines,d.country)
                         //aggiungere cose
                         countryHeatMap_country(data,d.country,links,airports,worldCountry)
+                        //countryHeatMap_continents(data,d.country,links,airports,worldCountry)
+                        //used to create pca dataset for countries
+                        //getArrayPCA_country(c_centroids,links,airports,airlines,routes2)
+                        scatterPlot_countries(pca_data_c, d.country,links,airports)
+
+                        document.getElementById("check1").checked = true;
+                        document.getElementById("check2").checked = false;
+                        let allCheckBox = document.querySelectorAll('.mCheckbox')
+                        allCheckBox.forEach((checkbox) => { 
+                            checkbox.addEventListener('change', (event) => {
+                                if (event.target.checked) {
+                                    //console.log(event.target.value)
+                                    
+                                    if(event.target.value == "continents"){
+                                        svg_heat.selectAll("*").remove()
+                                        svg_legend.selectAll("*").remove()
+                                        //svg_heat.selectAll("#heatMap-continents").remove()
+                                        countryHeatMap_continents(data,d.country,links,airports,worldCountry)
+                                    }
+                                    else if(event.target.value == "countries"){
+                                        svg_heat.selectAll("*").remove()
+                                        svg_legend.selectAll("*").remove()
+                                        countryHeatMap_country(data,d.country,links,airports,worldCountry)
+                                    }
+                                }
+                            })
+                        })
+
                     }
                     else{
                         missing_country()

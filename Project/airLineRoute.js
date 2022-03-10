@@ -31,7 +31,7 @@ function outline_routes(iata,airportId,links2){
            to_color.push(links2[i])
         }
     }
-
+    svg.selectAll("#flights_d").remove()
     svg.selectAll("flights_d")
             .data(to_color)
             .enter()

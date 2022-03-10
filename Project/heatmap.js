@@ -39,7 +39,19 @@ var svg_legend = d3.select("#svg_heat_legend").append("svg")
            .attr("transform", "translate(" + margin_h.left + "," + margin_h.top + ")")
 
 
-var colour_scale = {"100+": "#bd0026", "50-100": "#f03b20", "10-50": "#fd8d3c", "1-10": "#fecc5c", "0": "#ffffb2"}
+var colour_scale = {  "100+": "#bd0026",
+                    "50-100": "#f03b20", 
+                    "25-50": "#fd8d3c", 
+                    "10-25": "#fecc5c", 
+                    "1-10": "#ffffb2", 
+                    "0": "#b8b8b8" }
+
+var colour_scale2 = {  "500+": "#bd0026",
+                    "250-500": "#f03b20", 
+                    "100-250": "#fd8d3c", 
+                    "50-100": "#fecc5c", 
+                    "1-50": "#ffffb2", 
+                    "0": "#b8b8b8" }
 
 /*
 var colorScale_country = {  "50+": "#b10026",
@@ -53,16 +65,16 @@ var colorScale_country = {  "50+": "#b10026",
 var colorScale_country = {  "50+": "#bd0026",
                             "35-50": "#f03b20", 
                             "20-35": "#fd8d3c", 
-                            "5-20": "#feb24c", 
-                            "1-5": "#fed976", 
-                            "0": "#ffffb2"
+                            "5-20": "#fecc5c", 
+                            "1-5": "#ffffb2", 
+                            "0": "#b8b8b8"
 }
 var colorScale_country2 = {  "100+": "#bd0026",
                             "50-100": "#f03b20", 
                             "25-50": "#fd8d3c", 
-                            "10-25": "#feb24c", 
-                            "1-10": "#fed976", 
-                            "0": "#ffffb2"
+                            "10-25": "#fecc5c", 
+                            "1-10": "#ffffb2", 
+                            "0": "#b8b8b8"
 }
 
 var Tooltip_heat = d3.select("#svg_heat_div")
@@ -243,113 +255,138 @@ function heatMap(data,links, source_airportId,airports,worldCountry){
                 d3.select(this).classed("selected_heat", false);
             })
                                 
-    svg_legend
-        .append("rect")
-        .attr("id", "info_box")
-        .attr("x", -96)
-        .attr("y", 45)
-        .attr("width",145)
-        .attr("height", 145)
-        .attr("rx", 8)
-        .attr('fill','#F5F5F5')
-        .attr("opacity",0.7)
-        .attr('stroke-width',2)
-        .attr('stroke','black')
-        .style("border-width", "5px")
-        .style("border-radius", "5px")
-        .style("padding", "5px")
-    svg_legend.append("text")
-        .style("fill", "#000000")
-        .attr("x",-47)
-        .attr("y", 63)
-        .style("font-size", "17px")
-        .text("Flights")
-    svg_legend
-        .append("rect")
-        .attr("x",-90)
-        .attr("y",79)
-        .attr("width",15)
-        .attr("height", 15)
-        .attr("rx", 2)
-        .style("fill","#bd0026")
-        .attr('stroke-width',0.5)
-        .attr('stroke','black')
-        .style("border-radius", "2px")
+        svg_legend
+            .append("rect")
+            .attr("id", "info_box")
+            .attr("x", -96)
+            .attr("y", 20)
+            .attr("width",145)
+            .attr("height", 170)
+            .attr("rx", 8)
+            .attr('fill','#F5F5F5')
+            .attr("opacity",0.7)
+            .attr('stroke-width',2)
+            .attr('stroke','black')
+            .style("border-width", "5px")
+            .style("border-radius", "5px")
+            .style("padding", "5px")
+        svg_legend.append("text")
+            .style("fill", "#000000")
+            .attr("x",-47)
+            .attr("y", 39)
+            .style("font-size", "17px")
+            .text("Flights")
+        //100+
+        svg_legend
+            .append("rect")
+            .attr("x",-90)
+            .attr("y",55)
+            .attr("width",15)
+            .attr("height", 15)
+            .attr("rx", 2)
+            .style("fill","#bd0026")
+            .attr('stroke-width',0.5)
+            .attr('stroke','black')
+            .style("border-radius", "2px")
+            
+        svg_legend.append("text")
+            .style("fill", "#000000")
+            .attr("x",-70)
+            .attr("y", 67)
+            .style("font-size", "15px")
+            .text("> 100")
+        //50-100
+        svg_legend
+            .append("rect")
+            .attr("x",-90)
+            .attr("y",79)
+            .attr("width",15)
+            .attr("height", 15)
+            .attr("rx", 2)
+            .style("fill","#f03b20")
+            .attr('stroke-width',0.5)
+            .attr('stroke','black')
+            .style("border-radius", "2px")
+        svg_legend.append("text")
+            .style("fill", "#000000")
+            .attr("x",-70)
+            .attr("y", 91)
+            .style("font-size", "15px")
+            .text("50-100")
+        //25-50
+        svg_legend
+            .append("rect")
+            .attr("x",-90)
+            .attr("y",101)
+            .attr("width",15)
+            .attr("height", 15)
+            .attr("rx", 2)
+            .style("fill","#fd8d3c")
+            .attr('stroke-width',0.5)
+            .attr('stroke','black')
+            .style("border-radius", "2px")
+        svg_legend.append("text")
+            .style("fill", "#000000")
+            .attr("x",-70)
+            .attr("y", 113)
+            .style("font-size", "15px")
+            .text("25-50")
+        //10-25
+        svg_legend
+            .append("rect")
+            .attr("x",-90)
+            .attr("y",123)
+            .attr("width",15)
+            .attr("height", 15)
+            .attr("rx", 2)
+            .style("fill","#fecc5c")
+            .attr('stroke-width',0.5)
+            .attr('stroke','black')
+            .style("border-radius", "2px")
+        svg_legend.append("text")
+            .style("fill", "#000000")
+            .attr("x",-70)
+            .attr("y", 135)
+            .style("font-size", "15px")
+            .text("10-25")
+        //1-10
+        svg_legend
+            .append("rect")
+            .attr("x",-90)
+            .attr("y",145)
+            .attr("width",15)
+            .attr("height", 15)
+            .attr("rx", 2)
+            .style("fill","#ffffb2")
+            .attr('stroke-width',0.5)
+            .attr('stroke','black')
+            .style("border-radius", "2px")
+        svg_legend.append("text")
+            .style("fill", "#000000")
+            .attr("x",-70)
+            .attr("y", 157)
+            .style("font-size", "15px")
+            .text("1-10")
+    
+        //0
+        svg_legend
+            .append("rect")
+            .attr("x",-90)
+            .attr("y",167)
+            .attr("width",15)
+            .attr("height", 15)
+            .attr("rx", 2)
+            .style("fill","#b8b8b8")
+            .attr('stroke-width',0.5)
+            .attr('stroke','black')
+            .style("border-radius", "2px")
+        svg_legend.append("text")
+            .style("fill", "#000000")
+            .attr("x",-70)
+            .attr("y", 179)
+            .style("font-size", "15px")
+            .text("0")
         
-    svg_legend.append("text")
-        .style("fill", "#000000")
-        .attr("x",-70)
-        .attr("y", 91)
-        .style("font-size", "15px")
-        .text("> 100")
-    svg_legend
-        .append("rect")
-        .attr("x",-90)
-        .attr("y",101)
-        .attr("width",15)
-        .attr("height", 15)
-        .attr("rx", 2)
-        .style("fill","#f03b20")
-        .attr('stroke-width',0.5)
-        .attr('stroke','black')
-        .style("border-radius", "2px")
-    svg_legend.append("text")
-        .style("fill", "#000000")
-        .attr("x",-70)
-        .attr("y", 113)
-        .style("font-size", "15px")
-        .text("50-100")
-    svg_legend
-        .append("rect")
-        .attr("x",-90)
-        .attr("y",123)
-        .attr("width",15)
-        .attr("height", 15)
-        .attr("rx", 2)
-        .style("fill","#fd8d3c")
-        .attr('stroke-width',0.5)
-        .attr('stroke','black')
-        .style("border-radius", "2px")
-    svg_legend.append("text")
-        .style("fill", "#000000")
-        .attr("x",-70)
-        .attr("y", 135)
-        .style("font-size", "15px")
-        .text("10-50")
-    svg_legend
-        .append("rect")
-        .attr("x",-90)
-        .attr("y",145)
-        .attr("width",15)
-        .attr("height", 15)
-        .attr("rx", 2)
-        .style("fill","#fecc5c")
-        .attr('stroke-width',0.5)
-        .attr('stroke','black')
-        .style("border-radius", "2px")
-    svg_legend.append("text")
-        .style("fill", "#000000")
-        .attr("x",-70)
-        .attr("y", 157)
-        .style("font-size", "15px")
-        .text("1-10")
-    svg_legend
-        .append("rect")
-        .attr("x",-90)
-        .attr("y",167)
-        .attr("width",15)
-        .attr("height", 15)
-        .attr("rx", 2)
-        .style("fill","#ffffb2")
-        .attr('stroke-width',0.5)
-        .attr('stroke','black')
-        .style("border-radius", "2px")
-    svg_legend.append("text")
-        .style("fill", "#000000")
-        .attr("x",-70)
-        .attr("y", 179)
-        .style("font-size", "15px")
-        .text("0")
     
     
     /*
@@ -607,7 +644,7 @@ function heatMap_country(data,links, source_airportId,airports,worldCountry){
         .attr("width",15)
         .attr("height", 15)
         .attr("rx", 2)
-        .style("fill","#feb24c")
+        .style("fill","#fecc5c")
         .attr('stroke-width',0.5)
         .attr('stroke','black')
         .style("border-radius", "2px")
@@ -625,7 +662,7 @@ function heatMap_country(data,links, source_airportId,airports,worldCountry){
         .attr("width",15)
         .attr("height", 15)
         .attr("rx", 2)
-        .style("fill","#fed976")
+        .style("fill","#ffffb2")
         .attr('stroke-width',0.5)
         .attr('stroke','black')
         .style("border-radius", "2px")
@@ -644,7 +681,7 @@ function heatMap_country(data,links, source_airportId,airports,worldCountry){
         .attr("width",15)
         .attr("height", 15)
         .attr("rx", 2)
-        .style("fill","#ffffb2")
+        .style("fill","#b8b8b8")
         .attr('stroke-width',0.5)
         .attr('stroke','black')
         .style("border-radius", "2px")
@@ -755,8 +792,11 @@ function get_colour(dict,key,colours){
     else if(count<=100 && count > 50){
         col = colours["50-100"]
     }
-    else if(count<=50 && count > 10){
-        col = colours["10-50"]
+    else if(count<=50 && count > 25){
+        col = colours["25-50"]
+    }
+    else if(count<=25 && count > 10){
+        col = colours["10-25"]
     }
     else if(count<=10 && count >= 1){
         col = colours["1-10"]
@@ -865,7 +905,7 @@ function zoomed_heat() {
 }
 
 
-//COUNTRY HEATMAP --------------------------------------------------------
+//COUNTRY HEATMAP COUNTRY --------------------------------------------------------
 function countryHeatMap_country(data,country,links,airports,worldCountry){
     info = get_country_info(country,links,airports)
     infos = info[0]
@@ -898,7 +938,7 @@ function countryHeatMap_country(data,country,links,airports,worldCountry){
     }
     //console.log(tot_countries_arr)
     country_n = get_depN_country(tot_countries_arr)
-    console.log(country_n)
+    //console.log(country_n)
 
     //COUNTRY HEATMAP BUILDING
     var map_countries = topojson.feature(data,data.objects.countries).features
@@ -1026,7 +1066,7 @@ function countryHeatMap_country(data,country,links,airports,worldCountry){
         .attr("width",15)
         .attr("height", 15)
         .attr("rx", 2)
-        .style("fill","#feb24c")
+        .style("fill","#fecc5c")
         .attr('stroke-width',0.5)
         .attr('stroke','black')
         .style("border-radius", "2px")
@@ -1044,7 +1084,7 @@ function countryHeatMap_country(data,country,links,airports,worldCountry){
         .attr("width",15)
         .attr("height", 15)
         .attr("rx", 2)
-        .style("fill","#fed976")
+        .style("fill","#ffffb2")
         .attr('stroke-width',0.5)
         .attr('stroke','black')
         .style("border-radius", "2px")
@@ -1063,7 +1103,7 @@ function countryHeatMap_country(data,country,links,airports,worldCountry){
         .attr("width",15)
         .attr("height", 15)
         .attr("rx", 2)
-        .style("fill","#ffffb2")
+        .style("fill","#b8b8b8")
         .attr('stroke-width',0.5)
         .attr('stroke','black')
         .style("border-radius", "2px")
@@ -1076,6 +1116,232 @@ function countryHeatMap_country(data,country,links,airports,worldCountry){
     
 
     
+
+
+}
+
+//COUNTRY HEATMAP CONTINENT -------------------------------------------------
+function countryHeatMap_continents(data,country,links,airports,worldCountry){
+    info = get_country_info(country,links,airports)
+    infos = info[0]
+    //console.log(infos)
+    departures_countries = {}
+    dep_countries = []
+    for(a=0;a<infos.length;a++){
+        dep_airIDs = infos[a].dest_air_ids
+        //console.log(dep_airIDs)
+        if(dep_airIDs.length>0){
+            //console.log(dep_airIDs)
+            country_list = get_departures_country(dep_airIDs,airports)
+            departures_countries = {
+                'air_id':infos[a].id_source_c_air,
+                'departure_countries':country_list
+            }
+            dep_countries.push(departures_countries)
+           
+        }
+        
+        //get_departures_country(dep_array,airports)
+    }
+    //console.log(dep_countries)
+    
+    tot_countries_arr = []
+    for(l=0;l<dep_countries.length;l++){
+        arr = dep_countries[l].departure_countries
+        for(h=0;h<arr.length;h++){
+            tot_countries_arr.push(arr[h])
+        }
+    }
+    //console.log(tot_countries_arr)
+    country_n = get_depN_country(tot_countries_arr)
+    countries_used = Object.keys(country_n)
+    dict = {}
+    arr3 = []
+    for(n=0;n<countries_used.length;n++){
+        country_name = countries_used[n]
+        continent_c = get_continent(country_name,worldCountry)
+        //console.log(country_name,continent_c,country_n[country_name])
+        dict = {'continent':continent_c, 'flights':country_n[country_name]}
+        arr3.push(dict)
+    }
+    //console.log(arr3)
+    let dict_continent = arr3.reduce((c, v) => {
+        c[v.continent] = (c[v.continent] || 0) + v.flights;
+        return c;
+      }, {});
+    check = ['Antarctica','North America','South America','Oceania','Europe','Asia','Africa']
+    inside_ar = Object.keys(dict_continent)
+    for(i=0;i<check.length;i++){
+        if(inside_ar.includes(check[i])){continue;}
+        else{
+            dict_continent[check[i]] = 0
+        }
+    }
+    console.log(dict_continent)
+
+    //BUILD COUNTRY-CONTINENTS HEATMAP ----------------------
+    var map_countries = topojson.feature(data,data.objects.countries).features
+    
+    svg_heat.selectAll(".nation")
+            .data(map_countries)
+            .enter()
+            .append("path")
+            .attr("d",pathHeat)
+        //    .attr("fill","#b8b8b8")
+            .attr("fill",function(d){
+                col = get_color_continent2(dict_continent,d.properties.name,worldCountry)
+                return col
+            
+            })
+            .style("stroke", "#252525")
+            .style("stroke-width", "0.2")
+            .on("mouseover", function(d){
+                Tooltip_heat.style("opacity", 1)
+                d3.select(this).classed("selected_heat", true);
+                
+            })
+            .on("mousemove", function(d){
+                continent = get_continent(d.properties.name, worldCountry)
+                Tooltip_heat.html(" <p> Country: " + d.properties.name + "</p> <p> Continent: " + continent + "</p>")
+                            .style("left", (d3.event.pageX+20) + "px")		
+                            .style("top", (d3.event.pageY+10) + "px");
+            })
+            .on("mouseout", function(d){
+                Tooltip_heat.style("opacity", 0)
+                d3.select(this).classed("selected_heat", false);
+            })
+    svg_legend
+            .append("rect")
+            .attr("id", "info_box")
+            .attr("x", -96)
+            .attr("y", 20)
+            .attr("width",145)
+            .attr("height", 170)
+            .attr("rx", 8)
+            .attr('fill','#F5F5F5')
+            .attr("opacity",0.7)
+            .attr('stroke-width',2)
+            .attr('stroke','black')
+            .style("border-width", "5px")
+            .style("border-radius", "5px")
+            .style("padding", "5px")
+        svg_legend.append("text")
+            .style("fill", "#000000")
+            .attr("x",-47)
+            .attr("y", 39)
+            .style("font-size", "17px")
+            .text("Flights")
+        //100+
+        svg_legend
+            .append("rect")
+            .attr("x",-90)
+            .attr("y",55)
+            .attr("width",15)
+            .attr("height", 15)
+            .attr("rx", 2)
+            .style("fill","#bd0026")
+            .attr('stroke-width',0.5)
+            .attr('stroke','black')
+            .style("border-radius", "2px")
+            
+        svg_legend.append("text")
+            .style("fill", "#000000")
+            .attr("x",-70)
+            .attr("y", 67)
+            .style("font-size", "15px")
+            .text("> 500")
+        //50-100
+        svg_legend
+            .append("rect")
+            .attr("x",-90)
+            .attr("y",79)
+            .attr("width",15)
+            .attr("height", 15)
+            .attr("rx", 2)
+            .style("fill","#f03b20")
+            .attr('stroke-width',0.5)
+            .attr('stroke','black')
+            .style("border-radius", "2px")
+        svg_legend.append("text")
+            .style("fill", "#000000")
+            .attr("x",-70)
+            .attr("y", 91)
+            .style("font-size", "15px")
+            .text("250-500")
+        //25-50
+        svg_legend
+            .append("rect")
+            .attr("x",-90)
+            .attr("y",101)
+            .attr("width",15)
+            .attr("height", 15)
+            .attr("rx", 2)
+            .style("fill","#fd8d3c")
+            .attr('stroke-width',0.5)
+            .attr('stroke','black')
+            .style("border-radius", "2px")
+        svg_legend.append("text")
+            .style("fill", "#000000")
+            .attr("x",-70)
+            .attr("y", 113)
+            .style("font-size", "15px")
+            .text("100-250")
+        //10-25
+        svg_legend
+            .append("rect")
+            .attr("x",-90)
+            .attr("y",123)
+            .attr("width",15)
+            .attr("height", 15)
+            .attr("rx", 2)
+            .style("fill","#fecc5c")
+            .attr('stroke-width',0.5)
+            .attr('stroke','black')
+            .style("border-radius", "2px")
+        svg_legend.append("text")
+            .style("fill", "#000000")
+            .attr("x",-70)
+            .attr("y", 135)
+            .style("font-size", "15px")
+            .text("50-100")
+        //1-10
+        svg_legend
+            .append("rect")
+            .attr("x",-90)
+            .attr("y",145)
+            .attr("width",15)
+            .attr("height", 15)
+            .attr("rx", 2)
+            .style("fill","#ffffb2")
+            .attr('stroke-width',0.5)
+            .attr('stroke','black')
+            .style("border-radius", "2px")
+        svg_legend.append("text")
+            .style("fill", "#000000")
+            .attr("x",-70)
+            .attr("y", 157)
+            .style("font-size", "15px")
+            .text("1-50")
+    
+        //0
+        svg_legend
+            .append("rect")
+            .attr("x",-90)
+            .attr("y",167)
+            .attr("width",15)
+            .attr("height", 15)
+            .attr("rx", 2)
+            .style("fill","#b8b8b8")
+            .attr('stroke-width',0.5)
+            .attr('stroke','black')
+            .style("border-radius", "2px")
+        svg_legend.append("text")
+            .style("fill", "#000000")
+            .attr("x",-70)
+            .attr("y", 179)
+            .style("font-size", "15px")
+            .text("0")
+        
 
 
 }
@@ -1099,6 +1365,74 @@ function get_colour_country2(dict,key,colours){
     }
     else if(count<=10 && count >= 1){
         col = colours["1-10"]
+    }
+    else if(count==0){
+        col = colours["0"]
+    }
+    return col;
+}
+
+function get_color_continent2(dict_continent,country_name,worldCountry){
+    count_name = country_name
+    col = ""
+    //console.log(dict_continent)
+    for(i=0;i<worldCountry.length;i++){
+        c_n = worldCountry[i].country
+        //console.log(c_n)
+        main = worldCountry[i].continent
+        if(count_name == c_n && main == "AF"){
+            col = get_colour_cont(dict_continent['Africa'],"AF",colour_scale2)
+            break
+        }
+        else if (count_name == c_n && main == "NA"){
+            col = get_colour_cont(dict_continent['North America'],"NA",colour_scale2)
+            break
+        }
+        else if (count_name == c_n && main == "SA"){
+            col = get_colour_cont(dict_continent['South America'],"SA",colour_scale2)
+            break
+        }
+        else if(count_name == c_n && main == "EU"){
+            col = get_colour_cont(dict_continent['Europe'],"EU",colour_scale2)
+            break
+        }
+        else if(count_name == c_n && main == "AS"){
+            col = get_colour_cont(dict_continent['Asia'],"AS",colour_scale2)
+            break
+        }
+        else if (count_name == c_n && main == "AN"){
+            col = get_colour_cont(dict_continent['Antarctica'],"AN",colour_scale2)
+            break
+        }
+        else if (count_name == c_n && main == "OC"){
+            col = get_colour_cont(dict_continent['Oceania'],"OC",colour_scale2)
+            break
+        }
+        else{
+            col = colour_scale2["0"]
+        }
+    }
+
+        return col
+}
+
+function get_colour_cont(count,key,colours){
+
+    col = ""
+    if(count > 500){
+        col = colours["500+"]
+    }
+    else if(count<=500 && count > 250){
+        col = colours["250-500"]
+    }
+    else if(count<=250 && count > 100){
+        col = colours["100-250"]
+    }
+    else if(count<=100 && count > 50){
+        col = colours["50-100"]
+    }
+    else if(count<=50 && count >= 1){
+        col = colours["1-50"]
     }
     else if(count==0){
         col = colours["0"]

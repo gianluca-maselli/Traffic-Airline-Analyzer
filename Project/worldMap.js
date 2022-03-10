@@ -215,6 +215,7 @@ function f_click(d, links, airports){
         svg_bar.selectAll("*").remove()
         svg_heat.selectAll("*").remove()
         svg_scatter.selectAll("*").remove()
+        svg_legend.selectAll("*").remove()
             
     }
     airport_info(d,airports)
@@ -434,7 +435,8 @@ function c_click(d,links, airports,centroids_dict){
         svg_air_inf.selectAll("*").remove()
         svg_bar.selectAll("*").remove()
         svg_heat.selectAll("*").remove()
-        svg_heat.selectAll("*").remove()
+        svg_legend.selectAll("*").remove()
+        svg_scatter.selectAll("*").remove()
     }
     
     tot_departures = c_departures(d.country,links, airports,centroids_dict)

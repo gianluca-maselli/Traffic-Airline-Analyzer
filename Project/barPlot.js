@@ -204,10 +204,8 @@ function barplot_country(routes2,airports,airlines,country){
         'name':country,
         'airports':country_airports
     }
-    var air_lines = {}
     var airline_name = ""
     
-    var airline_info = []
     var air_id_airlines = {}
     infos = []
     flag = 0
