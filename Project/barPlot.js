@@ -111,7 +111,8 @@ var svg_bar = d3.select("#barplot")
                        // console.log(d)
                         return d.Airlines;
                     }))
-                    .padding(0.5);
+                    .padding(0.5)
+                    
     
     
         svg_bar.append("g")
@@ -119,6 +120,7 @@ var svg_bar = d3.select("#barplot")
             .call(d3.axisBottom(x))
             .selectAll("text")
             .style("font-size", "0.6em")
+            .attr("fill","#F0E2E7")
             .attr("transform", "translate(-10,0)rotate(-45)")
             .style("text-anchor", "end")
             .on("mouseover", function (d) {
@@ -126,14 +128,14 @@ var svg_bar = d3.select("#barplot")
                     .ease(d3.easeLinear)
                     .duration('0')
                     .style('font-size', 11)
-                    .attr('fill', '#1c9099');
+                    .attr('fill', '#0C8346');
             })
             .on('mouseout', function(d) {
                 d3.select(this).transition()
                   .ease(d3.easeLinear)
                   .duration('0')
                   .style('font-size', "0.6em")
-                  .attr('fill', '#000');
+                  .attr("fill", "#F0E2E7");
               })
             .on('click', function(d){
                 //console.log(d)
@@ -147,7 +149,28 @@ var svg_bar = d3.select("#barplot")
                     .domain([0, max])
                     .range([ height, 0]);
         svg_bar.append("g")
-                .call(d3.axisLeft(y));
+                .attr("class", "axisY")
+                .call(d3.axisLeft(y))
+                
+
+        svg_bar.append("text")
+                .attr("text-anchor", "end")
+                .attr("x", width+30)
+                .attr("y", height + margin.top + 22)
+                .text("Airlines")
+                .style("font-size", "15px")
+                .style('fill','#F0E2E7')
+            
+            // Y axis label:
+        svg_bar.append("text")
+                .attr("text-anchor", "end")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -margin.left+20)
+                .attr("x", -margin.top)
+                .text("Number of flights")
+                .style("font-size", "15px")
+                .style('fill','#F0E2E7')
+                
         // Bars
         svg_bar.selectAll("mybar")
                 .data(arr2)
@@ -164,7 +187,7 @@ var svg_bar = d3.select("#barplot")
                 .attr("height", function(d) { 
                     return height - y(d.Flights);
                 })
-                .attr("fill", "#1c9099")
+                .attr("fill", "#0C8346")
                 .on("mouseover", function(d){
                     Tooltip_heat.style("opacity", 1)
                     d3.select(this).classed("selected_heat", true);
@@ -298,6 +321,7 @@ function barplot_country(routes2,airports,airlines,country){
             .call(d3.axisBottom(x))
             .selectAll("text")
             .style("font-size", "0.6em")
+            .attr('fill','#F0E2E7')
             .attr("transform", "translate(-10,0)rotate(-45)")
             .style("text-anchor", "end")
             .on("mouseover", function (d) {
@@ -305,14 +329,14 @@ function barplot_country(routes2,airports,airlines,country){
                     .ease(d3.easeLinear)
                     .duration('0')
                     .style('font-size', 11)
-                    .attr('fill', '#1c9099');
+                    .attr('fill', '#0C8346');
             })
             .on('mouseout', function(d) {
                 d3.select(this).transition()
                   .ease(d3.easeLinear)
                   .duration('0')
                   .style('font-size', "0.6em")
-                  .attr('fill', '#000');
+                  .attr('fill', '#F0E2E7');
               })
             .on('click', function(d){
                 //console.log(d)
@@ -326,7 +350,27 @@ function barplot_country(routes2,airports,airlines,country){
                     .domain([0, max])
                     .range([ height, 0]);
         svg_bar.append("g")
+                .attr("class", "axisY")
                 .call(d3.axisLeft(y));
+
+        svg_bar.append("text")
+                .attr("text-anchor", "end")
+                .attr("x", width+31)
+                .attr("y", height + margin.top + 22)
+                .text("Airlines")
+                .style("font-size", "15px")
+                .style('fill','#F0E2E7')
+            
+            // Y axis label:
+        svg_bar.append("text")
+                .attr("text-anchor", "end")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -margin.left+20)
+                .attr("x", -margin.top)
+                .text("Number of flights")
+                .style("font-size", "15px")
+                .style('fill','#F0E2E7')
+                
         // Bars
         svg_bar.selectAll("mybar")
                 .data(diary)
@@ -343,7 +387,7 @@ function barplot_country(routes2,airports,airlines,country){
                 .attr("height", function(d) { 
                     return height - y(d.Flights);
                 })
-                .attr("fill", "#1c9099")
+                .attr("fill", "#0C8346")
                 .on("mouseover", function(d){
                     Tooltip_heat.style("opacity", 1)
                     d3.select(this).classed("selected_heat", true);

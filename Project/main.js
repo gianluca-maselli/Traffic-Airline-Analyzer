@@ -50,10 +50,17 @@ function getValue(element){
                 .attr("fill", "#b8b8b8")
                 .on("mouseover", function(d){
                     d3.select(this).classed("selected", true);
+                    Tooltip.style("opacity", 1)
         
+                })
+                .on("mousemove", function(d){
+                    Tooltip.html("<p> " + d.properties.name + " </p>")
+                                .style("left", (d3.event.pageX+10) + "px")		
+                                .style("top", (d3.event.pageY-90) + "px");
                 })
                 .on("mouseout", function(d){
                     d3.select(this).classed("selected", false);
+                    Tooltip.style("opacity", 0)
                 })
                
             if(btnValue=="Airport"){
@@ -68,7 +75,13 @@ function getValue(element){
                 svg_heat.selectAll("*").remove()
                 svg_legend.selectAll("*").remove()
                 svg_scatter.selectAll("*").remove()
+                legend_worldmap.selectAll("*").remove()
+                legend_pca.selectAll("*").remove()
                 
+                //init
+                init_maps(data,'c','Heatmap','PCA','Barplot')
+                //LEGEND 
+                getLegendWorldMap('Airport')
                 //AIRPORTS POINTS --------------------------
                 svg.selectAll(".world-airports")
                     .data(airports)
@@ -98,6 +111,7 @@ function getValue(element){
                            svg_scatter.selectAll("*").remove()
                            heatMap_country(data,links,d.Airport_ID,airports,worldCountry)
                            scatterPlot(pca_data, d.Airport_ID, routes2, airports)
+                           getLegendPCA('Airport')
                            
                            document.getElementById("check1").checked = true;
                            document.getElementById("check2").checked = false;
@@ -128,9 +142,11 @@ function getValue(element){
                         else{
                             document.getElementById("check1").checked = true;
                             document.getElementById("check2").checked = false;
+                            svg_heat.selectAll("*").remove()
                             svg_legend.selectAll("*").remove()
                             svg_scatter.selectAll("*").remove()
-                            missing()
+                            legend_pca.selectAll("*").remove()
+                            missing(data)
                         }
                     })
             }
@@ -147,9 +163,17 @@ function getValue(element){
                 svg_legend.selectAll("*").remove()
                 svg_scatter.selectAll("*").remove()
                 svg.selectAll("#centroids").remove()
+                legend_worldmap.selectAll("*").remove()
+                legend_pca.selectAll("*").remove()
 
                 document.getElementById("check1").checked = true;
                 document.getElementById("check2").checked = false;
+
+                //init
+                init_maps(data,'c','Heatmap','PCA','Barplot')
+                
+                //LEGEND 
+                getLegendWorldMap('Country')
 
                 svg.selectAll(".country_c")
                 .data(countries)
@@ -201,12 +225,11 @@ function getValue(element){
                     //console.log(tot_dep)
                     if(tot_dep>0){
                         barplot_country(routes2,airports,airlines,d.country)
-                        //aggiungere cose
                         countryHeatMap_country(data,d.country,links,airports,worldCountry)
-                        //countryHeatMap_continents(data,d.country,links,airports,worldCountry)
                         //used to create pca dataset for countries
                         //getArrayPCA_country(c_centroids,links,airports,airlines,routes2)
                         scatterPlot_countries(pca_data_c, d.country,links,airports)
+                        getLegendPCA('Country')
 
                         document.getElementById("check1").checked = true;
                         document.getElementById("check2").checked = false;
@@ -233,7 +256,13 @@ function getValue(element){
 
                     }
                     else{
-                        missing_country()
+                        document.getElementById("check1").checked = true;
+                        document.getElementById("check2").checked = false;
+                        svg_heat.selectAll("*").remove()
+                        svg_legend.selectAll("*").remove()
+                        svg_scatter.selectAll("*").remove()
+                        legend_pca.selectAll("*").remove()
+                        missing_country(data)
                     }
                 })
 

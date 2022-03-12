@@ -12,6 +12,12 @@ var svg_scatter = d3.select("#pca")
     .append("g")
     .attr("transform","translate(" + margin_pca.left + "," + margin_pca.top + ")")
 
+var legend_pca = d3.select("#legend_pca").append("svg")
+    .attr("id", "pca_legend")
+    .attr("height",(height + margin.top + margin.bottom)/5.5)
+    .attr("width", 120)
+    .append("g")
+   // .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 var tooltip_pca = d3.select("#pca")
     .append("div")
     .style("position", "absolute")
@@ -78,7 +84,18 @@ function scatterPlot(pca_data, Airport_ID, routes2, airports){
         .attr("cy", function (d) { 
             return y(d['PCA_pos'][1]); 
         } )
-        .attr("r", 2)
+        //.attr("r", 2)
+        .attr("r",function(d){
+            r = 0
+            airId = d.Airport_ID
+            if(airId == Airport_ID){
+                r = 3.5
+            }
+            else{
+                r = 2
+            }
+            return r
+        })
         .style("fill", function(d){
             color = ""
             airId = d.Airport_ID
@@ -88,7 +105,7 @@ function scatterPlot(pca_data, Airport_ID, routes2, airports){
                 color = "#f03b20"
             }
             else if(destAirposts.includes(airId)){
-                color = "#41b6c4"
+                color = "#266DD3"
             }
             else{
                 color = "#deebf7"
@@ -117,8 +134,14 @@ function scatterPlot(pca_data, Airport_ID, routes2, airports){
               .style('left', `${d3.event.pageX + 10}px`) 
               .style('top', `${d3.event.pageY - 18}px`);
           })
-        .on('mouseout', function(d){    
-            d3.select(this).attr('r',2)   
+        .on('mouseout', function(d){ 
+            airId = d.Airport_ID
+            if(airId == Airport_ID){
+                d3.select(this).attr('r',3.5)   
+            }
+            else{   
+                d3.select(this).attr('r',2) 
+            }  
             tooltip_pca.transition()        
             .duration(400)      
             .style('opacity', 0);   
@@ -126,7 +149,7 @@ function scatterPlot(pca_data, Airport_ID, routes2, airports){
         
         // x axis
         svg_scatter.append("g")
-           .attr("class", "x axis")
+           .attr("class", "axisX")
            .attr('id', "axis--x")
            .attr("transform", "translate(0," + height_pca + ")")
            .call(xAxis);
@@ -134,7 +157,7 @@ function scatterPlot(pca_data, Airport_ID, routes2, airports){
 
         // y axis
         svg_scatter.append("g")
-            .attr("class", "y axis")
+            .attr("class", "axisY")
             .attr('id', "axis--y")
             .call(yAxis);
         
@@ -267,7 +290,18 @@ function scatterPlot_countries(pca_data_c,country,links,airports){
         .attr("cy", function (d) { 
             return y(d['PCA_pos'][1]); 
         } )
-        .attr("r", 2)
+        //.attr("r", 2)
+        .attr("r",function(d){
+            r = 0
+            country_c = d.Country
+            if(country_c == country){
+                r = 3.5
+            }
+            else{
+                r = 2
+            }
+            return r
+        })
         .style("fill", function(d){
             //console.log(d)
             color = ""
@@ -278,7 +312,7 @@ function scatterPlot_countries(pca_data_c,country,links,airports){
                 color = "#f03b20"
             }
             else if(destination_countries.includes(country_c)){
-                color = "#41b6c4"
+                color = "#266DD3"
             }
             else{
                 color = "#deebf7"
@@ -298,7 +332,13 @@ function scatterPlot_countries(pca_data_c,country,links,airports){
               .style('top', `${d3.event.pageY - 18}px`);
           })
         .on('mouseout', function(d){    
-            d3.select(this).attr('r',2)   
+            country_c = d.Country
+            if(country_c == country){
+                d3.select(this).attr('r',3.5)   
+            }
+            else{   
+                d3.select(this).attr('r',2) 
+            }  
             tooltip_pca.transition()        
             .duration(400)      
             .style('opacity', 0);   
@@ -306,7 +346,7 @@ function scatterPlot_countries(pca_data_c,country,links,airports){
         
         // x axis
         svg_scatter.append("g")
-           .attr("class", "x axis")
+           .attr("class", "axisX")
            .attr('id', "axis--x")
            .attr("transform", "translate(0," + height_pca + ")")
            .call(xAxis);
@@ -314,7 +354,7 @@ function scatterPlot_countries(pca_data_c,country,links,airports){
 
         // y axis
         svg_scatter.append("g")
-            .attr("class", "y axis")
+            .attr("class", "axisY")
             .attr('id', "axis--y")
             .call(yAxis);
         
@@ -346,5 +386,96 @@ function scatterPlot_countries(pca_data_c,country,links,airports){
         }
 }
 
+function getLegendPCA(button_pushed){
+    //LEGEND FOR AIRPORTS WORLDMAP --------------------
+    if(button_pushed == 'Airport'){
+        legend_pca.append("g")
+                    .append("rect")
+                    .attr("id", "legend_box")
+                    .attr("x", 2)
+                    .attr("y", 2)
+                    .attr("width",115)
+                    .attr("height", 70)
+                    .attr("rx", 8)
+                    .attr('fill','#F8F8FF')
+                    .attr("opacity",0.7)
+                    .attr('stroke-width',2)
+                    .attr('stroke','black')
+                    .style("border-width", "5px")
+                    .style("border-radius", "5px")
+                    .style("padding", "5px")
+    
+        legend_pca.append("circle")
+                    .attr("r", 4)
+                    .attr("cx",15)
+                    .attr("cy",20)
+                    .style("fill","#f03b20")
+
+        legend_pca.append("text")
+                    .style("fill", "#000000")
+                    .attr("x",25)
+                    .attr("y", 25)
+                    .style("font-size", "15px")
+                    .text(button_pushed)
+    
+        legend_pca.append("circle")
+                    .attr("r", 4)
+                    .attr("cx",15)
+                    .attr("cy",40)
+                    .style("fill","#266DD3")
+
+        legend_pca.append("text")
+                    .style("fill", "#000000")
+                    .attr("x",25)
+                    .attr("y", 45)
+                    .style("font-size", "15px")
+                    .text('Destinations')
+    }
+    else if(button_pushed == 'Country'){
+        legend_pca.append("g")
+                    .append("rect")
+                    .attr("id", "legend_box")
+                    .attr("x", 2)
+                    .attr("y", 2)
+                    .attr("width",115)
+                    .attr("height", 70)
+                    .attr("rx", 8)
+                    .attr('fill','#F8F8FF')
+                    .attr("opacity",0.7)
+                    .attr('stroke-width',2)
+                    .attr('stroke','black')
+                    .style("border-width", "5px")
+                    .style("border-radius", "5px")
+                    .style("padding", "5px")
+    
+        legend_pca.append("circle")
+                    .attr("r", 4)
+                    .attr("cx",15)
+                    .attr("cy",20)
+                    .style("fill","#f03b20")
+
+        legend_pca.append("text")
+                    .style("fill", "#000000")
+                    .attr("x",25)
+                    .attr("y", 25)
+                    .style("font-size", "15px")
+                    .text(button_pushed)
+    
+        legend_pca.append("circle")
+                    .attr("r", 4)
+                    .attr("cx",15)
+                    .attr("cy",40)
+                    .style("fill","#266DD3")
+
+        legend_pca.append("text")
+                    .style("fill", "#000000")
+                    .attr("x",25)
+                    .attr("y", 45)
+                    .style("font-size", "15px")
+                    .text('Destinations')
+    
+    }
+    
+}
 
 

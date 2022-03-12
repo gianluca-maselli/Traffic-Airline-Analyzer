@@ -900,10 +900,6 @@ function get_color_continent(dict_continent,country_name,worldCountry){
         return col
 }
 
-function zoomed_heat() {
-    svg_heat.attr("transform", "translate(" + d3.event.transform.x + "," + d3.event.transform.y + ") scale(" + d3.event.transform.k + ")");
-}
-
 
 //COUNTRY HEATMAP COUNTRY --------------------------------------------------------
 function countryHeatMap_country(data,country,links,airports,worldCountry){
@@ -1438,4 +1434,8 @@ function get_colour_cont(count,key,colours){
         col = colours["0"]
     }
     return col;
+}
+
+function zoomed_heat() {
+    svg_heat.attr("transform", "translate(" + d3.event.transform.x + "," + d3.event.transform.y + ") scale(" + d3.event.transform.k + ")");
 }

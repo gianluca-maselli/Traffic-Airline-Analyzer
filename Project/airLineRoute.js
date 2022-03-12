@@ -4,7 +4,7 @@ var c_mouseover = function(d) {
     Tooltip
         .style("opacity", 1)
     d3.select(this)
-        .style("stroke", "white")
+        .style("stroke", "#22AED1")
         .style("opacity", 1)
     }
 var c_mousemove = function(d) {
@@ -17,7 +17,7 @@ var c_mouseleave = function(d) {
     Tooltip
         .style("opacity", 0)
     d3.select(this)
-        .style("stroke", "#31a354")
+        .style("stroke", "#0C8346")
         .style("opacity", 0.8)
 }
 
@@ -43,7 +43,7 @@ function outline_routes(iata,airportId,links2){
                 return path(x[1])
             })
                 .style("fill", "none")
-                .style("stroke", "#31a354")
+                .style("stroke", "#0C8346")
                 .style("stroke-width", 0.1)
             .on("mouseover", c_mouseover)
             .on("mousemove", c_mousemove)

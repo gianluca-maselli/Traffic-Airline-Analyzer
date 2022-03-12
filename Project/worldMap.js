@@ -10,7 +10,7 @@ var margin = { top:0, left:0, right:0, bottom:0},
         width = w;
     
 var zoom = d3.zoom()
-            .scaleExtent([1, 20])
+            .scaleExtent([1, 30])
             .on("zoom", zoomed)
             .on("end", function(){console.log("finish zoom")});
   
@@ -32,6 +32,14 @@ var svg_air_inf = d3.select("#air_info").append("svg")
                     .append("g")
                    // .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+
+var legend_worldmap = d3.select("#legend_world_map").append("svg")
+                   .attr("id", "worldMap_legend")
+                   .attr("height",(height + margin.top + margin.bottom)/5.5)
+                   .attr("width", 135)
+                   .append("g")
+                  // .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+                  .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 
 var last_clicked = "" 
   
@@ -73,8 +81,8 @@ var Tooltip = d3.select("#map")
                     }
     var mousemove = function(d) {
                         Tooltip.html("<p> " + d.Airport_Name + " </p> <p> IATA: " + d.IATA + "</p> <p>" + d.City + ", " + d.Country + "</p>")
-                                .style("left", (d3.event.pageX+2) + "px")		
-                                .style("top", (d3.event.pageY-20) + "px");	
+                                .style("left", (d3.event.pageX+10) + "px")		
+                                .style("top", (d3.event.pageY-90) + "px");	
                         
                     }
     var mouseleave = function(d) {
@@ -94,7 +102,8 @@ var Tooltip = d3.select("#map")
                             .style("opacity", 1)
                     }
     var f_mousemove = function(d) {
-                        Tooltip.html("<p> Airline: " + d[0][0] + "</p> <p> Source Airport: " + d[0][2] + "</p> <p> Destination Airport: " + d[0][4])
+                        //Tooltip.html("<p> Airline: " + d[0][0] + "</p> <p> Source Airport: " + d[0][2] + "</p> <p> Destination Airport: " + d[0][4])
+                        Tooltip.html("<p> Source Airport: " + d[0][2] + "</p> <p> Destination Airport: " + d[0][4])
                                 .style("left", (d3.event.pageX+10) + "px")		
                                 .style("top", (d3.event.pageY+10) + "px");	
                         
@@ -103,7 +112,7 @@ var Tooltip = d3.select("#map")
                         Tooltip
                             .style("opacity", 0)
                         d3.select(this)
-                            .style("stroke", "#756bb1")
+                            .style("stroke", "#266DD3")
                             .style("opacity", 0.8)
     }
 
@@ -125,26 +134,13 @@ var country_mouseleave = function(d) {
     Tooltip
         .style("opacity", 0)
     d3.select(this)
-        .style("stroke", "#756bb1")
+        .style("stroke", "#266DD3")
         .style("opacity", 0.8)
 }
 
 //empy map initialization
 function ready1(data){
-    
-    var countries = topojson.feature(data,data.objects.countries).features
-    // MAP BUILDING ---------------
-        svg.selectAll(".country_init")
-                .data(countries)
-                .enter()
-                .append("g")
-                .attr("id","init_map")
-                .append("path")
-                .attr("class", "country")
-                .attr("d",path) //coordinates of country borders
-                .style("stroke", "#fff")
-                .style("stroke-width", "0.2")
-                .attr("fill", "#b8b8b8")
+    init_maps(data,'WorldMap','Heatmap','PCA','Barplot')
 }
 function zoomed() {
     svg.attr("transform", "translate(" + d3.event.transform.x + "," + d3.event.transform.y + ") scale(" + d3.event.transform.k + ")");
@@ -248,7 +244,7 @@ function departures(air_id,links){
                 return path(x[1])
             })
                 .style("fill", "none")
-                .style("stroke", "#756bb1")
+                .style("stroke", "#266DD3")
                 .style("stroke-width", 0.1)
                         
             .on("mouseover", f_mouseover)
@@ -337,6 +333,7 @@ function airport_info(d,airports){
                 .attr("y", 230)
                 .style("font-size", "15px")
                 .text("Total arrivals: " + dep_arr[1])
+
 }
 
 function air_info(d,airports){
@@ -469,7 +466,7 @@ function c_departures(country,links, airports,centroids_dict){
                 return path(s[1])
             })
             .style("fill", "none")
-            .style("stroke", "#756bb1")
+            .style("stroke", "#266DD3")
             .style("stroke-width", 0.1)
             .on("mouseover", country_mouseover)
             .on("mousemove", country_mousemove)
@@ -688,4 +685,114 @@ function get_country_info(country,links, airports){
         infos.push(source_air_country_Dest)
     }
     return [infos,tot_departures,tot_arrivals]
+}
+
+function getLegendWorldMap(button_pushed){
+    //LEGEND FOR AIRPORTS WORLDMAP --------------------
+    if(button_pushed == 'Airport'){
+        legend_worldmap.append("g")
+                    .append("rect")
+                    .attr("id", "legend_box")
+                    .attr("x", 3)
+                    .attr("y", 2)
+                    .attr("width",129)
+                    .attr("height", 70)
+                    .attr("rx", 8)
+                    .attr('fill','#F8F8FF')
+                    .attr("opacity",0.7)
+                    .attr('stroke-width',2)
+                    .attr('stroke','black')
+                    .style("border-width", "5px")
+                    .style("border-radius", "5px")
+                    .style("padding", "5px")
+    
+        legend_worldmap.append("circle")
+                    .attr("r", 4)
+                    .attr("cx",17)
+                    .attr("cy",20)
+                    .style("fill","#000000")
+
+        legend_worldmap.append("text")
+                    .style("fill", "#000000")
+                    .attr("x",30)
+                    .attr("y", 25)
+                    .style("font-size", "15px")
+                    .text(button_pushed)
+    
+        legend_worldmap.append("line")
+                    .attr('x1', 10)
+                    .attr('y1', 40)
+                    .attr('x2', 25)
+                    .attr('y2', 40)
+                    .style("stroke", "#266DD3")
+                    .style("stroke-width", "2")
+
+        legend_worldmap.append("text")
+                    .style("fill", "#000000")
+                    .attr("x",30)
+                    .attr("y", 45)
+                    .style("font-size", "15px")
+                    .text('Departure')
+    
+        legend_worldmap.append("line")
+                    .attr('x1', 10)
+                    .attr('y1', 60)
+                    .attr('x2', 25)
+                    .attr('y2', 60)
+                    .style("stroke", "#0C8346")
+                    .style("stroke-width", "2")
+        legend_worldmap.append("text")
+                    .style("fill", "#000000")
+                    .attr("x",30)
+                    .attr("y", 65)
+                    .style("font-size", "15px")
+                    .text('Airline')
+    }
+    else if(button_pushed == 'Country'){
+        legend_worldmap.append("g")
+                    .append("rect")
+                    .attr("id", "legend_box")
+                    .attr("x", 3)
+                    .attr("y", 2)
+                    .attr("width",129)
+                    .attr("height", 70)
+                    .attr("rx", 8)
+                    .attr('fill','#F8F8FF')
+                    .attr("opacity",0.7)
+                    .attr('stroke-width',2)
+                    .attr('stroke','black')
+                    .style("border-width", "5px")
+                    .style("border-radius", "5px")
+                    .style("padding", "5px")
+    
+    legend_worldmap.append("circle")
+                    .attr("r", 4)
+                    .attr("cx",17)
+                    .attr("cy",20)
+                    .style("fill","#000000")
+
+    legend_worldmap.append("text")
+                    .style("fill", "#000000")
+                    .attr("x",30)
+                    .attr("y", 25)
+                    .style("font-size", "15px")
+                    .text(button_pushed)
+    
+    legend_worldmap.append("line")
+                    .attr('x1', 10)
+                    .attr('y1', 40)
+                    .attr('x2', 25)
+                    .attr('y2', 40)
+                    .style("stroke", "#266DD3")
+                    .style("stroke-width", "2")
+
+    legend_worldmap.append("text")
+                    .style("fill", "#000000")
+                    .attr("x",30)
+                    .attr("y", 45)
+                    .style("font-size", "15px")
+                    .text('Departure')
+    
+    }
+    
 }

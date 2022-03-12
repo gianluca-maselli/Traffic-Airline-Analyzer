@@ -10,7 +10,7 @@
 				width: 1440px; 
 				margin: 0;
 				position:absolute; 
-				background: #636363;
+				background: #383838;
 			}
 			#row {
 				width: 100%;
@@ -69,6 +69,14 @@
 				
 				
 			}
+			.axisX text{
+				fill: #F0E2E7;
+			}
+			.axisY text{
+				fill: #F0E2E7;
+			}
+			
+
 			#svg_heat_div{
 				border: 3px solid black;
 				border-radius: 8px;
@@ -122,7 +130,7 @@
 				
 			}
 				
-			.selected {fill: red;}
+			.selected {fill:#bfd3e6;}
 			.selected_air {font-size: 2em;}
 			.selected_heat {fill: #f7f7f7;}
 			
@@ -134,6 +142,15 @@
 					opacity: 0.9;
 					
 			}
+			#legend_world_map {
+				position: absolute;
+				z-index:9;
+				margin: 7px;
+				margin-top: 5px;
+				margin-left: 645px;
+				opacity: 0.9;
+				font-family:Sans,Arial;
+			}
 			#svg_heat_legend{
 				position: absolute;
 				z-index:9;
@@ -141,9 +158,6 @@
 				margin-top: 130px;
 				opacity: 0.9;
 				font-family:Sans,Arial;
-				
-				
-				
 			}
 			table,tr,td,th{
 				
@@ -167,6 +181,10 @@
 			}
 			th, td {
     			padding: 12px 15px;
+				
+			}
+			td{
+				color: #15b570;
 			}
 			tbody tr {
 				border-bottom: 1px solid #090909;
@@ -174,14 +192,29 @@
 			tr:last-of-type {
 				border-bottom: 1px solid #000000;
 			}
+			
 			.dot:hover {
 				stroke: black;
 				stroke-width: 1px;
 				
-			}  
-			
+			}
 
-			
+			#legend_pca {
+				position: absolute;
+				z-index:9;
+				margin: 7px;
+				margin-top: 10px;
+				margin-left: 1295px;
+				opacity: 0.9;
+				font-family:Sans,Arial;
+			}
+
+			.text {
+				color: white;
+			}
+			.top {
+				z-index: 100;
+			}
 			
 		</style>
 	</head>
@@ -197,6 +230,7 @@
 			<div id="svg_map">
 				<div id="map"></div>
 				<div id="air_info"></div>
+				<div id="legend_world_map"></div>
 			</div>
 			
 			<div id="barplot"></div>
@@ -204,8 +238,10 @@
 		
 		<div id="row2">
 			<div id="heat_buttons">
-				<input class="mCheckbox" id="check1" name="check" type ="checkbox"  value ="countries" onclick="selectIt(this)" onchange="s=this.checked" checked>Countries
-				<input class="mCheckbox" id="check2" name ="check" type ="checkbox" value="continents" onclick="selectIt(this)" onchange="s=this.checked">Continents
+				<input class="mCheckbox" id="check1" name="check" type ="checkbox"  value ="countries" onclick="selectIt(this)" onchange="s=this.checked" checked>
+				<span class="text">Countries</span>
+				<input class="mCheckbox" id="check2" name ="check" type ="checkbox" value="continents" onclick="selectIt(this)" onchange="s=this.checked">
+				<span class="text">Continents</span>
 			</div>
 			<div id="svg_heat_div">
 				<div id="svg_heatmap">
@@ -213,6 +249,7 @@
 				<div id = "svg_heat_legend"></div>
 			</div>
 			<div id="pca"></div>
+			<div id="legend_pca"></div>
 		</div>
 		
 			
@@ -264,7 +301,8 @@
 	<script type="text/javascript" src="main.js"></script>
 	<script type="text/javascript" src="airLineRoute.js"></script>
 	<script type="text/javascript" src="arrayPCA.js"></script> 
-	<script type="text/javascript" src="scatterPlotPCA.js"></script>       
+	<script type="text/javascript" src="scatterPlotPCA.js"></script> 
+	<script type="text/javascript" src="initializeMaps.js"></script>       
        
 
 
