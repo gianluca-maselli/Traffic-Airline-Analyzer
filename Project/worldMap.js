@@ -9,16 +9,16 @@ var margin = { top:0, left:0, right:0, bottom:0},
         height = h,
         width = w;
     
-var zoom = d3.zoom()
+var zoom_w = d3.zoom()
             .scaleExtent([1, 30])
-            .on("zoom", zoomed)
+            .on("zoom", zoomed_w)
             .on("end", function(){console.log("finish zoom")});
   
 var svg = d3.select("#map").append("svg")
             .attr("id", "svg_div")
             .attr("height",height+ margin.left + margin.right)
             .attr("width", width + margin.left + margin.right)
-            .call(zoom)
+            .call(zoom_w)
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
                 
@@ -142,10 +142,14 @@ var country_mouseleave = function(d) {
 function ready1(data){
     init_maps(data,'WorldMap','Heatmap','PCA','Barplot')
 }
-function zoomed() {
+/*
+function zoomed_w() {
     svg.attr("transform", "translate(" + d3.event.transform.x + "," + d3.event.transform.y + ") scale(" + d3.event.transform.k + ")");
         
-}
+}*/
+function zoomed_w() {
+    svg.attr("transform", d3.event.transform)
+  }
     //lat_source_air,
     //long_source_air,
     //lat_dest_air,

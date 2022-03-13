@@ -13,21 +13,34 @@
 				background: #383838;
 			}
 			#row {
-				width: 100%;
-				padding: 0;
-				margin: 0;
-				height:3%;
-			}
-			#menu {
 				border: 3px solid black;
 				border-radius: 8px;
-				height:100%;
-				width:99%;
+				width: 1405px;
 				padding: 3px;
-				margin: 2px;
+				margin: 3px;
+				height: 22px;
+			}
+
+			#menu {
+				
+				
+				height:20px;
+				width: 180px;
+				margin-left: 3px;
 				float: left;
 				
 			}
+			
+			#info_section{
+				width: 35px;
+				height:23px;
+				margin-left:190px;
+				position: relative;
+				
+			}
+			#info_section:hover  {
+				opacity: 0.2;
+			  }
 			
 			#row1 {
 				width:1427px;
@@ -41,7 +54,6 @@
 				height:330px;
 				padding: 0;
 				margin: 0;
-				height:40%;
 			}
 			
 			#svg_map {
@@ -96,8 +108,6 @@
 				font-family:Sans,Arial;
 				margin-left: 4px;
 				
-				
-				
 			}
 			#pca{
 				border: 3px solid black;
@@ -115,8 +125,6 @@
 				font-family:Sans,Arial;
 				margin-left: 4px;
 			}
-			
-			
 			
 			#map{
 					position: absolute;
@@ -215,6 +223,186 @@
 			.top {
 				z-index: 100;
 			}
+
+			.button {
+  				align-items: center;
+  				appearance: none;
+  				background-color: #fff;
+  				border-radius: 24px;
+  				border-style: none;
+  				box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  				box-sizing: border-box;
+  				color: #3c4043;
+  				cursor: pointer;
+  				display: inline-flex;
+  				fill: currentcolor;
+  				font-family: "Google Sans",Roboto,Arial,sans-serif;
+  				font-size: 14px;
+  				font-weight: 500;
+  				height: 22px;
+  				justify-content: center;
+  				letter-spacing: .25px;
+  				line-height: normal;
+  				overflow: visible;
+  				padding: 3px 17px;
+  				position: relative;
+  				text-align: center;
+  				text-transform: none;
+  				transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  				user-select: none;
+  				-webkit-user-select: none;
+  				touch-action: manipulation;
+  				width: 85px;
+  				will-change: transform,opacity;
+  				z-index: 0;
+			}
+
+			.button:hover {
+  				background: #F6F9FE;
+  				color: #174ea6;
+			}
+
+			.button:active {
+  				box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  				outline: none;
+			}
+
+			.button:focus {
+  				outline: none;
+  				border: 2px solid #4285f4;
+			}
+
+			.button:not(:disabled) {
+  				box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+			}
+
+			.button:not(:disabled):hover {
+  				box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+			}
+
+			.button:not(:disabled):focus {
+  				box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+			}
+			.button:not(:disabled):active {
+  				box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+			}
+			.button:disabled {
+  				box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+			}
+
+			#button_info{
+				width: 20px;
+				height:20px;
+			}
+			
+
+			#worldMap_info {
+				position: absolute;
+				display:block;
+				visibility: hidden;
+				line-height: 240px;
+				font-size: 17px;
+				color: white;
+				z-index: 10;
+				opacity: 0;
+				background-color: rgb(40, 40, 40);
+				height:400px; 
+				width:785px;
+				margin: 12px;
+				margin-left: -2px;
+				border-radius: 8px;
+				float: left;
+				transition: 1s ease;
+				font-family: "Google Sans",Roboto,Arial,sans-serif;
+			} 
+			.infos {
+				display: inline-block;
+				vertical-align: middle;
+				line-height: normal;
+			}
+
+			#info_section:hover ~ #worldMap_info{
+				visibility: visible;
+				opacity: 0.9;
+				text-align: center !important;
+			}
+			#button_i{
+				width: 22px;
+				height: 22px;
+			}
+			#airlines_info_b{
+				position: absolute;
+				display:block;
+				visibility: hidden;
+				line-height: 240px;
+				font-size: 16.5px;
+				color: white;
+				z-index: 10;
+				opacity: 0;
+				background-color: rgb(40, 40, 40);
+				width:615px;
+				margin: 12px;
+				height:400px;
+				margin-left:795px;
+				border-radius: 8px;
+				transition: 1s ease;
+				font-family: "Google Sans",Roboto,Arial,sans-serif;
+			} 
+			#info_section:hover ~ #airlines_info_b{
+				visibility: visible;
+				opacity: 0.9;
+				text-align: center !important;
+			}
+			#heatmap_infos{
+				position: absolute;
+				display:block;
+				visibility: hidden;
+				line-height: 240px;
+				font-size: 16.5px;
+				color: white;
+				z-index: 10;
+				opacity: 0;
+				background-color: rgb(40, 40, 40);
+				height: 330px;
+				width:785px;
+				margin: 445px;
+				margin-left: -2px;
+				border-radius: 8px;
+				transition: 1s ease;
+				font-family: "Google Sans",Roboto,Arial,sans-serif;
+			} 
+			#info_section:hover ~ #heatmap_infos{
+				visibility: visible;
+				opacity: 0.9;
+				text-align: center !important;
+			}
+
+			#pca_infos{
+				position: absolute;
+				display:block;
+				visibility: hidden;
+				line-height: 240px;
+				font-size: 16.5px;
+				color: white;
+				z-index: 10;
+				opacity: 0;
+				background-color: rgb(40, 40, 40);
+				width:615px;
+				margin: 445px;
+				height:330px;
+				margin-left:795px;
+				border-radius: 8px;
+				transition: 1s ease;
+				font-family: "Google Sans",Roboto,Arial,sans-serif;
+			} 
+			#info_section:hover ~ #pca_infos{
+				visibility: visible;
+				opacity: 0.9;
+				text-align: center !important;
+			}
+
+		
+
 			
 		</style>
 	</head>
@@ -223,6 +411,61 @@
 			<div id="menu">
 				<button class="button" id="button_airport" value="airport" onclick="getValue(this)">Airport</button>
 				<button class="button" id="button_count" value="country_search" onclick="getValue(this)">Country</button>
+				
+			</div>
+			<div id="info_section" onmouseover="info_hidden()">
+				<img src="info1.png" id="button_info">
+			</div>
+			<div id="worldMap_info">
+				<span class="infos">
+					<h3>Interactive World Map</h3>
+					The world map displays either points representing airports or points representing countries. <br>  
+					The two different visualization are triggered by pressing one of the two buttons on the top of the world map. 
+					The user can freely explore the map, zooming in and zooming out, according to its preferences. If the button 'Airport' is pressed the map 
+					displays the airport points and the user can click on one of them to visualize the information related to that airport. 
+					By contrast, by clicking on the button 'Country', the user can visualize information related to one of the countries on the map.
+					A card-like section,containing the world map information (e.g. name of the airport, IATA code, city) related to an airport or to a country, appears on the left when a node is clicked.
+					For both airports and countries links are created when the user clicks one of them.
+					They represent departures from a specific airport or country to their respective destinations. 
+					The information about the source airport or country and their destination is displayed in a tooltip appering when the mouse moves on the links.
+				</span>
+			</div>
+			<div id="airlines_info_b">
+				<span class="infos">
+					<h3>Airlines Barplot</h3>
+					Each time the user clicks an airport or a country on the world map, the airlines barplot is created.
+					This visualization aims to shown the number of flights for a specific airline company. 
+					In case the user is interested to know how much departure flights for a specific airline company are present in an airport 
+					then it can simply click on the latter. By contrast if it wants to know how much departure flights for a specific airline company 
+					are present in a country, then he can switch to the country mode and looks for the information it is interested in.
+					By moving on the barplot bars the name of the airline company and the total number of flights is displaye in a tooltip. 
+					Furthermore, if the user is interested in knowing the specific links for a certain airline company it can click on the name on the y-aixs and in the world map
+					the links will be shown in green. This option is available only for the airport mode visualization. 
+
+				</span>
+			</div>
+
+			<div id="heatmap_infos">
+				<span class="infos">
+					<h3>Flights World Heatmap</h3>
+					With this world heatmap the user can understand what are the most reached country or continents considering a specific airport or 
+					a country. The heamap is coloured according with the number of flights reaching a certain destination. 
+					Intuitevely, in the airport mode the world heatmap will be colored with respect the number of flights for the destinations reached by an airport. 
+					In the opposite way, in country mode the world heatmap is colored according to the numer of flights for the destination reached starting from a specific country.
+					With the checkboxes 'Countries' and 'Continents' the user is able to know the most reached destination considering the world heamap divided in countries or, by switching the checkbox, the most reached destinations regarding 
+					whole continents. 
+				</span>
+			</div>
+
+			<div id="pca_infos">
+				<span class="infos">
+					<h3>Dimensionality Reduction Scatterplot</h3>
+					The scatterplot is used to understand how the airports (if airport mode) or the countries (if country mode) get clusterized. The scatterplot divides white dots, to blue dots
+					for the destinations reached by an airport (in this case destination are other airport) or by a country (the destinations are other countries). 
+					The clicked airport or  the clicked country on the worldmap is represented in the scatterplot by a red point. Furthermore it is possible to rely on the brush for zooming on the scatterplot and at the same 
+					by hoovering the mouse on the top of the dots the information related to each of them are displayed in a tooltip. 
+
+				</span>
 			</div>
 		</div>
 		
@@ -246,7 +489,7 @@
 			<div id="svg_heat_div">
 				<div id="svg_heatmap">
 				</div>
-				<div id = "svg_heat_legend"></div>
+				<div id ="svg_heat_legend"></div>
 			</div>
 			<div id="pca"></div>
 			<div id="legend_pca"></div>
@@ -269,14 +512,19 @@
 			  el.checked = false;
 			});
 			id.checked = true;
-		  }
+		}
 		function  selectIt2(id){
 			var myCheckbox = document.getElementsByName("check_pca");
 			Array.prototype.forEach.call(myCheckbox,function(el){
 			  el.checked = false;
 			});
 			id.checked = true;
-		  }
+		}
+		function info_hidden() {
+			if (document.getElementById('button_info') != null) {
+			  document.getElementById('button_info').id = 'button_i';
+			}
+		}
 	</script>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
@@ -303,9 +551,5 @@
 	<script type="text/javascript" src="arrayPCA.js"></script> 
 	<script type="text/javascript" src="scatterPlotPCA.js"></script> 
 	<script type="text/javascript" src="initializeMaps.js"></script>       
-       
-
-
-	
-	
+    	
 </html>

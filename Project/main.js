@@ -110,7 +110,7 @@ function getValue(element){
                            svg_legend.selectAll("*").remove()
                            svg_scatter.selectAll("*").remove()
                            heatMap_country(data,links,d.Airport_ID,airports,worldCountry)
-                           scatterPlot(pca_data, d.Airport_ID, routes2, airports)
+                           scatterPlot(pca_data, d.Airport_ID, routes2, airports,data)
                            getLegendPCA('Airport')
                            
                            document.getElementById("check1").checked = true;

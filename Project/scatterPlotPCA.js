@@ -30,7 +30,7 @@ var tooltip_pca = d3.select("#pca")
     .style("padding", "5px")
 
 //SCATTERPLOT FUNCTION
-function scatterPlot(pca_data, Airport_ID, routes2, airports){
+function scatterPlot(pca_data, Airport_ID, routes2, airports,data){
     linksArr = drawFlights2(routes2)
     destAirposts = get_airport_destinations(Airport_ID,linksArr)
     
@@ -133,7 +133,7 @@ function scatterPlot(pca_data, Airport_ID, routes2, airports){
             tooltip_pca.html("<p> Airport: " + info_air.name + "</p> <p> IATA: " + info_air.iata + "</p> <p> Country: " + info_air.country + "</p>")
               .style('left', `${d3.event.pageX + 10}px`) 
               .style('top', `${d3.event.pageY - 18}px`);
-          })
+        })
         .on('mouseout', function(d){ 
             airId = d.Airport_ID
             if(airId == Airport_ID){
@@ -145,7 +145,68 @@ function scatterPlot(pca_data, Airport_ID, routes2, airports){
             tooltip_pca.transition()        
             .duration(400)      
             .style('opacity', 0);   
-          });
+        })
+        /*
+        .on('click', function(d){
+           // console.log(d.Airport_ID)
+            
+            id_airport = d.Airport_ID
+            svg.selectAll("#point-airports").remove()
+            svg.selectAll("#flights_d").remove()
+            svg.selectAll("#flights_color").remove()
+            svg.selectAll("#Country_c").remove()
+            svg_air_inf.selectAll("*").remove()
+            svg_bar.selectAll("*").remove()
+            svg_heat.selectAll("*").remove()
+            svg_legend.selectAll("*").remove()
+            svg_scatter.selectAll("*").remove()
+            svg.selectAll("#centroids").remove()
+            legend_worldmap.selectAll("*").remove()
+            legend_pca.selectAll("*").remove()
+            
+            console.log(zoom_w)
+            var countries = topojson.feature(data,data.objects.countries).features
+            svg.call(zoom_w.transform, d3.zoomIdentity.scale(1));
+            
+            // MAP BUILDING INIT ---------------
+            svg.selectAll(".country")
+                .data(countries)
+                .enter()
+                .append("g")
+                .attr("id","init_map")
+                .append("path")
+                .attr("class", "country")
+                .attr("d",path) //coordinates of country borders
+                .style("stroke", "#fff")
+                .style("stroke-width", "0.2")
+                .attr("fill", "#b8b8b8")
+            
+            
+            
+
+            //AIRPORTS POINTS --------------------------
+            svg.selectAll(".world-airports")
+                .data(airports)
+                .enter()
+                .append("g")
+                .attr("id","point-airports")
+                .append("circle")
+                .attr("r", 0.2)
+                .attr("cx", function(d){
+                    var coords = projection([d.Longitude, d.Latitude])
+                    return coords[0] //longitude;
+                })
+                .attr("cy", function(d){
+                    var coords = projection([d.Longitude, d.Latitude])
+                    return coords[1] //latitude;
+                })
+                .on("mouseover", mouseover)
+                .on("mousemove", mousemove)
+                .on("mouseleave", mouseleave)
+                tot_d_a = f_click(d,links,airports)
+
+        })*/
+
         
         // x axis
         svg_scatter.append("g")
@@ -330,7 +391,7 @@ function scatterPlot_countries(pca_data_c,country,links,airports){
             tooltip_pca.html("<p> Country: " + c_name + "</p>")
               .style('left', `${d3.event.pageX + 10}px`) 
               .style('top', `${d3.event.pageY - 18}px`);
-          })
+        })
         .on('mouseout', function(d){    
             country_c = d.Country
             if(country_c == country){
@@ -342,7 +403,9 @@ function scatterPlot_countries(pca_data_c,country,links,airports){
             tooltip_pca.transition()        
             .duration(400)      
             .style('opacity', 0);   
-          });
+        })
+        
+        
         
         // x axis
         svg_scatter.append("g")
