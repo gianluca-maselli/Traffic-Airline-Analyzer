@@ -361,6 +361,7 @@ function c_click(d,links, airports,centroids_dict){
     if(last_clicked != d || last_clicked == d ){
         last_clicked = ""
         svg.selectAll("#flights_c").remove()
+        svg.selectAll("#flights_color").remove()
         svg_air_inf.selectAll("*").remove()
         svg_bar.selectAll("*").remove()
         svg_heat.selectAll("*").remove()

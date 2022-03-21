@@ -112,7 +112,7 @@ function missing_country(data){
                 .attr("id", "info_box")
                 .attr("x", 25)
                 .attr("y", 80)
-                .attr("width",width3)
+                .attr("width",width_pca)
                 .attr("height",120)
                 .attr("rx", 8)
                 .attr('fill','#3182bd')

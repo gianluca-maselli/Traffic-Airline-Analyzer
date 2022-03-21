@@ -1,0 +1,270 @@
+﻿country,iso,dafif,continent
+Bonaire,Saint Eustatius and Saba,BQ,NA
+Aruba,AW,AA,NA
+Antigua and Barbuda,AG,AC,NA
+United Arab Emirates,AE,AE,AS
+Afghanistan,AF,AF,AS
+Algeria,DZ,AG,AF
+Azerbaijan,AZ,AJ,AS
+Albania,AL,AL,EU
+Armenia,AM,AM,AS
+Angola,AO,AO,AF
+American Samoa,AS,AQ,OC
+Argentina,AR,AR,SA
+Australia,AU,AS,OC
+Ashmore and Cartier Islands,\N,AT,OC
+Austria,AT,AU,EU
+Anguilla,AI,AV,NA
+Antarctica,AQ,AY,AN
+Bahrain,BH,BA,AS
+Barbados,BB,BB,NA
+Botswana,BW,BC,AF
+Bermuda,BM,BD,NA
+Belgium,BE,BE,EU
+Bahamas,BS,BF,NA
+Bangladesh,BD,BG,AS
+Belize,BZ,BH,NA
+Bosnia and Herzegovina,BA,BK,EU
+Bolivia,BO,BL,SA
+Myanmar,MM,BM,AS
+Burma,MM,BM,AS
+Benin,BJ,BN,AF
+Belarus,BY,BO,EU
+Solomon Islands,SB,BP,OC
+Navassa Island,\N,BQ,NA
+Brazil,BR,BR,SA
+India,IN,BS,AS
+Bhutan,BT,BT,AS
+Bulgaria,BG,BU,EU
+Bouvet Island,BV,BV,SA
+Brunei,BN,BX,AS
+Burundi,BI,BY,AF
+Canada,CA,CA,NA
+Cambodia,KH,CB,AS
+Chad,TD,CD,AF
+Sri Lanka,LK,CE,AS
+Congo,CD,CF,AF
+Congo Republic,CG,CG,AF
+China,CN,CH,AS
+Chile,CL,CI,SA
+Cayman Islands,KY,CJ,NA
+Cocos (Keeling) Islands,CC,CK,NA
+Cameroon,CM,CM,AF
+Comoros,KM,CN,AF
+Colombia,CO,CO,SA
+Northern Mariana Islands,MP,CQ,OC
+Coral Sea Islands,\N,CR,OC
+Costa Rica,CR,CS,NA
+Central African Republic,CF,CT,AF
+Cuba,CU,CU,NA
+Cape Verde,CV,CV,AF
+Cook Islands,CK,CW,OC
+Cyprus,CY,CY,EU
+Denmark,DK,DA,EU
+Djibouti,DJ,DJ,AF
+Dominica,DM,DO,NA
+Jarvis Island,\N,DQ,OC
+Dominican Republic,DO,DR,NA
+Ecuador,EC,EC,SA
+Egypt,EG,EG,AF
+Ireland,IE,EI,EU
+Equatorial Guinea,GQ,EK,AF
+Estonia,EE,EN,EU
+Eritrea,ER,ER,AF
+El Salvador,SV,ES,NA
+Ethiopia,ET,ET,AF
+Europa Island,\N,EU,null
+Czech Republic,CZ,EZ,EU
+French Guiana,GF,FG,SA
+Finland,FI,FI,EU
+Fiji,FJ,FJ,OC
+Falkland Islands,FK,FK,SA
+Micronesia,Fed. Sts.,FM,OC
+Faeroe Islands,FO,FO,null
+French Polynesia,PF,FP,OC
+Baker Island,\N,FQ,OC
+France,FR,FR,EU
+French Southern Territories,TF,FS,AN
+Gambia,GM,GA,AF
+Gabon,GA,GB,AF
+Georgia,GE,GG,AS
+Ghana,GH,GH,AF
+Gibraltar,GI,GI,EU
+Grenada,GD,GJ,NA
+Guernsey,GG,GK,EU
+Greenland,GL,GL,NA
+Germany,DE,GM,EU
+Glorioso Islands,\N,GO,null
+Guadeloupe,GP,GP,NA
+Guam,GU,GQ,OC
+Greece,GR,GR,EU
+Guatemala,GT,GT,NA
+Guinea,GN,GV,AF
+Guyana,GY,GY,SA
+Palestine,PS,GZ,AS
+Haiti,HT,HA,NA
+Hong Kong,HK,HK,AS
+Heard and McDonald Islands,HM,HM,AN
+Honduras,HN,HO,NA
+Howland Island,\N,HQ,OC
+Croatia,HR,HR,EU
+Hungary,HU,HU,EU
+Iceland,IS,IC,EU
+Indonesia,ID,ID,AS
+Isle of Man,IM,IM,EU
+India,IN,IN,AS
+British Indian Ocean Territory,IO,IO,AS
+Clipperton Island,\N,IP,NA
+Iran,IR,IR,AS
+Israel,IL,IS,AS
+Italy,IT,IT,EU
+Cote d'Ivoire,CI,IV,AF
+Iraq,IQ,IZ,AS
+Japan,JP,JA,AS
+Jersey,JE,JE,EU
+Jamaica,JM,JM,NA
+Jan Mayen,\N,JN,EU
+Jordan,JO,JO,AS
+Johnston Atoll,\N,JQ,OC
+Juan de Nova Island,\N,JU,null
+Kenya,KE,KE,AF
+Kyrgyz Republic,KG,KG,null
+North Korea,KP,KN,AS
+Kingman Reef,\N,KQ,OC
+Kiribati,KI,KR,OC
+South Korea,KR,KS,AS
+Christmas Island,CX,KT,OC
+Kuwait,KW,KU,AS
+Kazakhstan,KZ,KZ,AS
+Laos,LA,LA,AS
+Lebanon,LB,LE,AS
+Latvia,LV,LG,EU
+Lithuania,LT,LH,EU
+Liberia,LR,LI,AF
+Slovakia,SK,LO,EU
+Palmyra Atoll,\N,LQ,OC
+Lesotho,LS,LT,AF
+Luxembourg,LU,LU,EU
+Libya,LY,LY,AF
+Madagascar,MG,MA,AF
+Martinique,MQ,MB,NA
+Macao,MO,MC,AS
+Moldova,MD,MD,EU
+Mayotte,YT,MF,AF
+Mongolia,MN,MG,AS
+Montserrat,MS,MH,NA
+Malawi,MW,MI,AF
+Montenegro,ME,MJ,EU
+Macedonia,MK,MK,EU
+Mali,ML,ML,AF
+Monaco,MC,MN,EU
+Morocco,MA,MO,AF
+Mauritius,MU,MP,AF
+Midway Islands,\N,MQ,OC
+Mauritania,MR,MR,AF
+Malta,MT,MT,EU
+Oman,OM,MU,AS
+Maldives,MV,MV,AS
+Mexico,MX,MX,NA
+Malaysia,MY,MY,AS
+Mozambique,MZ,MZ,AF
+New Caledonia,NC,NC,OC
+Niue,NU,NE,OC
+Norfolk Island,NF,NF,OC
+Niger,NE,NG,AF
+Vanuatu,VU,NH,OC
+Nigeria,NG,NI,AF
+Netherlands,NL,NL,EU
+Norway,NO,NO,EU
+Nepal,NP,NP,AS
+Nauru,NR,NR,OC
+Suriname,SR,NS,SA
+Netherlands Antilles,AN,NT,SA
+Nicaragua,NI,NU,NA
+New Zealand,NZ,NZ,OC
+Paraguay,PY,PA,SA
+Pitcairn,PN,PC,OC
+Peru,PE,PE,SA
+Paracel Islands,\N,PF,null
+Spratly Islands,\N,PG,null
+Pakistan,PK,PK,AS
+Poland,PL,PL,EU
+Panama,PA,PM,NA
+Portugal,PT,PO,EU
+Papua New Guinea,PG,PP,OC
+Palau,PW,PS,OC
+Guinea-Bissau,GW,PU,AF
+Qatar,QA,QA,AS
+Serbia,RS,RB,EU
+Reunion,RE,RE,AF
+Marshall Islands,MH,RM,OC
+Romania,RO,RO,EU
+Philippines,PH,RP,AS
+Puerto Rico,PR,RQ,NA
+Russia,RU,RS,AS
+Rwanda,RW,RW,AF
+Saudi Arabia,SA,SA,AS
+Saint Pierre and Miquelon,PM,SB,NA
+Saint Kitts and Nevis,KN,SC,NA
+Seychelles,SC,SE,AF
+South Africa,ZA,SF,AF
+Senegal,SN,SG,AF
+Saint Helena,SH,SH,AF
+Slovenia,SI,SI,EU
+Sierra Leone,SL,SL,AF
+Singapore,SG,SN,AS
+Somalia,SO,SO,AF
+Somaliland,\N,\N,AF
+Spain,ES,SP,EU
+South Sudan,SS,SS,AF
+Saint Lucia,LC,ST,NA
+Sudan,SD,SU,AF
+Svalbard,SJ,SV,EU
+Sweden,SE,SW,EU
+South Georgia and South Sandwich Is.,GS,SX,AN
+Syria,SY,SY,AS
+Switzerland,CH,SZ,EU
+Trinidad and Tobago,TT,TD,NA
+Tromelin Island,\N,TE,null
+Thailand,TH,TH,AS
+Tajikistan,TJ,TI,AS
+Turks and Caicos Islands,TC,TK,NA
+Tokelau,TK,TL,OC
+Tonga,TO,TN,OC
+Togo,TG,TO,AF
+Sao Tome and Principe,ST,TP,AF
+Tunisia,TN,TS,AF
+Timor-Leste,TL,TT,AS
+Turkey,TR,TU,AS
+Tuvalu,TV,TV,OC
+Taiwan,TW,TW,AS
+Turkmenistan,TM,TX,AS
+Tanzania,TZ,TZ,AF
+Uganda,UG,UG,AF
+United Kingdom,GB,UK,EU
+Ukraine,UA,UP,EU
+United States,US,US,NA
+Burkina Faso,BF,UV,AF
+Uruguay,UY,UY,SA
+Uzbekistan,UZ,UZ,AS
+Saint Vincent and the Grenadines,VC,VC,NA
+Venezuela,VE,VE,SA
+British Virgin Islands,VG,VI,NA
+Vietnam,VN,VM,AS
+United States Virgin Islands,VI,VQ,NA
+Namibia,NA,WA,AF
+Wallis and Futuna,WF,WF,OC
+Western Sahara,EH,WI,AF
+Wake Island,\N,WQ,OC
+Samoa,WS,WS,OC
+Eswatini,SZ,WZ,AF
+Yemen,YE,YM,AS
+Zambia,ZM,ZA,AF
+Zimbabwe,ZW,ZI,AF
+Faroe Islands,\N,\N,EU
+Swaziland,\N,\N,AF
+West Bank,\N,\N,AS
+Kyrgyzstan,\N,\N,AS
+Kosovo,\N,\N,EU
+Northern Cyprus,\N,\N,EU
+Siachen Glacier,\N,\N,AS

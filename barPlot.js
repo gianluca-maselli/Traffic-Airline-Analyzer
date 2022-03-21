@@ -17,15 +17,16 @@ var svg_bar = d3.select("#barplot")
     diary = []
     l = []
     k=0
+
     flag = 0
     airpID = airportId
+    console.log(airpID)
     var airportName = ""
     var air_lines = {}
     var arline_name = ""
     var airlines_air = []
     var airline_info = []
     for(i=0;i<links2.length;i++){
-           
         if(airpID == links2[i][0][2]){
             flag = 1
             airportName = airpID
@@ -59,6 +60,7 @@ var svg_bar = d3.select("#barplot")
         }
         diary.push(air_lines)
     }
+
     var infos = {}
     var arr2 = []
     for(i=0;i<diary.length;i++){
@@ -75,7 +77,8 @@ var svg_bar = d3.select("#barplot")
 
     arr2.sort(function(b, a) {
         return a["Flights"] - b["Flights"];
-      });
+    });
+
 
     min = Number.MAX_VALUE,
     max = -Number.MAX_VALUE;
@@ -101,7 +104,9 @@ var svg_bar = d3.select("#barplot")
                         return d.Airlines;
                     }))
                     .padding(0.5)
-
+                    
+    
+    
         svg_bar.append("g")
             .attr("transform", "translate(0," + height + ")")
             .call(d3.axisBottom(x))
@@ -191,6 +196,10 @@ var svg_bar = d3.select("#barplot")
                     d3.select(this).classed("selected_heat", false);
                 })
 
+    
+        
+
+                    
     }
     else{
         var table = []
@@ -199,10 +208,11 @@ var svg_bar = d3.select("#barplot")
         table_maker(arr2,airlines, airportId,links2)
     }
 
+
 }
 
 //COUNTRY BARPLOT -----------------------------------
-function barplot_country(routes2,airports,airlines,country){
+function barplot_country(routes2,airports,airlines,country,country_coords){
     links2 = drawFlights2(routes2)
     country_airports = get_country_airports(country,airports)
     var source_country = {
@@ -210,6 +220,7 @@ function barplot_country(routes2,airports,airlines,country){
         'airports':country_airports
     }
     var airline_name = ""
+    
     var air_id_airlines = {}
     infos = []
     flag = 0
@@ -321,9 +332,18 @@ function barplot_country(routes2,airports,airlines,country){
               })
             .on('click', function(d){
                 //console.log(d)
-                //iata = get_IATA(d,airlines)
-                //svg.selectAll("#flights_color").remove()
-                //outline_routes(iata,airportId,links2)
+                var airlineID
+                for(f=0;f<airlines.length;f++){
+                    air_name = airlines[f].Name
+                    if(d == air_name){
+                        airlineID = airlines[f].Airline_ID
+                        break
+                    }
+                    
+                }
+                iata = get_IATA(d,airlines)
+                svg.selectAll("#flights_color").remove()
+                outline_routes_countries(airlineID,iata,country,airlines,airports,links2,country_coords)
             })
 
         // Add Y axis
@@ -384,9 +404,10 @@ function barplot_country(routes2,airports,airlines,country){
                     Tooltip_heat.style("opacity", 0)
                     d3.select(this).classed("selected_heat", false);
                 })
+                
     }
     else{
-        table_maker_country(diary,airlines, country,links2)
+        table_maker_country(diary,airlines, country,links2,airports,country_coords)
     }
 
 }

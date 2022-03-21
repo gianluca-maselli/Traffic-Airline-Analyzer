@@ -224,7 +224,8 @@ function getValue(element){
                     tot_dep = c_click(d,links,airports, c_centroids)
                     //console.log(tot_dep)
                     if(tot_dep>0){
-                        barplot_country(routes2,airports,airlines,d.country)
+                        country_coords = [d.latitude,d.longitude]
+                        barplot_country(routes2,airports,airlines,d.country,country_coords)
                         countryHeatMap_country(data,d.country,links,airports,worldCountry)
                         //used to create pca dataset for countries
                         //getArrayPCA_country(c_centroids,links,airports,airlines,routes2)
