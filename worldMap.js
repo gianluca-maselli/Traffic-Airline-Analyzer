@@ -676,20 +676,20 @@ function getLegendWorldMap(button_pushed){
                     .style("border-radius", "5px")
                     .style("padding", "5px")
     
-    legend_worldmap.append("circle")
+        legend_worldmap.append("circle")
                     .attr("r", 4)
                     .attr("cx",17)
                     .attr("cy",20)
                     .style("fill","#000000")
 
-    legend_worldmap.append("text")
+        legend_worldmap.append("text")
                     .style("fill", "#000000")
                     .attr("x",30)
                     .attr("y", 25)
                     .style("font-size", "15px")
                     .text(button_pushed)
     
-    legend_worldmap.append("line")
+        legend_worldmap.append("line")
                     .attr('x1', 10)
                     .attr('y1', 40)
                     .attr('x2', 25)
@@ -697,12 +697,26 @@ function getLegendWorldMap(button_pushed){
                     .style("stroke", "#266DD3")
                     .style("stroke-width", "2")
 
-    legend_worldmap.append("text")
+        legend_worldmap.append("text")
                     .style("fill", "#000000")
                     .attr("x",30)
                     .attr("y", 45)
                     .style("font-size", "15px")
                     .text('Departure')
+    
+        legend_worldmap.append("line")
+                    .attr('x1', 10)
+                    .attr('y1', 60)
+                    .attr('x2', 25)
+                    .attr('y2', 60)
+                    .style("stroke", "#0C8346")
+                    .style("stroke-width", "2")
+        legend_worldmap.append("text")
+                    .style("fill", "#000000")
+                    .attr("x",30)
+                    .attr("y", 65)
+                    .style("font-size", "15px")
+                    .text('Airline')
     
     }
     
