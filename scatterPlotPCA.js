@@ -301,11 +301,11 @@ function scatterPlot_countries(pca_data_c,country,links,airports){
     //console.log(destination_countries)
 
     var x = d3.scaleLinear()
-        .domain([-2, 17.5])
+        .domain([-2, 12])
         .range([ 0, width_pca ])
 
     var y = d3.scaleLinear()
-        .domain([-3, 6])
+        .domain([-3, 8])
         .range([ height_pca, 0]);
     
     var xAxis = d3.axisBottom(x)
