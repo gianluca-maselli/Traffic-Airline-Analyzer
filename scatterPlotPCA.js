@@ -535,7 +535,7 @@ function scatterPlot_countries(pca_data_c,country,links,airports,data,c_centroid
 
                 barplot_country(routes2,airports,airlines,d.country,country_coords)
                 countryHeatMap_country(data,d.country,links,airports,worldCountry)
-                scatterPlot_countries(pca_data_c,country,links,airports,data,c_centroids,routes2, airlines, worldCountry)
+                scatterPlot_countries(pca_data_c,d.country,links,airports,data,c_centroids,routes2, airlines, worldCountry)
                 getLegendPCA('Country')
                 document.getElementById("check1").checked = true;
                 document.getElementById("check2").checked = false;
