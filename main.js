@@ -15,25 +15,6 @@ function getValue(element){
         function ready(error, data, airports, routes2, airlines,worldCountry,pca_data,c_centroids,pca_data_c){
             //getArrayPCA(airports,airlines,routes2)
             var countries = topojson.feature(data,data.objects.countries).features
-            //compute centroids 
-            //console.log(countries)
-            //console.log(countries[1].geometry)
-            //console.log(cent)
-            //centroids_country = {}
-            /*
-            var centroids_country = countries.map(function (country){
-                c_name = country.properties.name
-                centroid =  path.centroid(country);
-                return {'country':c_name, 'centroid':centroid}
-            });*/
-            //console.log(c_centroids)
-
-            
-
-            //console.log(centroids_country)
-
-            //console.log(centroids)
-            //console.log(countries)
             //AIRLINE ROUTES CONNECTION --------------------
             links = drawFlights(routes2)
             //console.log(links)
@@ -77,6 +58,9 @@ function getValue(element){
                 svg_scatter.selectAll("*").remove()
                 legend_worldmap.selectAll("*").remove()
                 legend_pca.selectAll("*").remove()
+
+                document.getElementById("check1").checked = true;
+                document.getElementById("check2").checked = false;
                 
                 //init
                 init_maps(data,'c','Heatmap','PCA','Barplot')
@@ -110,7 +94,7 @@ function getValue(element){
                            svg_legend.selectAll("*").remove()
                            svg_scatter.selectAll("*").remove()
                            heatMap_country(data,links,d.Airport_ID,airports,worldCountry)
-                           scatterPlot(pca_data, d.Airport_ID, routes2, airports,data)
+                           scatterPlot(pca_data, d.Airport_ID, routes2, airports,data, airlines, worldCountry)
                            getLegendPCA('Airport')
                            
                            document.getElementById("check1").checked = true;
@@ -229,7 +213,7 @@ function getValue(element){
                         countryHeatMap_country(data,d.country,links,airports,worldCountry)
                         //used to create pca dataset for countries
                         //getArrayPCA_country(c_centroids,links,airports,airlines,routes2)
-                        scatterPlot_countries(pca_data_c, d.country,links,airports)
+                        scatterPlot_countries(pca_data_c,d.country,links,airports,data,c_centroids,routes2, airlines, worldCountry)
                         getLegendPCA('Country')
 
                         document.getElementById("check1").checked = true;
