@@ -158,7 +158,6 @@ function scatterPlot(pca_data, Airport_ID, routes2, airports,data, airlines, wor
             svg_legend.selectAll("*").remove()
             svg_scatter.selectAll("*").remove()
             svg.selectAll("#centroids").remove()
-            legend_worldmap.selectAll("*").remove()
             legend_pca.selectAll("*").remove()
 
             id_airport = d.Airport_ID
@@ -476,7 +475,6 @@ function scatterPlot_countries(pca_data_c,country,links,airports,data,c_centroid
             svg_legend.selectAll("*").remove()
             svg_scatter.selectAll("*").remove()
             svg.selectAll("#centroids").remove()
-            legend_worldmap.selectAll("*").remove()
             legend_pca.selectAll("*").remove()
  
             var countries = topojson.feature(data,data.objects.countries).features
