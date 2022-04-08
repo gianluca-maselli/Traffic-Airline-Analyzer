@@ -3,4 +3,4 @@ This data visualization tool aims to give a general visualization of the commerc
 
 Datasets: https://openflights.org/data.html
 
-The tool is freely accessible from [here][https://gianluca-maselli.github.io/Traffic-Airline-Analyzer/].
+The tool is freely accessible from [here](https://gianluca-maselli.github.io/Traffic-Airline-Analyzer/).
